@@ -1,0 +1,861 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00D6DBD11BE6B53A00BDC277 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D6DBD01BE6B53A00BDC277 /* left.png */; };
+		288027701B9C98FC002B9AE4 /* Tool Box WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		288027731B9C98FC002B9AE4 /* Tool Box WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */; };
+		28BFC6A61B5493DA00E45770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6A51B5493DA00E45770 /* main.m */; };
+		28BFC6A91B5493DA00E45770 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6A81B5493DA00E45770 /* AppDelegate.m */; };
+		28BFC6AC1B5493DA00E45770 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6AB1B5493DA00E45770 /* ViewController.m */; };
+		28BFC6AF1B5493DA00E45770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BFC6AD1B5493DA00E45770 /* Main.storyboard */; };
+		28BFC6B41B5493DA00E45770 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */; };
+		28BFC6C01B5493DA00E45770 /* Tool_BoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6BF1B5493DA00E45770 /* Tool_BoxTests.m */; };
+		28E2A5341B54B29700126C42 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E2A5331B54B29700126C42 /* InterfaceController.m */; };
+		28E2A5371B54B29700126C42 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E2A5361B54B29700126C42 /* NotificationController.m */; };
+		28E2A5451B54B29700126C42 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5431B54B29700126C42 /* Interface.storyboard */; };
+		28E2A5561B54B2B900126C42 /* multiply-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5541B54B2B900126C42 /* multiply-25.png */; };
+		28E2A5571B54B2B900126C42 /* timer-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5551B54B2B900126C42 /* timer-25.png */; };
+		28E2A5591B54B35000126C42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5581B54B35000126C42 /* Images.xcassets */; };
+		28E2A55C1B54B35600126C42 /* horizontal_line-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A55A1B54B35600126C42 /* horizontal_line-48.png */; };
+		28E2A55D1B54B35600126C42 /* divide2-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A55B1B54B35600126C42 /* divide2-48.png */; };
+		28E2A55F1B54B36200126C42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A55E1B54B36200126C42 /* Images.xcassets */; };
+		28E2A5611B54B38C00126C42 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5601B54B38C00126C42 /* StoreKit.framework */; };
+		28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5621B54B39000126C42 /* MessageUI.framework */; };
+		28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5641B54B39400126C42 /* UIKit.framework */; };
+		28E2A5691B54B5E700126C42 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5681B54B5E700126C42 /* Media.xcassets */; };
+		9F1FACAAC0FE91F848EDD915 /* libPods-Tool Box.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2880276E1B9C98FC002B9AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28BFC6981B5493DA00E45770 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28E2A52C1B54B29700126C42;
+			remoteInfo = "Tool Box WatchKit Extension";
+		};
+		288027711B9C98FC002B9AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28BFC6981B5493DA00E45770 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28E2A53B1B54B29700126C42;
+			remoteInfo = "Tool Box WatchKit App";
+		};
+		28BFC6BA1B5493DA00E45770 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28BFC6981B5493DA00E45770 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28BFC69F1B5493DA00E45770;
+			remoteInfo = "Tool Box";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		288027741B9C98FC002B9AE4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				288027701B9C98FC002B9AE4 /* Tool Box WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		288027751B9C98FC002B9AE4 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				288027731B9C98FC002B9AE4 /* Tool Box WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00D6DBD01BE6B53A00BDC277 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		1AEDFFBF4924332B0C2E89B9 /* Pods-Tool Box.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool Box.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box.release.xcconfig"; sourceTree = "<group>"; };
+		28BFC6A01B5493DA00E45770 /* Tool Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tool Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28BFC6A41B5493DA00E45770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28BFC6A51B5493DA00E45770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28BFC6A71B5493DA00E45770 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		28BFC6A81B5493DA00E45770 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		28BFC6AA1B5493DA00E45770 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		28BFC6AB1B5493DA00E45770 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		28BFC6AE1B5493DA00E45770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28BFC6B31B5493DA00E45770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		28BFC6B91B5493DA00E45770 /* Tool BoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tool BoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28BFC6BE1B5493DA00E45770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28BFC6BF1B5493DA00E45770 /* Tool_BoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool_BoxTests.m; sourceTree = "<group>"; };
+		28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tool Box WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E2A5301B54B29700126C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E2A5311B54B29700126C42 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		28E2A5321B54B29700126C42 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		28E2A5331B54B29700126C42 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		28E2A5351B54B29700126C42 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		28E2A5361B54B29700126C42 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tool Box WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E2A5421B54B29700126C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E2A5441B54B29700126C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		28E2A5541B54B2B900126C42 /* multiply-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiply-25.png"; sourceTree = "<group>"; };
+		28E2A5551B54B2B900126C42 /* timer-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer-25.png"; sourceTree = "<group>"; };
+		28E2A5581B54B35000126C42 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		28E2A55A1B54B35600126C42 /* horizontal_line-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal_line-48.png"; sourceTree = "<group>"; };
+		28E2A55B1B54B35600126C42 /* divide2-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "divide2-48.png"; sourceTree = "<group>"; };
+		28E2A55E1B54B36200126C42 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		28E2A5601B54B38C00126C42 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		28E2A5621B54B39000126C42 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		28E2A5641B54B39400126C42 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28E2A5681B54B5E700126C42 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tool Box.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12D1843DE2D1060F33585E6 /* Pods-Tool Box.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool Box.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28BFC69D1B5493DA00E45770 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */,
+				28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */,
+				28E2A5611B54B38C00126C42 /* StoreKit.framework in Frameworks */,
+				9F1FACAAC0FE91F848EDD915 /* libPods-Tool Box.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28BFC6B61B5493DA00E45770 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E2A52A1B54B29700126C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DBFBE2CBF47660A6EC6FEBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28BFC6971B5493DA00E45770 = {
+			isa = PBXGroup;
+			children = (
+				28E2A5641B54B39400126C42 /* UIKit.framework */,
+				28E2A5621B54B39000126C42 /* MessageUI.framework */,
+				28E2A5601B54B38C00126C42 /* StoreKit.framework */,
+				28BFC6A21B5493DA00E45770 /* Tool Box */,
+				28BFC6BC1B5493DA00E45770 /* Tool BoxTests */,
+				28E2A52E1B54B29700126C42 /* Tool Box WatchKit Extension */,
+				28E2A5401B54B29700126C42 /* Tool Box WatchKit App */,
+				28BFC6A11B5493DA00E45770 /* Products */,
+				D47130B1FB6632499E665E24 /* Pods */,
+				7D9B626185536093D39BCFD3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		28BFC6A11B5493DA00E45770 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28BFC6A01B5493DA00E45770 /* Tool Box.app */,
+				28BFC6B91B5493DA00E45770 /* Tool BoxTests.xctest */,
+				28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */,
+				28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28BFC6A21B5493DA00E45770 /* Tool Box */ = {
+			isa = PBXGroup;
+			children = (
+				28BFC6A71B5493DA00E45770 /* AppDelegate.h */,
+				28BFC6A81B5493DA00E45770 /* AppDelegate.m */,
+				28BFC6AA1B5493DA00E45770 /* ViewController.h */,
+				28BFC6AB1B5493DA00E45770 /* ViewController.m */,
+				28BFC6AD1B5493DA00E45770 /* Main.storyboard */,
+				00D6DBD01BE6B53A00BDC277 /* left.png */,
+				28E2A5541B54B2B900126C42 /* multiply-25.png */,
+				28E2A5551B54B2B900126C42 /* timer-25.png */,
+				28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */,
+				28E2A5681B54B5E700126C42 /* Media.xcassets */,
+				28BFC6A31B5493DA00E45770 /* Supporting Files */,
+			);
+			path = "Tool Box";
+			sourceTree = "<group>";
+		};
+		28BFC6A31B5493DA00E45770 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28BFC6A41B5493DA00E45770 /* Info.plist */,
+				28BFC6A51B5493DA00E45770 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28BFC6BC1B5493DA00E45770 /* Tool BoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				28BFC6BF1B5493DA00E45770 /* Tool_BoxTests.m */,
+				28BFC6BD1B5493DA00E45770 /* Supporting Files */,
+			);
+			path = "Tool BoxTests";
+			sourceTree = "<group>";
+		};
+		28BFC6BD1B5493DA00E45770 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28BFC6BE1B5493DA00E45770 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28E2A52E1B54B29700126C42 /* Tool Box WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				28E2A5321B54B29700126C42 /* InterfaceController.h */,
+				28E2A5331B54B29700126C42 /* InterfaceController.m */,
+				28E2A5351B54B29700126C42 /* NotificationController.h */,
+				28E2A5361B54B29700126C42 /* NotificationController.m */,
+				28E2A52F1B54B29700126C42 /* Supporting Files */,
+			);
+			path = "Tool Box WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		28E2A52F1B54B29700126C42 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28E2A5301B54B29700126C42 /* Info.plist */,
+				28E2A5311B54B29700126C42 /* PushNotificationPayload.apns */,
+				28E2A55E1B54B36200126C42 /* Images.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28E2A5401B54B29700126C42 /* Tool Box WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				28E2A5431B54B29700126C42 /* Interface.storyboard */,
+				28E2A55A1B54B35600126C42 /* horizontal_line-48.png */,
+				28E2A55B1B54B35600126C42 /* divide2-48.png */,
+				28E2A5581B54B35000126C42 /* Images.xcassets */,
+				28E2A5411B54B29700126C42 /* Supporting Files */,
+			);
+			path = "Tool Box WatchKit App";
+			sourceTree = "<group>";
+		};
+		28E2A5411B54B29700126C42 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28E2A5421B54B29700126C42 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D9B626185536093D39BCFD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D47130B1FB6632499E665E24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E12D1843DE2D1060F33585E6 /* Pods-Tool Box.debug.xcconfig */,
+				1AEDFFBF4924332B0C2E89B9 /* Pods-Tool Box.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28BFC69F1B5493DA00E45770 /* Tool Box */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28BFC6C31B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Tool Box" */;
+			buildPhases = (
+				C8281B5F54D4445D618FBFA7 /* 📦 Check Pods Manifest.lock */,
+				28BFC69C1B5493DA00E45770 /* Sources */,
+				28BFC69D1B5493DA00E45770 /* Frameworks */,
+				28BFC69E1B5493DA00E45770 /* Resources */,
+				288027751B9C98FC002B9AE4 /* Embed Watch Content */,
+				64FB43CA2845996B6C93660E /* 📦 Embed Pods Frameworks */,
+				C2611E511F6D316FBD59C025 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				288027721B9C98FC002B9AE4 /* PBXTargetDependency */,
+			);
+			name = "Tool Box";
+			productName = "Tool Box";
+			productReference = 28BFC6A01B5493DA00E45770 /* Tool Box.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28BFC6B81B5493DA00E45770 /* Tool BoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28BFC6C61B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Tool BoxTests" */;
+			buildPhases = (
+				28BFC6B51B5493DA00E45770 /* Sources */,
+				28BFC6B61B5493DA00E45770 /* Frameworks */,
+				28BFC6B71B5493DA00E45770 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28BFC6BB1B5493DA00E45770 /* PBXTargetDependency */,
+			);
+			name = "Tool BoxTests";
+			productName = "Tool BoxTests";
+			productReference = 28BFC6B91B5493DA00E45770 /* Tool BoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		28E2A52C1B54B29700126C42 /* Tool Box WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28E2A5501B54B29700126C42 /* Build configuration list for PBXNativeTarget "Tool Box WatchKit Extension" */;
+			buildPhases = (
+				28E2A5291B54B29700126C42 /* Sources */,
+				28E2A52A1B54B29700126C42 /* Frameworks */,
+				28E2A52B1B54B29700126C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tool Box WatchKit Extension";
+			productName = "Tool Box WatchKit Extension";
+			productReference = 28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		28E2A53B1B54B29700126C42 /* Tool Box WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28E2A54F1B54B29700126C42 /* Build configuration list for PBXNativeTarget "Tool Box WatchKit App" */;
+			buildPhases = (
+				28E2A53A1B54B29700126C42 /* Resources */,
+				288027741B9C98FC002B9AE4 /* Embed App Extensions */,
+				9DBFBE2CBF47660A6EC6FEBF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2880276F1B9C98FC002B9AE4 /* PBXTargetDependency */,
+			);
+			name = "Tool Box WatchKit App";
+			productName = "Tool Box WatchKit App";
+			productReference = 28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28BFC6981B5493DA00E45770 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Yongyang Nie";
+				TargetAttributes = {
+					28BFC69F1B5493DA00E45770 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 8NZ8K5GNH8;
+					};
+					28BFC6B81B5493DA00E45770 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 28BFC69F1B5493DA00E45770;
+					};
+					28E2A52C1B54B29700126C42 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 8NZ8K5GNH8;
+					};
+					28E2A53B1B54B29700126C42 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 8NZ8K5GNH8;
+					};
+				};
+			};
+			buildConfigurationList = 28BFC69B1B5493DA00E45770 /* Build configuration list for PBXProject "Tool Box" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28BFC6971B5493DA00E45770;
+			productRefGroup = 28BFC6A11B5493DA00E45770 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28BFC69F1B5493DA00E45770 /* Tool Box */,
+				28BFC6B81B5493DA00E45770 /* Tool BoxTests */,
+				28E2A52C1B54B29700126C42 /* Tool Box WatchKit Extension */,
+				28E2A53B1B54B29700126C42 /* Tool Box WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28BFC69E1B5493DA00E45770 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E2A5691B54B5E700126C42 /* Media.xcassets in Resources */,
+				28BFC6AF1B5493DA00E45770 /* Main.storyboard in Resources */,
+				28E2A5561B54B2B900126C42 /* multiply-25.png in Resources */,
+				28BFC6B41B5493DA00E45770 /* LaunchScreen.xib in Resources */,
+				00D6DBD11BE6B53A00BDC277 /* left.png in Resources */,
+				28E2A5571B54B2B900126C42 /* timer-25.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28BFC6B71B5493DA00E45770 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E2A52B1B54B29700126C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E2A55F1B54B36200126C42 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E2A53A1B54B29700126C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E2A5451B54B29700126C42 /* Interface.storyboard in Resources */,
+				28E2A55D1B54B35600126C42 /* divide2-48.png in Resources */,
+				28E2A55C1B54B35600126C42 /* horizontal_line-48.png in Resources */,
+				28E2A5591B54B35000126C42 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64FB43CA2845996B6C93660E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2611E511F6D316FBD59C025 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8281B5F54D4445D618FBFA7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28BFC69C1B5493DA00E45770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28BFC6AC1B5493DA00E45770 /* ViewController.m in Sources */,
+				28BFC6A91B5493DA00E45770 /* AppDelegate.m in Sources */,
+				28BFC6A61B5493DA00E45770 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28BFC6B51B5493DA00E45770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28BFC6C01B5493DA00E45770 /* Tool_BoxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E2A5291B54B29700126C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E2A5371B54B29700126C42 /* NotificationController.m in Sources */,
+				28E2A5341B54B29700126C42 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2880276F1B9C98FC002B9AE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28E2A52C1B54B29700126C42 /* Tool Box WatchKit Extension */;
+			targetProxy = 2880276E1B9C98FC002B9AE4 /* PBXContainerItemProxy */;
+		};
+		288027721B9C98FC002B9AE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28E2A53B1B54B29700126C42 /* Tool Box WatchKit App */;
+			targetProxy = 288027711B9C98FC002B9AE4 /* PBXContainerItemProxy */;
+		};
+		28BFC6BB1B5493DA00E45770 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28BFC69F1B5493DA00E45770 /* Tool Box */;
+			targetProxy = 28BFC6BA1B5493DA00E45770 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28BFC6AD1B5493DA00E45770 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28BFC6AE1B5493DA00E45770 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28BFC6B31B5493DA00E45770 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		28E2A5431B54B29700126C42 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28E2A5441B54B29700126C42 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28BFC6C11B5493DA00E45770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28BFC6C21B5493DA00E45770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28BFC6C41B5493DA00E45770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E12D1843DE2D1060F33585E6 /* Pods-Tool Box.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Tool Box/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		28BFC6C51B5493DA00E45770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AEDFFBF4924332B0C2E89B9 /* Pods-Tool Box.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Tool Box/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		28BFC6C71B5493DA00E45770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tool BoxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tool Box.app/Tool Box";
+			};
+			name = Debug;
+		};
+		28BFC6C81B5493DA00E45770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tool BoxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tool Box.app/Tool Box";
+			};
+			name = Release;
+		};
+		28E2A54B1B54B29700126C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tool Box WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		28E2A54C1B54B29700126C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Tool Box WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		28E2A54D1B54B29700126C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Tool_Box_WatchKit_Extension;
+				INFOPLIST_FILE = "Tool Box WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		28E2A54E1B54B29700126C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IBSC_MODULE = Tool_Box_WatchKit_Extension;
+				INFOPLIST_FILE = "Tool Box WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28BFC69B1B5493DA00E45770 /* Build configuration list for PBXProject "Tool Box" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28BFC6C11B5493DA00E45770 /* Debug */,
+				28BFC6C21B5493DA00E45770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28BFC6C31B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Tool Box" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28BFC6C41B5493DA00E45770 /* Debug */,
+				28BFC6C51B5493DA00E45770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28BFC6C61B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Tool BoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28BFC6C71B5493DA00E45770 /* Debug */,
+				28BFC6C81B5493DA00E45770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28E2A54F1B54B29700126C42 /* Build configuration list for PBXNativeTarget "Tool Box WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E2A54D1B54B29700126C42 /* Debug */,
+				28E2A54E1B54B29700126C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28E2A5501B54B29700126C42 /* Build configuration list for PBXNativeTarget "Tool Box WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E2A54B1B54B29700126C42 /* Debug */,
+				28E2A54C1B54B29700126C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28BFC6981B5493DA00E45770 /* Project object */;
+}
