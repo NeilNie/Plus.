@@ -20,8 +20,6 @@
 
 @implementation ViewController
 
-
-
 #define kRemoveAdsProductIdentifier @"noads.toolbox"
 #define kRemoveAdsProductIdentifier2 @"donation.toobox"
 
@@ -83,7 +81,7 @@
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
     SKProduct *validProduct = nil;
-    int count = [response.products count];
+    NSUInteger count = [response.products count];
     if(count > 0){
         validProduct = [response.products objectAtIndex:0];
         NSLog(@"Products Available!");
@@ -153,6 +151,9 @@
                 }
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
+                
+            case SKPaymentTransactionStateDeferred:
+                break;
         }
     }
 }
@@ -196,7 +197,7 @@
     
     countnumber = countnumber + 1;
     timerdisplay.text = [NSString stringWithFormat:@"%i", countnumber];
-    if (countnumber == 60) {
+    if (countnumber == 100) {
         countnumber2 = countnumber2 + 1;
         countnumber = 0;
     }
@@ -206,7 +207,6 @@
     }
     timerdisplay3.text = [NSString stringWithFormat:@"%i", countnumber3];
     timerdisplay2.text = [NSString stringWithFormat:@"%i", countnumber2];
-    
 }
 -(IBAction)stop:(id)sender{
     
@@ -224,7 +224,6 @@
     timerdisplay2.text = [NSString stringWithFormat:@"00"];
     timerdisplay3.text = [NSString stringWithFormat:@"00"];
 }
-
 
 //
 //
@@ -484,8 +483,6 @@
     Method = 0;
     SelectNumber = 0;
     Screen.text = [NSString stringWithFormat:@"%f", RunningTotal];
-    
-    
 }
 
 
@@ -495,277 +492,20 @@
     RunningTotal = 0;
     SelectNumber = 0;
     Screen.text = [NSString stringWithFormat:@"0"];
-    
 }
-//
-//UnitConvert
-//
-//
-//
-/*
- 
- 
- 
- 
- */
 
 -(void)viewDidLoad {
     
     if(areAdsRemoved == YES){
-        self.adBanner.delegate = self;
-        self.adBanner2.delegate = self;
-        self.adBanner4.delegate = self;
-        self.adBanner.alpha = 0.0;
-        self.adBanner2.alpha = 0.0;
-        self.adBanner4.alpha = 0.0;
-        NSLog(@"No Ads");
-        
+        self.banner.hidden = YES;
     }else{
-        self.adBanner.delegate = self;
-        self.adBanner2.delegate = self;
-        self.adBanner4.delegate = self;
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1];
-        [self.adBanner setAlpha:1];
-        [self.adBanner2 setAlpha:1];
-        [self.adBanner4 setAlpha:1];
-        [UIView commitAnimations];
-        
+        self.banner.adUnitID = @"ca-app-pub-7942613644553368/9252365932";
+        self.banner.rootViewController = self;
+        [self.banner loadRequest:[GADRequest request]];
     }
-    size_t size;
-    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
-    char *machine = malloc(size);
-    sysctlbyname("hw.machine", machine, &size, NULL, 0);
-    NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
-    NSLog(@"iPhone Device %i",[self platformType:platform]);
-    int ScreenSize = [self platformType:platform];
-    free(machine);
-    if (ScreenSize < 650) {
-        self.adBanner.hidden = YES;
-        self.adBanner2.hidden = YES;
-        self.adBanner4.hidden = YES;
-    }
-    
-    NSArray *data1 = [[NSArray alloc] initWithObjects:@"kilometer", @"centimeter", @"inches", @"feet", nil];
-    self.DistanceUnitArray = data1;
-    NSArray *data2 = [[NSArray alloc] initWithObjects:@"fahrenheit", @"celsius", @"Kelvin", nil];
-    self.TemperatureArray = data2;
-    NSArray *data3 = [[NSArray alloc] initWithObjects:@"kilgrams", @"pounds", @"grams", @"ounce", nil];
-    self.MassUnitArray = data3;
-    NSArray *data4 = [[NSArray alloc] initWithObjects:@"gallon", @"quart", @"liter", @"pint", nil];
-    self.VolumeArray = data4;
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
-}
--(IBAction)Selection:(id)sender{
-    [self.UniPicker reloadAllComponents];
-}
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.UnitTextField1 resignFirstResponder];
-    [self.UnitTextField2 resignFirstResponder];
-}
-
-#pragma mark Picker Data Source Methods
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    
-    // This method returns the number of components we want in our Picker.
-    // The components are the colums.
-    return 2;
-    
-}
-#pragma mark Picker Delegate Methods
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    
-    // This method provides the data for a specific row in a specific component.
-    switch (self.UnitSelectorSegmentedControl.selectedSegmentIndex) {
-        case 0:
-            NSLog(@"Distance Unit Convert");
-            switch (component) {
-                case 0:
-                    return [_DistanceUnitArray objectAtIndex:row];
-                    break;
-                case 1:
-                    return [_DistanceUnitArray objectAtIndex:row];
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-            
-        case 1:
-            NSLog(@"Temperature Unit Convert");
-            switch (component) {
-                case 0:
-                    return [_TemperatureArray objectAtIndex:row];
-                    break;
-                case 1:
-                    return [_TemperatureArray objectAtIndex:row];
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-            
-        case 2:
-            NSLog(@"Mass Unit Convert");
-            switch (component) {
-                case 0:
-                    return [_MassUnitArray objectAtIndex:row];
-                    break;
-                case 1:
-                    return [_MassUnitArray objectAtIndex:row];
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-        case 3:
-            NSLog(@"Volume Unit Convert");
-            switch (component) {
-                case 0:
-                    return [_VolumeArray objectAtIndex:row];
-                    break;
-                case 1:
-                    return [_VolumeArray objectAtIndex:row];
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-            
-        default:
-            break;
-    }
-    
-    return 0;
-    
-}
-
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    
-    // This returns the number of rows in each component. We use the count of our array to determine the number of rows.
-    switch (self.UnitSelectorSegmentedControl.selectedSegmentIndex) {
-        case 0:
-            NSLog(@"Distance Unit Convert");
-            switch (component) {
-                case 0:
-                    return _DistanceUnitArray.count;
-                    break;
-                case 1:
-                    return _DistanceUnitArray.count;
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-            
-        case 1:
-            NSLog(@"Temperature Unit Convert");
-            switch (component) {
-                case 0:
-                    return _TemperatureArray.count;
-                    break;
-                case 1:
-                    return _TemperatureArray.count;
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-            
-        case 2:
-            NSLog(@"Mass Unit Convert");
-            switch (component) {
-                case 0:
-                    return _MassUnitArray.count;
-                    break;
-                case 1:
-                    return _MassUnitArray.count;
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-        case 3:
-            NSLog(@"Volume Unit Convert");
-            switch (component) {
-                case 0:
-                    return _VolumeArray.count;
-                    break;
-                case 1:
-                    return _VolumeArray.count;
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-            
-        default:
-            break;
-    }
-    
-    return 0;
-
-    
-}
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    
-    NSLog(@"%@ , %@", [_DistanceUnitArray objectAtIndex:[self.UniPicker selectedRowInComponent:0]], [_DistanceUnitArray objectAtIndex:[self.UniPicker selectedRowInComponent:1]]);
-}
-
-//
-//Return Hardware Enviroment.
-- (int)platformType:(NSString *)platform
-{
-    if ([platform isEqualToString:@"iPhone4,1"])    return 550;
-    if ([platform isEqualToString:@"iPhone5,1"])    return 670;
-    if ([platform isEqualToString:@"iPhone5,2"])    return 670;
-    if ([platform isEqualToString:@"iPhone5,3"])    return 670;
-    if ([platform isEqualToString:@"iPhone5,4"])    return 670;
-    if ([platform isEqualToString:@"iPhone6,1"])    return 670;
-    if ([platform isEqualToString:@"iPhone6,2"])    return 670;
-    if ([platform isEqualToString:@"iPhone7,2"])    return 700;
-    if ([platform isEqualToString:@"iPhone7,1"])    return 720;
-    if ([platform isEqualToString:@"iPod4,1"])      return 630;
-    if ([platform isEqualToString:@"iPod5,1"])      return 630;
-    if ([platform isEqualToString:@"iPad2,1"])      return 550;
-    if ([platform isEqualToString:@"iPad2,2"])      return 550;
-    if ([platform isEqualToString:@"iPad2,3"])      return 550;
-    if ([platform isEqualToString:@"iPad2,4"])      return 550;
-    if ([platform isEqualToString:@"iPad2,5"])      return 550;
-    if ([platform isEqualToString:@"iPad2,6"])      return 550;
-    if ([platform isEqualToString:@"iPad2,7"])      return 550;
-    if ([platform isEqualToString:@"iPad3,1"])      return 550;
-    if ([platform isEqualToString:@"iPad3,2"])      return 550;
-    if ([platform isEqualToString:@"iPad3,3"])      return 550;
-    if ([platform isEqualToString:@"iPad3,4"])      return 550;
-    if ([platform isEqualToString:@"iPad3,5"])      return 550;
-    if ([platform isEqualToString:@"iPad3,6"])      return 550;
-    if ([platform isEqualToString:@"iPad4,1"])      return 550;
-    if ([platform isEqualToString:@"iPad4,2"])      return 550;
-    if ([platform isEqualToString:@"iPad4,3"])      return 550;
-    if ([platform isEqualToString:@"iPad4,4"])      return 550;
-    if ([platform isEqualToString:@"iPad4,5"])      return 550;
-    if ([platform isEqualToString:@"iPad4,6"])      return 550;
-    if ([platform isEqualToString:@"iPad4,7"])      return 550;
-    if ([platform isEqualToString:@"iPad4,8"])      return 550;
-    if ([platform isEqualToString:@"iPad4,9"])      return 550;
-    if ([platform isEqualToString:@"iPad5,3"])      return 550;
-    if ([platform isEqualToString:@"iPad5,4"])      return 550;
-    if ([platform isEqualToString:@"i386"])         return 630;
-    if ([platform isEqualToString:@"x86_64"])       return 690;
-    
-    return 700;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

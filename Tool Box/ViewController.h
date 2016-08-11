@@ -11,6 +11,8 @@
 #import <StoreKit/StoreKit.h>
 #import <MessageUI/MessageUI.h>
 
+@import GoogleMobileAds;
+
 //Setting
 BOOL areAdsRemoved;
 //calc
@@ -28,7 +30,7 @@ int timercases;
 int timercases1;
 //Unit Convert
 
-@interface ViewController : UIViewController <ADBannerViewDelegate, MFMailComposeViewControllerDelegate, ADBannerViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, SKProductsRequestDelegate>
+@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate, ADBannerViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
 {
     //Calc
     IBOutlet UILabel *Screen;
@@ -39,7 +41,6 @@ int timercases1;
     IBOutlet UIButton *Start;
     NSTimer *timer;
     //Unit Convert
-
 }
 //Calc
 -(IBAction)Number1:(id)sender;
@@ -58,20 +59,11 @@ int timercases1;
 -(IBAction)Plus:(id)sender;
 -(IBAction)Equals:(id)sender;
 -(IBAction)AllClear:(id)sender;
-@property (strong, nonatomic) IBOutlet ADBannerView *adBanner;
 
 //Timer
 -(IBAction)start:(id)sender;
 -(IBAction)stop:(id)sender;
 -(IBAction)restart:(id)sender;
-@property (strong, nonatomic) IBOutlet ADBannerView *adBanner2;
-
-//UnitConvert
-@property (strong, nonatomic) IBOutlet UIPickerView *UniPicker;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *UnitSelectorSegmentedControl;
-@property (strong, nonatomic) IBOutlet UITextField *UnitTextField1;
-@property (strong, nonatomic) IBOutlet UITextField *UnitTextField2;
--(IBAction)Selection:(id)sender;
 
 //Setting
 -(IBAction)rate:(id)sender;
@@ -80,7 +72,7 @@ int timercases1;
 - (IBAction)tapsRemoveAdsButton;
 - (IBAction)tapsRemoveAdsButton2;
 -(IBAction)feedback:(id)sender;
-@property (strong, nonatomic) IBOutlet ADBannerView *adBanner4;
+@property (weak, nonatomic) IBOutlet GADBannerView *banner;
 
 @end
 

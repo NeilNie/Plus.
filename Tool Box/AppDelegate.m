@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "Localytics.h"
-#import <Parse/Parse.h>
 
+@import FirebaseAnalytics;
+@import Firebase;
 @interface AppDelegate ()
 
 @end
@@ -19,16 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Parse enableLocalDatastore];
-    
+    [FIRApp configure];
     // Initialize Parse.
-    [Parse setApplicationId:@"P8NO9YtMkacKAZ8kw5DeEss8hvOkJjM1UpS69zHn"
-                  clientKey:@"1j73ehNp3bYFpiOaooCizQlcAWJg0S8LYYmXq0WU"];
-    
-    // [Optional] Track statistics around application opens.
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    [Localytics autoIntegrate:@"3f05c8d7c2c519fddb59c0b-6b4ae560-6953-11e5-b2b6-00d0fea82624r" launchOptions:launchOptions];
-    
     return YES;
 }
 
