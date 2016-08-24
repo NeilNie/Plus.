@@ -30,7 +30,7 @@ int timercases;
 int timercases1;
 //Unit Convert
 
-@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate, ADBannerViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
+@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
 {
     //Calc
     IBOutlet UILabel *Screen;

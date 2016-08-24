@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00594D3A1D6A9BF300CB1DB4 /* circled_down_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */; };
 		006FB1A91D047CC300768D92 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FB1A81D047CC300768D92 /* NotificationCenter.framework */; };
 		006FB1AD1D047CC300768D92 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006FB1AC1D047CC300768D92 /* TodayViewController.m */; };
 		006FB1B01D047CC300768D92 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006FB1AE1D047CC300768D92 /* MainInterface.storyboard */; };
 		006FB1B41D047CC300768D92 /* Tool Box Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 006FB1A71D047CC300768D92 /* Tool Box Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = 007A7D441D6A03BE00871577 /* GeoPointCompass.m */; };
+		007A7D481D6A03CE00871577 /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 007A7D471D6A03CE00871577 /* CompassViewController.m */; };
+		007A7D4A1D6A043000871577 /* Compass_Rose-Black 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 007A7D491D6A043000871577 /* Compass_Rose-Black 3.png */; };
+		007A7D4C1D6A061E00871577 /* compass_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 007A7D4B1D6A061E00871577 /* compass_arrow.png */; };
 		008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */; };
 		00D6DBD11BE6B53A00BDC277 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D6DBD01BE6B53A00BDC277 /* left.png */; };
 		288027701B9C98FC002B9AE4 /* Tool Box WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -28,7 +33,6 @@
 		28E2A55C1B54B35600126C42 /* horizontal_line-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A55A1B54B35600126C42 /* horizontal_line-48.png */; };
 		28E2A55D1B54B35600126C42 /* divide2-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A55B1B54B35600126C42 /* divide2-48.png */; };
 		28E2A55F1B54B36200126C42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A55E1B54B36200126C42 /* Images.xcassets */; };
-		28E2A5611B54B38C00126C42 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5601B54B38C00126C42 /* StoreKit.framework */; };
 		28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5621B54B39000126C42 /* MessageUI.framework */; };
 		28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5641B54B39400126C42 /* UIKit.framework */; };
 		28E2A5691B54B5E700126C42 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5681B54B5E700126C42 /* Media.xcassets */; };
@@ -103,12 +107,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circled_down_filled.png; sourceTree = "<group>"; };
 		006FB1A71D047CC300768D92 /* Tool Box Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tool Box Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		006FB1A81D047CC300768D92 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		006FB1AB1D047CC300768D92 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		006FB1AC1D047CC300768D92 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		006FB1AF1D047CC300768D92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		006FB1B11D047CC300768D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		007A7D431D6A03BE00871577 /* GeoPointCompass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointCompass.h; sourceTree = "<group>"; };
+		007A7D441D6A03BE00871577 /* GeoPointCompass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointCompass.m; sourceTree = "<group>"; };
+		007A7D461D6A03CE00871577 /* CompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompassViewController.h; path = ../CompassViewController.h; sourceTree = "<group>"; };
+		007A7D471D6A03CE00871577 /* CompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompassViewController.m; path = ../CompassViewController.m; sourceTree = "<group>"; };
+		007A7D491D6A043000871577 /* Compass_Rose-Black 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Compass_Rose-Black 3.png"; sourceTree = "<group>"; };
+		007A7D4B1D6A061E00871577 /* compass_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_arrow.png; sourceTree = "<group>"; };
 		008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00D6DBD01BE6B53A00BDC277 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		1AEDFFBF4924332B0C2E89B9 /* Pods-Tool Box.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool Box.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,7 +149,6 @@
 		28E2A55A1B54B35600126C42 /* horizontal_line-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal_line-48.png"; sourceTree = "<group>"; };
 		28E2A55B1B54B35600126C42 /* divide2-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "divide2-48.png"; sourceTree = "<group>"; };
 		28E2A55E1B54B36200126C42 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		28E2A5601B54B38C00126C42 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		28E2A5621B54B39000126C42 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		28E2A5641B54B39400126C42 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28E2A5681B54B5E700126C42 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -161,7 +171,6 @@
 			files = (
 				28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */,
 				28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */,
-				28E2A5611B54B38C00126C42 /* StoreKit.framework in Frameworks */,
 				9F1FACAAC0FE91F848EDD915 /* libPods-Tool Box.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +199,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00594D3B1D6A9D5000CB1DB4 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				00D6DBD01BE6B53A00BDC277 /* left.png */,
+				28E2A5681B54B5E700126C42 /* Media.xcassets */,
+				007A7D4B1D6A061E00871577 /* compass_arrow.png */,
+				007A7D491D6A043000871577 /* Compass_Rose-Black 3.png */,
+				00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
+		00594D3C1D6A9D7000CB1DB4 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				28BFC6AD1B5493DA00E45770 /* Main.storyboard */,
+				28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		00594D3D1D6A9D7F00CB1DB4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				007A7D461D6A03CE00871577 /* CompassViewController.h */,
+				007A7D471D6A03CE00871577 /* CompassViewController.m */,
+				28BFC6AA1B5493DA00E45770 /* ViewController.h */,
+				28BFC6AB1B5493DA00E45770 /* ViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		00594D3E1D6A9D8900CB1DB4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				007A7D431D6A03BE00871577 /* GeoPointCompass.h */,
+				007A7D441D6A03BE00871577 /* GeoPointCompass.m */,
+				28BFC6A71B5493DA00E45770 /* AppDelegate.h */,
+				28BFC6A81B5493DA00E45770 /* AppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		006FB1AA1D047CC300768D92 /* Tool Box Widget */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +258,6 @@
 			children = (
 				28E2A5641B54B39400126C42 /* UIKit.framework */,
 				28E2A5621B54B39000126C42 /* MessageUI.framework */,
-				28E2A5601B54B38C00126C42 /* StoreKit.framework */,
 				28BFC6A21B5493DA00E45770 /* Tool Box */,
 				28BFC6BC1B5493DA00E45770 /* Tool BoxTests */,
 				28E2A52E1B54B29700126C42 /* Tool Box WatchKit Extension */,
@@ -233,13 +284,11 @@
 		28BFC6A21B5493DA00E45770 /* Tool Box */ = {
 			isa = PBXGroup;
 			children = (
-				28BFC6A71B5493DA00E45770 /* AppDelegate.h */,
-				28BFC6A81B5493DA00E45770 /* AppDelegate.m */,
-				28BFC6AA1B5493DA00E45770 /* ViewController.h */,
-				28BFC6AB1B5493DA00E45770 /* ViewController.m */,
-				28BFC6AD1B5493DA00E45770 /* Main.storyboard */,
-				28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */,
 				28BFC6A31B5493DA00E45770 /* Supporting Files */,
+				00594D3B1D6A9D5000CB1DB4 /* Media */,
+				00594D3C1D6A9D7000CB1DB4 /* Nibs */,
+				00594D3D1D6A9D7F00CB1DB4 /* ViewControllers */,
+				00594D3E1D6A9D8900CB1DB4 /* Classes */,
 			);
 			path = "Tool Box";
 			sourceTree = "<group>";
@@ -248,8 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */,
-				28E2A5681B54B5E700126C42 /* Media.xcassets */,
-				00D6DBD01BE6B53A00BDC277 /* left.png */,
 				28BFC6A41B5493DA00E45770 /* Info.plist */,
 				28BFC6A51B5493DA00E45770 /* main.m */,
 			);
@@ -499,7 +546,10 @@
 				28E2A5691B54B5E700126C42 /* Media.xcassets in Resources */,
 				28BFC6AF1B5493DA00E45770 /* Main.storyboard in Resources */,
 				28BFC6B41B5493DA00E45770 /* LaunchScreen.xib in Resources */,
+				007A7D4C1D6A061E00871577 /* compass_arrow.png in Resources */,
 				00D6DBD11BE6B53A00BDC277 /* left.png in Resources */,
+				007A7D4A1D6A043000871577 /* Compass_Rose-Black 3.png in Resources */,
+				00594D3A1D6A9BF300CB1DB4 /* circled_down_filled.png in Resources */,
 				008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,7 +645,9 @@
 			files = (
 				28BFC6AC1B5493DA00E45770 /* ViewController.m in Sources */,
 				28BFC6A91B5493DA00E45770 /* AppDelegate.m in Sources */,
+				007A7D481D6A03CE00871577 /* CompassViewController.m in Sources */,
 				28BFC6A61B5493DA00E45770 /* main.m in Sources */,
+				007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,7 +736,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "Tool Box Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.toobox.Tool-Box-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -698,7 +750,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Tool Box Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.toobox.Tool-Box-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -743,7 +795,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -781,7 +833,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -797,7 +849,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Tool Box/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -805,7 +857,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -817,7 +869,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Tool Box/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -825,7 +877,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

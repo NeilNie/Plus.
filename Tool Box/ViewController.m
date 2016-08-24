@@ -114,7 +114,7 @@
     NSLog(@"received restored transactions: %lu", (unsigned long)queue.transactions.count);
     for (SKPaymentTransaction *transaction in queue.transactions)
     {
-        if(transaction == SKPaymentTransactionStateRestored){
+        if(transaction.transactionState == SKPaymentTransactionStateRestored){
             NSLog(@"Transaction state -> Restored");
             //called when the user successfully restores a purchase
             [self doRemoveAds];
