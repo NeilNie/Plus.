@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 #import "GeoPointCompass.h"
 
-@interface CompassViewController : UIViewController <GeoPointCompassDelegate>
+@interface CompassViewController : UIViewController <GeoPointCompassDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *arrowImageView;
 
@@ -19,5 +21,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *location;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *height;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *width;
+
+//
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *vHeight;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface GeoPointCompass : NSObject <CLLocationManagerDelegate>
 
@@ -28,5 +29,6 @@
 
 -(void)GeoPointCompass:(GeoPointCompass *)compass didUpdateLocation:(CLLocation *)newLocation;
 -(void)GeoPointCompass:(GeoPointCompass *)compass didUpdateHeading:(CLHeading *)newHeading;
+-(void)GeoPointCompass:(GeoPointCompass *)compass didUpdateGeocoder:(NSString *)newCoder;
 
 @end

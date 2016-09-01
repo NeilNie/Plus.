@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N7c-Uq-lr0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N7c-Uq-lr0">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -801,7 +802,6 @@
                             <constraint firstItem="3pf-9D-g10" firstAttribute="top" secondItem="MTm-Ao-GRB" secondAttribute="bottom" constant="56" id="F42-5F-q4s"/>
                             <constraint firstItem="BFh-ch-SSb" firstAttribute="top" secondItem="a5v-rr-fgt" secondAttribute="bottom" constant="-3" id="Lox-Ht-InP"/>
                             <constraint firstItem="BFh-ch-SSb" firstAttribute="centerY" secondItem="3pf-9D-g10" secondAttribute="centerY" id="Ner-pu-xap"/>
-                            <constraint firstItem="2Bi-wm-LVx" firstAttribute="top" secondItem="JKs-OU-QUl" secondAttribute="bottom" constant="23" id="Qcg-Wl-Qbl"/>
                             <constraint firstItem="Fef-I0-PPE" firstAttribute="centerX" secondItem="t0L-un-RGB" secondAttribute="centerX" id="Scz-7C-qtH"/>
                             <constraint firstItem="YEq-YY-bD1" firstAttribute="centerX" secondItem="rKD-3I-RDq" secondAttribute="centerX" id="bBZ-aH-eSb"/>
                             <constraint firstItem="rKD-3I-RDq" firstAttribute="top" secondItem="2Bi-wm-LVx" secondAttribute="bottom" constant="25" id="bhI-mP-v8q"/>
@@ -846,10 +846,10 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9y3-42-OE6" kind="relationship" relationship="viewControllers" id="sNa-Al-dVN"/>
-                        <segue destination="yEz-n9-hPJ" kind="relationship" relationship="viewControllers" id="fXR-37-wqK"/>
-                        <segue destination="0ok-pI-gAy" kind="relationship" relationship="viewControllers" id="gEJ-8F-956"/>
-                        <segue destination="QAy-zb-HlD" kind="relationship" relationship="viewControllers" id="wDU-VH-Qch"/>
+                        <segue destination="yEz-n9-hPJ" kind="relationship" relationship="viewControllers" id="hh0-4a-rLW"/>
+                        <segue destination="9y3-42-OE6" kind="relationship" relationship="viewControllers" id="dsN-dg-fOw"/>
+                        <segue destination="pBR-dL-VDA" kind="relationship" relationship="viewControllers" id="nye-Sl-Keh"/>
+                        <segue destination="0ok-pI-gAy" kind="relationship" relationship="viewControllers" id="fVZ-0d-3rG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqh-iH-yYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -857,9 +857,28 @@
             <point key="canvasLocation" x="-70" y="1559"/>
         </scene>
         <!--Compass-->
+        <scene sceneID="RBn-dy-eGo">
+            <objects>
+                <viewController id="pBR-dL-VDA" customClass="MasterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gL7-tT-C1q"/>
+                        <viewControllerLayoutGuide type="bottom" id="C6m-C2-dMj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="up4-iT-me2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Compass" image="compass" selectedImage="compass" id="XWm-K5-c2a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pA0-OA-97h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="564"/>
+        </scene>
+        <!--Compass-->
         <scene sceneID="R7d-ux-Wn4">
             <objects>
-                <viewController id="QAy-zb-HlD" customClass="CompassViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="compassViewController" id="QAy-zb-HlD" customClass="CompassViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nVS-VP-oo4"/>
                         <viewControllerLayoutGuide type="bottom" id="qYn-1o-1bS"/>
@@ -868,16 +887,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Compass_Rose-Black 3.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZDM-uI-W8X">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compass_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="4y9-0e-zou">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="VFy-gu-Hd8"/>
-                                    <constraint firstAttribute="width" constant="350" id="ti8-0N-uab"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compass_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="4y9-0e-zou">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="ExM-hm-D2p"/>
-                                    <constraint firstAttribute="height" constant="250" id="qQd-dN-iTQ"/>
+                                    <constraint firstAttribute="width" constant="350" id="ExM-hm-D2p"/>
+                                    <constraint firstAttribute="height" constant="350" id="qQd-dN-iTQ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="359°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLx-dl-snt">
@@ -900,23 +913,27 @@
                                 <color key="textColor" red="1" green="0.50268310308456421" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Vk2-py-6gR">
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="m7U-Vr-TLM" firstAttribute="top" secondItem="GCX-wz-ScS" secondAttribute="bottom" constant="20" id="3Ok-uo-Mwc"/>
                             <constraint firstItem="vLx-dl-snt" firstAttribute="centerY" secondItem="4y9-0e-zou" secondAttribute="centerY" id="4tD-dX-luP"/>
-                            <constraint firstItem="ZDM-uI-W8X" firstAttribute="top" secondItem="nVS-VP-oo4" secondAttribute="bottom" constant="20" id="Aup-Xs-Jjj"/>
+                            <constraint firstItem="4y9-0e-zou" firstAttribute="centerX" secondItem="K4q-B6-tH9" secondAttribute="centerX" id="6fc-56-kAS"/>
                             <constraint firstItem="GCX-wz-ScS" firstAttribute="trailing" secondItem="K4q-B6-tH9" secondAttribute="trailingMargin" id="BQG-qD-dsN"/>
-                            <constraint firstItem="4y9-0e-zou" firstAttribute="centerX" secondItem="ZDM-uI-W8X" secondAttribute="centerX" id="F4W-2n-vwP"/>
-                            <constraint firstItem="qYn-1o-1bS" firstAttribute="top" secondItem="YvA-M7-Bew" secondAttribute="bottom" constant="55" id="OBC-y5-CC9"/>
+                            <constraint firstItem="qYn-1o-1bS" firstAttribute="top" secondItem="YvA-M7-Bew" secondAttribute="bottom" constant="8" id="OBC-y5-CC9"/>
+                            <constraint firstItem="Vk2-py-6gR" firstAttribute="centerX" secondItem="K4q-B6-tH9" secondAttribute="centerX" id="R7s-Oh-hZk"/>
                             <constraint firstItem="YvA-M7-Bew" firstAttribute="top" secondItem="m7U-Vr-TLM" secondAttribute="bottom" constant="20" id="RrM-4o-Wuc"/>
-                            <constraint firstItem="ZDM-uI-W8X" firstAttribute="centerX" secondItem="K4q-B6-tH9" secondAttribute="centerX" id="Xki-ia-yXM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YvA-M7-Bew" secondAttribute="trailing" id="cRE-ZR-2MR"/>
                             <constraint firstItem="vLx-dl-snt" firstAttribute="centerX" secondItem="4y9-0e-zou" secondAttribute="centerX" id="dhS-za-wYk"/>
                             <constraint firstItem="m7U-Vr-TLM" firstAttribute="trailing" secondItem="K4q-B6-tH9" secondAttribute="trailingMargin" id="fgP-Gd-0bG"/>
                             <constraint firstItem="YvA-M7-Bew" firstAttribute="leading" secondItem="K4q-B6-tH9" secondAttribute="leadingMargin" id="g5d-fO-RIz"/>
                             <constraint firstItem="GCX-wz-ScS" firstAttribute="leading" secondItem="K4q-B6-tH9" secondAttribute="leadingMargin" id="iTx-aY-5tV"/>
-                            <constraint firstItem="4y9-0e-zou" firstAttribute="centerY" secondItem="ZDM-uI-W8X" secondAttribute="centerY" id="jfx-FM-vsF"/>
+                            <constraint firstItem="qYn-1o-1bS" firstAttribute="top" secondItem="Vk2-py-6gR" secondAttribute="bottom" constant="-36" id="iXA-KQ-3LL"/>
+                            <constraint firstItem="4y9-0e-zou" firstAttribute="top" secondItem="nVS-VP-oo4" secondAttribute="bottom" constant="40" id="ozd-eN-biB"/>
                             <constraint firstItem="m7U-Vr-TLM" firstAttribute="leading" secondItem="K4q-B6-tH9" secondAttribute="leadingMargin" id="tMz-OF-zSD"/>
                         </constraints>
                     </view>
@@ -924,21 +941,21 @@
                     <connections>
                         <outlet property="arrowImageView" destination="4y9-0e-zou" id="8QN-YW-tV2"/>
                         <outlet property="degrees" destination="vLx-dl-snt" id="a7d-EK-KYh"/>
-                        <outlet property="height" destination="VFy-gu-Hd8" id="TJk-qP-nBa"/>
+                        <outlet property="height" destination="qQd-dN-iTQ" id="bRL-Ta-Io3"/>
                         <outlet property="latitude" destination="m7U-Vr-TLM" id="yjI-gH-AVh"/>
                         <outlet property="location" destination="GCX-wz-ScS" id="pLb-xK-0sl"/>
                         <outlet property="longtitude" destination="YvA-M7-Bew" id="EvK-f0-gXB"/>
-                        <outlet property="width" destination="ti8-0N-uab" id="Tc6-aR-Vcx"/>
+                        <outlet property="width" destination="ExM-hm-D2p" id="2mS-bW-LMR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmj-9w-wHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="557.27136431784118"/>
+            <point key="canvasLocation" x="1420" y="1228"/>
         </scene>
-        <!--View Controller-->
+        <!--Compass View Controller-->
         <scene sceneID="WYY-EV-Lm8">
             <objects>
-                <viewController storyboardIdentifier="idMapView" id="msr-BM-T2i" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapViewController" id="msr-BM-T2i" customClass="CompassViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WgX-9y-wmd"/>
                         <viewControllerLayoutGuide type="bottom" id="v6Y-Ob-fui"/>
@@ -947,7 +964,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IE2-dM-TCe"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IE2-dM-TCe">
+                                <connections>
+                                    <outlet property="delegate" destination="msr-BM-T2i" id="X5g-nQ-1iS"/>
+                                </connections>
+                            </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M47-tR-K1E">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amherst, MA, USA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEi-La-hkI">
@@ -970,21 +991,27 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="XaY-YZ-MYK">
+                                        <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.50268310308456421" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="R5y-Ty-KI5" firstAttribute="leading" secondItem="M47-tR-K1E" secondAttribute="leading" id="0dr-ds-lj9"/>
+                                    <constraint firstAttribute="bottom" secondItem="XaY-YZ-MYK" secondAttribute="bottom" id="0wU-4u-At4"/>
                                     <constraint firstItem="R5y-Ty-KI5" firstAttribute="top" secondItem="TEi-La-hkI" secondAttribute="bottom" constant="20" id="8Z1-da-KBk"/>
                                     <constraint firstItem="TEi-La-hkI" firstAttribute="leading" secondItem="M47-tR-K1E" secondAttribute="leading" id="HaH-4u-Qsf"/>
                                     <constraint firstAttribute="trailing" secondItem="JBR-dM-vSF" secondAttribute="trailing" constant="8" id="Iga-qL-3zt"/>
-                                    <constraint firstAttribute="height" constant="203" id="KXL-tu-1aK"/>
+                                    <constraint firstAttribute="height" constant="230" id="KXL-tu-1aK"/>
                                     <constraint firstAttribute="trailing" secondItem="PfC-Qw-zuX" secondAttribute="trailing" id="NW7-d3-5q3"/>
                                     <constraint firstItem="PfC-Qw-zuX" firstAttribute="top" secondItem="R5y-Ty-KI5" secondAttribute="bottom" constant="20" id="QJU-sm-dkl"/>
                                     <constraint firstItem="JBR-dM-vSF" firstAttribute="leading" secondItem="M47-tR-K1E" secondAttribute="leading" constant="8" id="dcP-7z-nfQ"/>
                                     <constraint firstItem="JBR-dM-vSF" firstAttribute="top" secondItem="PfC-Qw-zuX" secondAttribute="bottom" constant="20" id="hL1-pD-Cuf"/>
                                     <constraint firstItem="PfC-Qw-zuX" firstAttribute="leading" secondItem="M47-tR-K1E" secondAttribute="leading" id="sMU-Ce-3Lz"/>
                                     <constraint firstAttribute="trailing" secondItem="R5y-Ty-KI5" secondAttribute="trailing" id="tFj-Lc-ueA"/>
-                                    <constraint firstAttribute="bottom" secondItem="JBR-dM-vSF" secondAttribute="bottom" constant="8" id="wXI-MG-DOh"/>
+                                    <constraint firstItem="XaY-YZ-MYK" firstAttribute="centerX" secondItem="M47-tR-K1E" secondAttribute="centerX" id="v5P-xe-Im0"/>
+                                    <constraint firstAttribute="bottom" secondItem="JBR-dM-vSF" secondAttribute="bottom" constant="32" id="wXI-MG-DOh"/>
                                     <constraint firstAttribute="trailing" secondItem="TEi-La-hkI" secondAttribute="trailing" id="zab-3b-5CM"/>
                                 </constraints>
                             </view>
@@ -999,7 +1026,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="M47-tR-K1E" firstAttribute="top" secondItem="Huy-Xf-yD0" secondAttribute="bottom" constant="8" id="DID-Gh-Cg5"/>
-                            <constraint firstItem="v6Y-Ob-fui" firstAttribute="top" secondItem="M47-tR-K1E" secondAttribute="bottom" id="FYN-Py-VUv"/>
+                            <constraint firstItem="v6Y-Ob-fui" firstAttribute="top" secondItem="M47-tR-K1E" secondAttribute="bottom" constant="-37" id="FYN-Py-VUv"/>
                             <constraint firstItem="M47-tR-K1E" firstAttribute="leading" secondItem="1kX-4Z-RDk" secondAttribute="leading" id="Fjf-4c-uKE"/>
                             <constraint firstItem="Huy-Xf-yD0" firstAttribute="centerX" secondItem="M47-tR-K1E" secondAttribute="centerX" id="I86-mf-BRv"/>
                             <constraint firstItem="IE2-dM-TCe" firstAttribute="top" secondItem="1kX-4Z-RDk" secondAttribute="top" id="Lmi-Hv-1Ca"/>
@@ -1013,17 +1040,32 @@
                             <constraint firstAttribute="trailing" secondItem="M47-tR-K1E" secondAttribute="trailing" id="xE7-xP-O63"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="M47-tR-K1E" id="2r5-Lf-d3g"/>
+                        <outlet property="degrees" destination="JBR-dM-vSF" id="glg-jB-vQg"/>
+                        <outlet property="latitude" destination="R5y-Ty-KI5" id="lV3-TF-FSv"/>
+                        <outlet property="location" destination="TEi-La-hkI" id="aNN-Pd-5XF"/>
+                        <outlet property="longtitude" destination="PfC-Qw-zuX" id="We0-fP-kt3"/>
+                        <outlet property="mapView" destination="IE2-dM-TCe" id="6bB-5w-5IK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIX-CO-gg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421.5" y="556.5"/>
+            <point key="canvasLocation" x="1420" y="556.37181409295351"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="P9T-q5-vMe">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="QyT-wb-9BM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Eu-O0-bzu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2092" y="557"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Compass_Rose-Black 3.png" width="1312" height="1312"/>
         <image name="circled_down_filled.png" width="84" height="84"/>
         <image name="compass" width="28" height="28"/>
-        <image name="compass_arrow.png" width="1000" height="1000"/>
+        <image name="compass_1.png" width="854" height="854"/>
         <image name="multiply" width="28" height="28"/>
         <image name="timer" width="28" height="28"/>
     </resources>

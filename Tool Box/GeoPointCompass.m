@@ -69,6 +69,18 @@ float angle;
     [delegate GeoPointCompass:self didUpdateLocation:newLocation];
     
     angle = [self calculateAngle:newLocation];
+    
+    CLGeocoder *reverseGeocoder = [[CLGeocoder alloc] init];
+    
+    [reverseGeocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        // NSLog(@"Received placemarks: %@", placemarks);
+        
+        CLPlacemark *myPlacemark = [placemarks objectAtIndex:0];
+        NSString *countryCode = myPlacemark.ISOcountryCode;
+        NSString *countryName = myPlacemark.country;
+        NSString *cityName= myPlacemark.subAdministrativeArea;
+        NSLog(@"My country code: %@ and countryName: %@ MyCity: %@", countryCode, countryName, cityName);
+    }];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
