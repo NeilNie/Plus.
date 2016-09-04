@@ -917,18 +917,27 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9TM-m9-mVg" customClass="GADBannerView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mxa-Nj-mXi"/>
+                                    <constraint firstAttribute="width" constant="320" id="Xw4-q9-o61"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="m7U-Vr-TLM" firstAttribute="top" secondItem="GCX-wz-ScS" secondAttribute="bottom" constant="20" id="3Ok-uo-Mwc"/>
                             <constraint firstItem="vLx-dl-snt" firstAttribute="centerY" secondItem="4y9-0e-zou" secondAttribute="centerY" id="4tD-dX-luP"/>
                             <constraint firstItem="4y9-0e-zou" firstAttribute="centerX" secondItem="K4q-B6-tH9" secondAttribute="centerX" id="6fc-56-kAS"/>
+                            <constraint firstItem="9TM-m9-mVg" firstAttribute="centerX" secondItem="K4q-B6-tH9" secondAttribute="centerX" id="6id-oX-cqx"/>
                             <constraint firstItem="GCX-wz-ScS" firstAttribute="trailing" secondItem="K4q-B6-tH9" secondAttribute="trailingMargin" id="BQG-qD-dsN"/>
                             <constraint firstItem="qYn-1o-1bS" firstAttribute="top" secondItem="YvA-M7-Bew" secondAttribute="bottom" constant="8" id="OBC-y5-CC9"/>
                             <constraint firstItem="Vk2-py-6gR" firstAttribute="centerX" secondItem="K4q-B6-tH9" secondAttribute="centerX" id="R7s-Oh-hZk"/>
                             <constraint firstItem="YvA-M7-Bew" firstAttribute="top" secondItem="m7U-Vr-TLM" secondAttribute="bottom" constant="20" id="RrM-4o-Wuc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YvA-M7-Bew" secondAttribute="trailing" id="cRE-ZR-2MR"/>
                             <constraint firstItem="vLx-dl-snt" firstAttribute="centerX" secondItem="4y9-0e-zou" secondAttribute="centerX" id="dhS-za-wYk"/>
+                            <constraint firstItem="9TM-m9-mVg" firstAttribute="top" secondItem="K4q-B6-tH9" secondAttribute="topMargin" id="eTJ-dq-Ktl"/>
                             <constraint firstItem="m7U-Vr-TLM" firstAttribute="trailing" secondItem="K4q-B6-tH9" secondAttribute="trailingMargin" id="fgP-Gd-0bG"/>
                             <constraint firstItem="YvA-M7-Bew" firstAttribute="leading" secondItem="K4q-B6-tH9" secondAttribute="leadingMargin" id="g5d-fO-RIz"/>
                             <constraint firstItem="GCX-wz-ScS" firstAttribute="leading" secondItem="K4q-B6-tH9" secondAttribute="leadingMargin" id="iTx-aY-5tV"/>
@@ -940,6 +949,7 @@
                     <tabBarItem key="tabBarItem" title="Compass" image="compass" selectedImage="compass" id="uqH-PX-WZ7"/>
                     <connections>
                         <outlet property="arrowImageView" destination="4y9-0e-zou" id="8QN-YW-tV2"/>
+                        <outlet property="banner" destination="9TM-m9-mVg" id="9YY-hL-R7w"/>
                         <outlet property="degrees" destination="vLx-dl-snt" id="a7d-EK-KYh"/>
                         <outlet property="height" destination="qQd-dN-iTQ" id="bRL-Ta-Io3"/>
                         <outlet property="latitude" destination="m7U-Vr-TLM" id="yjI-gH-AVh"/>
@@ -1022,15 +1032,24 @@
                                 </constraints>
                                 <state key="normal" image="circled_down_filled.png"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzI-s2-i3D" customClass="GADBannerView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mUv-3i-HCz"/>
+                                    <constraint firstAttribute="width" constant="320" id="rrd-5h-7XZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lzI-s2-i3D" firstAttribute="top" secondItem="WgX-9y-wmd" secondAttribute="bottom" constant="-20" id="0L8-ce-bc4"/>
                             <constraint firstItem="M47-tR-K1E" firstAttribute="top" secondItem="Huy-Xf-yD0" secondAttribute="bottom" constant="8" id="DID-Gh-Cg5"/>
                             <constraint firstItem="v6Y-Ob-fui" firstAttribute="top" secondItem="M47-tR-K1E" secondAttribute="bottom" constant="-37" id="FYN-Py-VUv"/>
                             <constraint firstItem="M47-tR-K1E" firstAttribute="leading" secondItem="1kX-4Z-RDk" secondAttribute="leading" id="Fjf-4c-uKE"/>
                             <constraint firstItem="Huy-Xf-yD0" firstAttribute="centerX" secondItem="M47-tR-K1E" secondAttribute="centerX" id="I86-mf-BRv"/>
                             <constraint firstItem="IE2-dM-TCe" firstAttribute="top" secondItem="1kX-4Z-RDk" secondAttribute="top" id="Lmi-Hv-1Ca"/>
                             <constraint firstItem="IE2-dM-TCe" firstAttribute="leading" secondItem="1kX-4Z-RDk" secondAttribute="leading" id="Oxn-36-eFE"/>
+                            <constraint firstItem="lzI-s2-i3D" firstAttribute="centerX" secondItem="1kX-4Z-RDk" secondAttribute="centerX" id="Qzg-7r-TMX"/>
                             <constraint firstItem="IE2-dM-TCe" firstAttribute="leading" secondItem="1kX-4Z-RDk" secondAttribute="leading" id="TWz-9U-Iab"/>
                             <constraint firstAttribute="trailing" secondItem="IE2-dM-TCe" secondAttribute="trailing" id="WIB-N2-6vO"/>
                             <constraint firstItem="v6Y-Ob-fui" firstAttribute="top" secondItem="IE2-dM-TCe" secondAttribute="bottom" id="flv-qg-kBy"/>
@@ -1041,6 +1060,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="banner" destination="lzI-s2-i3D" id="VT6-q9-Qmk"/>
                         <outlet property="contentView" destination="M47-tR-K1E" id="2r5-Lf-d3g"/>
                         <outlet property="degrees" destination="JBR-dM-vSF" id="glg-jB-vQg"/>
                         <outlet property="latitude" destination="R5y-Ty-KI5" id="lV3-TF-FSv"/>

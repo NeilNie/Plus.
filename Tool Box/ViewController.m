@@ -499,7 +499,7 @@
     if(areAdsRemoved == YES){
         self.banner.hidden = YES;
     }else{
-        self.banner.adUnitID = @"ca-app-pub-7942613644553368/9252365932";
+        self.banner.adUnitID = @"ca-app-pub-7942613644553368/1714159132";
         self.banner.rootViewController = self;
         [self.banner loadRequest:[GADRequest request]];
     }

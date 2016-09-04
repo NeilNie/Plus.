@@ -10,6 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "GeoPointCompass.h"
+#import "ViewController.h"
+
+@import GoogleMobileAds;
 
 @interface CompassViewController : UIViewController <GeoPointCompassDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
 
@@ -27,5 +30,8 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+
+//
+@property (weak, nonatomic) IBOutlet GADBannerView *banner;
 
 @end
