@@ -286,7 +286,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		2588EA364419D831347938453F4F6DE5 /* Debug */ = {
+		0708A3A25C30E55DEC279E64209E72FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF4CD4FCD01337E3059F0B700E912677 /* Pods-Tool Box.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		46EE69AF77A148AF92860F097B5698B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -328,28 +349,7 @@
 			};
 			name = Debug;
 		};
-		3520138F91FBDF9EF55C360DF5372680 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF4CD4FCD01337E3059F0B700E912677 /* Pods-Tool Box.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		61AD4929AC3440F8BFA0595E8DCD90C8 /* Release */ = {
+		7A156876A8824526ED495550DF098FA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -387,7 +387,7 @@
 			};
 			name = Release;
 		};
-		D5B0DA2F517086B21CF56B300F87CC74 /* Release */ = {
+		EE3C7F657B93D01D80751DB18CBCA529 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B35C5B9CE2C3FA1DA002769703E96F38 /* Pods-Tool Box.release.xcconfig */;
 			buildSettings = {
@@ -395,7 +395,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -414,8 +414,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2588EA364419D831347938453F4F6DE5 /* Debug */,
-				61AD4929AC3440F8BFA0595E8DCD90C8 /* Release */,
+				46EE69AF77A148AF92860F097B5698B1 /* Debug */,
+				7A156876A8824526ED495550DF098FA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -423,8 +423,8 @@
 		A291B1CCAB0D76D6674081F3D5A6A041 /* Build configuration list for PBXNativeTarget "Pods-Tool Box" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3520138F91FBDF9EF55C360DF5372680 /* Debug */,
-				D5B0DA2F517086B21CF56B300F87CC74 /* Release */,
+				0708A3A25C30E55DEC279E64209E72FC /* Debug */,
+				EE3C7F657B93D01D80751DB18CBCA529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

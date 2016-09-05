@@ -283,7 +283,7 @@
     
     [super viewDidLoad];
     
-    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
+    //self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -303,14 +303,14 @@
     completionHandler(NCUpdateResultNewData);
 }
 
--(void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize{
-    
-    if (activeDisplayMode == NCWidgetDisplayModeCompact) {
-        self.preferredContentSize = CGSizeMake(0, 360);
-    }else{
-        self.preferredContentSize = CGSizeMake(0, 360);
-    }
-}
+//-(void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize{
+//    
+//    if (activeDisplayMode == NCWidgetDisplayModeCompact) {
+//        self.preferredContentSize = CGSizeMake(0, 360);
+//    }else{
+//        self.preferredContentSize = CGSizeMake(0, 360);
+//    }
+//}
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)margins
 {
