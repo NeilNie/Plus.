@@ -20,6 +20,8 @@
 		008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */; };
 		00B58A1B1D6E935E00B7870E /* compass_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B58A1A1D6E935E00B7870E /* compass_1.png */; };
 		00D6DBD11BE6B53A00BDC277 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D6DBD01BE6B53A00BDC277 /* left.png */; };
+		284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284737541D85B9CE00B56DB0 /* CalculatorViewController.m */; };
+		284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284737561D85BA0E00B56DB0 /* Speech.framework */; };
 		288027701B9C98FC002B9AE4 /* Tool Box WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		288027731B9C98FC002B9AE4 /* Tool Box WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */; };
 		28BFC6A61B5493DA00E45770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6A51B5493DA00E45770 /* main.m */; };
@@ -128,6 +130,9 @@
 		00B58A1A1D6E935E00B7870E /* compass_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_1.png; sourceTree = "<group>"; };
 		00D6DBD01BE6B53A00BDC277 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		1AEDFFBF4924332B0C2E89B9 /* Pods-Tool Box.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool Box.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box.release.xcconfig"; sourceTree = "<group>"; };
+		284737531D85B9CE00B56DB0 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		284737541D85B9CE00B56DB0 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		284737561D85BA0E00B56DB0 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		28BFC6A01B5493DA00E45770 /* Tool Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tool Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BFC6A41B5493DA00E45770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28BFC6A51B5493DA00E45770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -174,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */,
 				28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */,
 				28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */,
 				9F1FACAAC0FE91F848EDD915 /* libPods-Tool Box.a in Frameworks */,
@@ -235,6 +241,8 @@
 				007A7D471D6A03CE00871577 /* CompassViewController.m */,
 				28BFC6AA1B5493DA00E45770 /* ViewController.h */,
 				28BFC6AB1B5493DA00E45770 /* ViewController.m */,
+				284737531D85B9CE00B56DB0 /* CalculatorViewController.h */,
+				284737541D85B9CE00B56DB0 /* CalculatorViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -373,6 +381,7 @@
 		7D9B626185536093D39BCFD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				284737561D85BA0E00B56DB0 /* Speech.framework */,
 				BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */,
 				006FB1A81D047CC300768D92 /* NotificationCenter.framework */,
 			);
@@ -654,6 +663,7 @@
 			files = (
 				28BFC6AC1B5493DA00E45770 /* ViewController.m in Sources */,
 				28BFC6A91B5493DA00E45770 /* AppDelegate.m in Sources */,
+				284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */,
 				007A7D481D6A03CE00871577 /* CompassViewController.m in Sources */,
 				28BFC6A61B5493DA00E45770 /* main.m in Sources */,
 				005FD1A61D7116C5006225C0 /* MasterViewController.m in Sources */,
@@ -746,7 +756,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "Tool Box Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.toobox.Tool-Box-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -760,7 +770,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Tool Box Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.toobox.Tool-Box-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -805,7 +815,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -843,7 +853,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -860,7 +870,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Tool Box/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -881,7 +891,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Tool Box/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

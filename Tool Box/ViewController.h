@@ -15,13 +15,7 @@
 
 //Setting
 BOOL areAdsRemoved;
-//calc
-int Method;
-int SelectNumber;
-float RunningTotal;
-int cases;
-int cases1;
-int cases2;
+
 //Timer
 int countnumber;
 int countnumber2;
@@ -32,33 +26,13 @@ int timercases1;
 
 @interface ViewController : UIViewController <MFMailComposeViewControllerDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
 {
-    //Calc
-    IBOutlet UILabel *Screen;
     //Timer
     IBOutlet UILabel *timerdisplay;
     IBOutlet UILabel *timerdisplay2;
     IBOutlet UILabel *timerdisplay3;
     IBOutlet UIButton *Start;
     NSTimer *timer;
-    //Unit Convert
 }
-//Calc
--(IBAction)Number1:(id)sender;
--(IBAction)Number2:(id)sender;
--(IBAction)Number3:(id)sender;
--(IBAction)Number4:(id)sender;
--(IBAction)Number5:(id)sender;
--(IBAction)Number6:(id)sender;
--(IBAction)Number7:(id)sender;
--(IBAction)Number8:(id)sender;
--(IBAction)Number9:(id)sender;
--(IBAction)Number0:(id)sender;
--(IBAction)Times:(id)sender;
--(IBAction)Divide:(id)sender;
--(IBAction)Subtract:(id)sender;
--(IBAction)Plus:(id)sender;
--(IBAction)Equals:(id)sender;
--(IBAction)AllClear:(id)sender;
 
 //Timer
 -(IBAction)start:(id)sender;
