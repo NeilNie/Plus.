@@ -21,7 +21,16 @@
     
     //Calc
     IBOutlet UILabel *Screen;
+    
+    SFSpeechRecognizer *speech;
+    
+    SFSpeechAudioBufferRecognitionRequest *recognitionRequest;
+    SFSpeechRecognitionTask *recognitionTask;
+    AVAudioEngine *const audioEngine;
 }
+
+@property (weak, nonatomic) IBOutlet UIButton *speechButton;
+@property (weak, nonatomic) IBOutlet UILabel *speechResult;
 
 //Calc
 -(IBAction)Number1:(id)sender;

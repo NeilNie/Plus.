@@ -14,6 +14,8 @@
 
 @implementation CalculatorViewController
 
+#pragma mark Calculator Methods
+
 -(IBAction)Number1:(id)sender{
     
     SelectNumber = SelectNumber * 10;
@@ -275,7 +277,101 @@
     Screen.text = [NSString stringWithFormat:@"0"];
 }
 
+#pragma mark - Speech Recognition Methods
+
+-(void)startRecording{
+    
+    if (recognitionTask != nil) {
+        [recognitionTask cancel];
+        recognitionTask = nil;
+    }
+    
+    NSError *error = nil;
+    
+    AVAudioSession *audioSession = [AVAudioSession new];
+    [audioSession setCategory:AVAudioSessionCategoryRecord error:&error];
+    [audioSession setMode:AVAudioSessionModeMeasurement error:&error];
+    [audioSession setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&error];
+    
+    recognitionRequest = [SFSpeechAudioBufferRecognitionRequest new];
+    
+    AVAudioInputNode *inputNode = audioEngine.inputNode;
+    
+    recognitionRequest.shouldReportPartialResults = YES;
+    
+    recognitionTask = [speech recognitionTaskWithRequest:recognitionRequest resultHandler:^(SFSpeechRecognitionResult * _Nullable result, NSError * _Nullable error) {
+        
+        BOOL isFinal = NO;
+        
+        if (result != nil) {
+            self.speechResult.text = result.bestTranscription.formattedString;
+            isFinal = result.isFinal;
+        }
+        
+        if (error != nil || isFinal) {
+            [audioEngine stop];
+            [inputNode removeTapOnBus:0];
+            
+            recognitionRequest = nil;
+            recognitionTask = nil;
+            
+            self.speechButton.enabled = YES;
+        }
+    }];
+    
+    AVAudioFormat *recordingFormate = [inputNode outputFormatForBus:0];
+    [inputNode installTapOnBus:0 bufferSize:1024 format:recordingFormate block:^(AVAudioPCMBuffer * _Nonnull buffer, AVAudioTime * _Nonnull when) {
+        [recognitionRequest appendAudioPCMBuffer:buffer];
+    }];
+    
+    [audioEngine prepare];
+    
+    [audioEngine startAndReturnError:&error];
+    
+    self.speechResult.text = @"Say Something, I'm listening";
+}
+
+-(void)setUpSpeechRecognition{
+    
+    speech = [[SFSpeechRecognizer alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"en-US"]];
+    
+    self.speechButton.enabled = NO;
+    
+    speech.delegate = self;
+    
+    static BOOL enabled;
+    
+    [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
+        
+        switch (status) {
+            case SFSpeechRecognizerAuthorizationStatusDenied:
+                enabled = NO;
+                break;
+            case SFSpeechRecognizerAuthorizationStatusNotDetermined:
+                enabled = NO;
+                break;
+            case SFSpeechRecognizerAuthorizationStatusAuthorized:
+                enabled = YES;
+                break;
+            case SFSpeechRecognizerAuthorizationStatusRestricted:
+                enabled = NO;
+                break;
+                
+            default:
+                break;
+        }
+    }];
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        self.speechButton.enabled = enabled;
+    }];
+}
+
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
+    
+    [self setUpSpeechRecognition];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
