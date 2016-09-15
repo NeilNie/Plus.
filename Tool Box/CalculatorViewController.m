@@ -279,6 +279,30 @@
 
 #pragma mark - Speech Recognition Methods
 
+-(void)speechRecognizer:(SFSpeechRecognizer *)speechRecognizer availabilityDidChange:(BOOL)available{
+    
+    if (available) {
+        self.speechButton.enabled = YES;
+    }else{
+        self.speechButton.enabled = NO;
+    }
+}
+
+#pragma mark - IBActions
+
+-(IBAction)microphoneTapped:(id)sender{
+    
+    if (audioEngine.isRunning) {
+        [audioEngine stop];
+        [recognitionRequest endAudio];
+        self.speechButton.enabled = NO;
+    }else{
+        [self startRecording];
+    }
+}
+
+#pragma mark - Private
+
 -(void)startRecording{
     
     if (recognitionTask != nil) {
@@ -288,7 +312,8 @@
     
     NSError *error = nil;
     
-    AVAudioSession *audioSession = [AVAudioSession new];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    
     [audioSession setCategory:AVAudioSessionCategoryRecord error:&error];
     [audioSession setMode:AVAudioSessionModeMeasurement error:&error];
     [audioSession setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&error];
@@ -326,12 +351,14 @@
     
     [audioEngine prepare];
     
-    [audioEngine startAndReturnError:&error];
+    [audioEngine startAndReturnError:nil];
     
     self.speechResult.text = @"Say Something, I'm listening";
 }
 
 -(void)setUpSpeechRecognition{
+    
+    audioEngine = [[AVAudioEngine alloc] init];
     
     speech = [[SFSpeechRecognizer alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"en-US"]];
     
@@ -348,7 +375,7 @@
                 enabled = NO;
                 break;
             case SFSpeechRecognizerAuthorizationStatusNotDetermined:
-                enabled = NO;
+                enabled = YES;
                 break;
             case SFSpeechRecognizerAuthorizationStatusAuthorized:
                 enabled = YES;
@@ -362,9 +389,36 @@
         }
     }];
     
+    switch ([[AVAudioSession sharedInstance] recordPermission]) {
+        case AVAudioSessionRecordPermissionGranted:
+            
+            break;
+        case AVAudioSessionRecordPermissionDenied:
+            [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+                if (granted) {
+                    NSLog(@"premission granted");
+                }else{
+                    enabled = NO;
+                }
+            }];
+            break;
+        case AVAudioSessionRecordPermissionUndetermined:
+            [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+                if (granted) {
+                    NSLog(@"premission granted");
+                }else{
+                    enabled = NO;
+                }
+            }];
+            break;
+        default:
+            break;
+    }
+    
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         self.speechButton.enabled = enabled;
     }];
+    
 }
 
 #pragma mark - Life Cycle
@@ -372,6 +426,16 @@
 - (void)viewDidLoad {
     
     [self setUpSpeechRecognition];
+    
+    SpeechParser *parse = [[SpeechParser alloc] initWithText:@"what is 10+2+3+4"];
+    [parse parseEquation];
+    [parse parseNumbersOperators:^(BOOL success, NSString *error) {
+        
+        if (!success) {
+            NSLog(@"%@", error);
+        }
+    }];
+    NSLog(@"equations: %@", parse.equation);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

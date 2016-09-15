@@ -24,6 +24,8 @@
 		284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284737561D85BA0E00B56DB0 /* Speech.framework */; };
 		288027701B9C98FC002B9AE4 /* Tool Box WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		288027731B9C98FC002B9AE4 /* Tool Box WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */; };
+		289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 289FC80E1D86336800D3BDAF /* SpeechParser.m */; };
+		28BE24C21D88DF230065D520 /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BE24C11D88DF230065D520 /* microphone.png */; };
 		28BFC6A61B5493DA00E45770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6A51B5493DA00E45770 /* main.m */; };
 		28BFC6A91B5493DA00E45770 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6A81B5493DA00E45770 /* AppDelegate.m */; };
 		28BFC6AC1B5493DA00E45770 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6AB1B5493DA00E45770 /* ViewController.m */; };
@@ -133,6 +135,9 @@
 		284737531D85B9CE00B56DB0 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		284737541D85B9CE00B56DB0 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		284737561D85BA0E00B56DB0 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		289FC80D1D86336800D3BDAF /* SpeechParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechParser.h; sourceTree = "<group>"; };
+		289FC80E1D86336800D3BDAF /* SpeechParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechParser.m; sourceTree = "<group>"; };
+		28BE24C11D88DF230065D520 /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphone.png; sourceTree = "<group>"; };
 		28BFC6A01B5493DA00E45770 /* Tool Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tool Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BFC6A41B5493DA00E45770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28BFC6A51B5493DA00E45770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -213,6 +218,7 @@
 		00594D3B1D6A9D5000CB1DB4 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				28BE24C11D88DF230065D520 /* microphone.png */,
 				00B58A1A1D6E935E00B7870E /* compass_1.png */,
 				00D6DBD01BE6B53A00BDC277 /* left.png */,
 				28E2A5681B54B5E700126C42 /* Media.xcassets */,
@@ -250,6 +256,8 @@
 		00594D3E1D6A9D8900CB1DB4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				289FC80D1D86336800D3BDAF /* SpeechParser.h */,
+				289FC80E1D86336800D3BDAF /* SpeechParser.m */,
 				007A7D431D6A03BE00871577 /* GeoPointCompass.h */,
 				007A7D441D6A03BE00871577 /* GeoPointCompass.m */,
 				28BFC6A71B5493DA00E45770 /* AppDelegate.h */,
@@ -569,6 +577,7 @@
 				007A7D4A1D6A043000871577 /* Compass_Rose-Black 3.png in Resources */,
 				00594D3A1D6A9BF300CB1DB4 /* circled_down_filled.png in Resources */,
 				008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */,
+				28BE24C21D88DF230065D520 /* microphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +676,7 @@
 				007A7D481D6A03CE00871577 /* CompassViewController.m in Sources */,
 				28BFC6A61B5493DA00E45770 /* main.m in Sources */,
 				005FD1A61D7116C5006225C0 /* MasterViewController.m in Sources */,
+				289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */,
 				007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

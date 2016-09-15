@@ -640,6 +640,21 @@
                                     <constraint firstAttribute="height" constant="50" id="RGV-jX-qiO"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMA-6P-lXc">
+                                <frame key="frameInset" minX="137" minY="460" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="microphone.png"/>
+                                <connections>
+                                    <action selector="microphoneTapped:" destination="yEz-n9-hPJ" eventType="touchUpInside" id="hFV-TH-WIm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZk-zg-zAx">
+                                <frame key="frameInset" minX="38" minY="432" width="310" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -684,11 +699,13 @@
                     <tabBarItem key="tabBarItem" title="Calculator" image="multiply" selectedImage="multiply" id="w5F-Jo-PdV"/>
                     <connections>
                         <outlet property="Screen" destination="Xqs-Lh-eXL" id="ICi-Vk-BtU"/>
+                        <outlet property="speechButton" destination="TMA-6P-lXc" id="9i0-Ex-Y99"/>
+                        <outlet property="speechResult" destination="NZk-zg-zAx" id="UBT-8t-peR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pu9-Xk-Mfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="753" y="1889"/>
+            <point key="canvasLocation" x="752.79999999999995" y="1888.6056971514245"/>
         </scene>
         <!--timer-->
         <scene sceneID="Ahe-pX-T2R">
@@ -1085,7 +1102,8 @@
         <image name="circled_down_filled.png" width="84" height="84"/>
         <image name="compass" width="28" height="28"/>
         <image name="compass_1.png" width="854" height="854"/>
-        <image name="multiply" width="28" height="28"/>
+        <image name="microphone.png" width="1024" height="1024"/>
+        <image name="multiply" width="32" height="32"/>
         <image name="timer" width="28" height="28"/>
     </resources>
 </document>

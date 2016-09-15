@@ -6,6 +6,7 @@
 //
 //
 
+#import "SpeechParser.h"
 #import <UIKit/UIKit.h>
 #import <Speech/Speech.h>
 
@@ -26,7 +27,7 @@
     
     SFSpeechAudioBufferRecognitionRequest *recognitionRequest;
     SFSpeechRecognitionTask *recognitionTask;
-    AVAudioEngine *const audioEngine;
+    AVAudioEngine *audioEngine;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *speechButton;

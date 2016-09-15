@@ -28,7 +28,7 @@
 
 - (CompassViewController *)viewControllerAtIndex:(NSUInteger)index
 {
-    CompassViewController *compassViewController = [[CompassViewController alloc] init];
+    CompassViewController *compassViewController;
     if (index == 0) {
         // Create a new view controller and pass suitable data.
         compassViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"compassViewController"];
