@@ -19,11 +19,41 @@
     return self;
 }
 
--(NSString *)calculate{
+-(void)calculate{
     
-    NSString *number;
+    float sum = 0.0;
     
-    return number;
+    int value1 = [[self.numbers objectAtIndex:0] intValue];
+    int value2 = value2 = [[self.numbers objectAtIndex:0 + 1] intValue];
+    NSString *c = [self.operations objectAtIndex:0];
+    
+    if ([c isEqualToString:@"×"]) {
+        sum = sum + (value1 * value2);
+    }else if ([c isEqualToString:@"-"]){
+        sum = sum + (value1 - value2);
+    }else if ([c isEqualToString:@"÷"]){
+        sum = sum + (value1 / value2);
+    }else if ([c isEqualToString:@"+"]){
+        sum = sum + (value1 + value2);
+    }
+    
+    for (int i = 2; i < self.numbers.count; i = i + 1) { // 1- 2 - 3 -4 - 5
+        
+        NSString *c = [self.operations objectAtIndex:i - 1];
+        value1 = [[self.numbers objectAtIndex:i] intValue];
+        
+        if ([c isEqualToString:@"×"]) {
+            sum = sum * value1;
+        }else if ([c isEqualToString:@"-"]){
+            sum = sum - value1;
+        }else if ([c isEqualToString:@"÷"]){
+            sum = sum / value1;
+        }else if ([c isEqualToString:@"+"]){
+            sum = sum + value1;
+        }
+        
+    }
+    self.result = [NSNumber numberWithFloat:sum];
 }
 
 -(void)parseEquation{
@@ -36,74 +66,86 @@
         
         const char *c = [currentString UTF8String];
         
-        if ([self isNumber:c[0]]) {
+        if ([self isNumber:[NSString stringWithFormat:@"%c", c[0]]]) {
             self.equation = currentString;
             
             return;
         }
     }
 }
--(void)parseNumbersOperators:(void (^)(BOOL success, NSString *error))completionHandler{
+
+-(NSMutableArray <NSString *> *)convertToChars{
     
-    const char *array = [self.equation UTF8String];
+    NSMutableArray *array = [NSMutableArray new];
+    
+    for (int i = 0; i < self.equation.length; i++) {
+        
+        unichar s = [self.equation characterAtIndex:i];
+        [array addObject:[NSString stringWithFormat:@"%c", s]];
+    }
+    
+    return array;
+}
+
+-(void)parseNumbersOperators:(void (^)(BOOL success, NSString *error))completionHandler{
+
+    NSMutableArray *array = [self convertToChars];
     
     NSMutableArray *numberArr = [NSMutableArray new];
-    
     NSMutableArray *opArray = [NSMutableArray new];
     
     NSString *numberString = [NSString new];
     
     for (int i = 0; i < self.equation.length; i++) {
         
-        BOOL isLast = self.equation.length - 1;
-        char c = array[i];
-        char nc = array[i + 1];
-        
+        BOOL isLast = (i == (int)self.equation.length - 1)? YES : NO;
+        NSString *c = array[i];
+        NSString *nc = (isLast) ? nil : array[i + 1];
+
         //all cases before the last case
         //c parsing
         if ([self isNumber:c]) { //if c is a number
             
-            numberString = [numberString stringByAppendingString:[NSString stringWithFormat:@"%c", c]];
+            numberString = [numberString stringByAppendingString:c];
             
-            if (isLast) {
-                NSString *operator = [NSString stringWithFormat:@"%c", c];
-                [opArray addObject:operator];
-            }
-            
-        }else if ([self isOperator:c]) { //if c is a char
-            
-            NSString *operator = [NSString stringWithFormat:@"%c", c];
-            [opArray addObject:operator];
-            
-            if (![self isNumber:nc]) { //c is operator, safty check
-                completionHandler(NO, @"ER_WR-OP");
-                return;
-            }
+        }else if ([self isOperator:c]) { //if c is a operator
+
+            [opArray addObject:c];
         }
         
         //ns parsing and safty check
-        if ([self isOperator:nc]){ //if next char is operator add string to array and reset;
+        if ([self isOperator:nc] || isLast){ //if next char is operator add string to array and reset;
             
             [numberArr addObject:numberString];
             numberString = [NSString new];
             
-        }else if (![self isOperator:nc] && ![self isNumber:nc] && !isLast){ //if next char is not number nor operator return error
-            
-            completionHandler(NO, @"ER_WR-VAL");
-            return;
         }
     }
     
-    self.numbers = numberArr;
-    self.operations = opArray;
+    if ([self validateNumber:numberArr withOperators:opArray]) {
+        self.numbers = numberArr;
+        self.operations = opArray;
+    }else{
+        completionHandler(NO, @"ER_BD-OP");
+    }
     
     completionHandler(YES, nil);
 }
 
--(BOOL)isNumber:(char)c{
+-(BOOL)validateNumber:(NSMutableArray *)number withOperators:(NSMutableArray *)operations{
     
-    if (c == '0' || c == '1' || c == '2' || c == '3' || c == '4' ||
-        c == '5' || c == '6' || c == '7' || c == '8' || c == '9') {
+    if (number.count == operations.count + 1) {
+        return YES;
+    }
+    return NO;
+}
+
+-(BOOL)isNumber:(NSString *)c{
+    
+    if ([c isEqualToString:@"1"] || [c isEqualToString:@"2"] || [c isEqualToString:@"3"] ||
+        [c isEqualToString:@"4"] || [c isEqualToString:@"5"] ||
+        [c isEqualToString:@"6"] || [c isEqualToString:@"7"] || [c isEqualToString:@"8"] ||
+        [c isEqualToString:@"9"] || [c isEqualToString:@"0"]) {
         
         return YES;
         
@@ -112,11 +154,9 @@
     }
 }
 
--(BOOL)isOperator:(char)c{
+-(BOOL)isOperator:(NSString *)c{
     
-    NSString *divide = @"÷";
-    
-    if (c == [divide characterAtIndex:0] || c == '+' || c == '-' || c == '*') {
+    if ([c isEqualToString:@"×"] || [c isEqualToString:@"-"] || [c isEqualToString:@"÷"] || [c isEqualToString:@"+"]) {
         
         return YES;
         

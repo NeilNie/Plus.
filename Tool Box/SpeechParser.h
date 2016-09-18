@@ -10,12 +10,14 @@
 
 @interface SpeechParser : NSObject
 
+@property (strong, nonatomic) NSNumber *result;
 @property (strong, nonatomic) NSString *text;
 @property (strong, nonatomic) NSString *exceptions;
 @property (strong, nonatomic) NSString *equation;
 @property (strong, nonatomic) NSMutableArray<NSString *> *operations;
 @property (strong, nonatomic) NSMutableArray<NSString *> *numbers;
 
+-(void)calculate;
 -(void)parseEquation;
 -(void)parseNumbersOperators:(void (^)(BOOL success, NSString *error))completionHandler;
 -(instancetype)initWithText:(NSString *)text;

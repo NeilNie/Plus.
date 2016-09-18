@@ -35,6 +35,7 @@ int timercases1;
 }
 
 //Timer
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 -(IBAction)start:(id)sender;
 -(IBAction)stop:(id)sender;
 -(IBAction)restart:(id)sender;

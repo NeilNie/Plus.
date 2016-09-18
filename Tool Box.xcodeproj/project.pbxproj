@@ -22,6 +22,8 @@
 		00D6DBD11BE6B53A00BDC277 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D6DBD01BE6B53A00BDC277 /* left.png */; };
 		284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284737541D85B9CE00B56DB0 /* CalculatorViewController.m */; };
 		284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284737561D85BA0E00B56DB0 /* Speech.framework */; };
+		2872E75D1D8DE699004D0D62 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2872E75C1D8DE699004D0D62 /* AVFoundation.framework */; };
+		2872E7601D8DE929004D0D62 /* Speech.m in Sources */ = {isa = PBXBuildFile; fileRef = 2872E75F1D8DE929004D0D62 /* Speech.m */; };
 		288027701B9C98FC002B9AE4 /* Tool Box WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		288027731B9C98FC002B9AE4 /* Tool Box WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */; };
 		289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 289FC80E1D86336800D3BDAF /* SpeechParser.m */; };
@@ -135,6 +137,9 @@
 		284737531D85B9CE00B56DB0 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		284737541D85B9CE00B56DB0 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		284737561D85BA0E00B56DB0 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		2872E75C1D8DE699004D0D62 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2872E75E1D8DE929004D0D62 /* Speech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speech.h; sourceTree = "<group>"; };
+		2872E75F1D8DE929004D0D62 /* Speech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speech.m; sourceTree = "<group>"; };
 		289FC80D1D86336800D3BDAF /* SpeechParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechParser.h; sourceTree = "<group>"; };
 		289FC80E1D86336800D3BDAF /* SpeechParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechParser.m; sourceTree = "<group>"; };
 		28BE24C11D88DF230065D520 /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphone.png; sourceTree = "<group>"; };
@@ -184,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2872E75D1D8DE699004D0D62 /* AVFoundation.framework in Frameworks */,
 				284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */,
 				28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */,
 				28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */,
@@ -256,6 +262,8 @@
 		00594D3E1D6A9D8900CB1DB4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2872E75E1D8DE929004D0D62 /* Speech.h */,
+				2872E75F1D8DE929004D0D62 /* Speech.m */,
 				289FC80D1D86336800D3BDAF /* SpeechParser.h */,
 				289FC80E1D86336800D3BDAF /* SpeechParser.m */,
 				007A7D431D6A03BE00871577 /* GeoPointCompass.h */,
@@ -389,6 +397,7 @@
 		7D9B626185536093D39BCFD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2872E75C1D8DE699004D0D62 /* AVFoundation.framework */,
 				284737561D85BA0E00B56DB0 /* Speech.framework */,
 				BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */,
 				006FB1A81D047CC300768D92 /* NotificationCenter.framework */,
@@ -670,6 +679,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2872E7601D8DE929004D0D62 /* Speech.m in Sources */,
 				28BFC6AC1B5493DA00E45770 /* ViewController.m in Sources */,
 				28BFC6A91B5493DA00E45770 /* AppDelegate.m in Sources */,
 				284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */,

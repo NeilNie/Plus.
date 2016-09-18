@@ -53,6 +53,13 @@ GeoPointCompass *geoPointCompass;
     return self;
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+    
+    [self.locationManager stopUpdatingHeading];
+    [self.locationManager stopUpdatingLocation];
+    [super viewDidDisappear:YES];
+}
+
 -(void)viewDidAppear:(BOOL)animated{
  
     // Create the image for the compass

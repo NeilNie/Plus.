@@ -225,6 +225,16 @@
     timerdisplay3.text = [NSString stringWithFormat:@"00"];
 }
 
+-(void)setShadowforView:(UIView *)view{
+    
+    view.layer.cornerRadius = 15;
+    view.layer.shadowRadius = 2.0f;
+    view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
+    view.layer.shadowOpacity = 0.8f;
+    view.layer.masksToBounds = NO;
+    
+}
 
 -(void)viewDidLoad {
     
@@ -235,6 +245,11 @@
         self.banner.rootViewController = self;
         [self.banner loadRequest:[GADRequest request]];
     }
+    
+    for (UIButton *button in self.buttons) {
+        [self setShadowforView:button];
+    }
+    
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
