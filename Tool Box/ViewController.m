@@ -170,13 +170,12 @@
 
 -(IBAction)rate:(id)sender{
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/artist/huan-he/id966523275"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/artist/huan-he/id966523275"] options:@{} completionHandler:nil];
     
 }
 -(IBAction)Foremore:(id)sender{
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://nspiresoftware.net"]];
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://nspiresoftware.net"] options:@{} completionHandler:nil];
 }
 
 //

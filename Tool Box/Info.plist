@@ -19,9 +19,13 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.0</string>
+	<string>1.0.2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>We need to access this information</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>We need to access this information</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location</string>
 	<key>NSMicrophoneUsageDescription</key>
