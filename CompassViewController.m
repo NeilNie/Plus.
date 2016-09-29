@@ -72,7 +72,7 @@ GeoPointCompass *geoPointCompass;
     geoPointCompass.latitudeOfTargetedPoint = 90.0;
     geoPointCompass.longitudeOfTargetedPoint = 0.0;
     geoPointCompass.delegate = self;
-    
+
     [super viewDidAppear:YES];
 }
 
