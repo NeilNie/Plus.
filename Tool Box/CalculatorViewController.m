@@ -14,6 +14,16 @@
 
 @implementation CalculatorViewController
 
+/*
+ *  System Versioning Preprocessor Macros
+ */
+
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
 #pragma mark Calculator Methods
 
 -(IBAction)selectedNumber:(id)sender{
@@ -22,76 +32,6 @@
     SelectNumber = SelectNumber * 10;
     SelectNumber = SelectNumber + [string intValue];
     Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-<<<<<<< Updated upstream
-=======
-    
-}
--(IBAction)Number2:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 2;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-}
--(IBAction)Number3:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 3;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-}
--(IBAction)Number4:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 4;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-}
--(IBAction)Number5:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 5;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-}
--(IBAction)Number6:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 6;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-}
--(IBAction)Number7:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 7;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-    
-}
--(IBAction)Number8:(id)sender{
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 8;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-}
--(IBAction)Number9:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 9;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-}
--(IBAction)Number0:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 0;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
->>>>>>> Stashed changes
 }
 
 -(IBAction)Times:(id)sender{
@@ -102,7 +42,6 @@
     }
     
     else{
-        
         switch (Method) {
             case 1:
                 RunningTotal = RunningTotal * SelectNumber;
@@ -451,7 +390,6 @@
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         self.speechButton.enabled = enabled;
     }];
-    
 }
 
 -(void)setShadowforView:(UIView *)view{
@@ -491,12 +429,16 @@
         self.banner.rootViewController = self;
         [self.banner loadRequest:[GADRequest request]];
     }
-    
+
     [self setUpSpeechRecognition];
-    
     [self setupViews];
-    
     [super viewDidLoad];
+    
+    if (SYSTEM_VERSION_LESS_THAN(@"10.0")) {
+        self.speechButton.hidden = YES;
+        self.table.hidden = YES;
+    }
+
     // Do any additional setup after loading the view.
 }
 
@@ -505,14 +447,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
