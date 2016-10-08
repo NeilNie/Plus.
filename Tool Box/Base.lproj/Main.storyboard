@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2333a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N7c-Uq-lr0">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2327e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N7c-Uq-lr0">
+>>>>>>> Stashed changes
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -657,8 +661,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+<<<<<<< Updated upstream
                                     <constraint firstAttribute="bottom" secondItem="aXp-uy-kOf" secondAttribute="bottom" constant="12" id="BVQ-Vx-wxW"/>
                                     <constraint firstAttribute="height" constant="400" id="OL9-ad-6bG"/>
+=======
+                                    <constraint firstAttribute="height" id="OL9-ad-6bG"/>
+>>>>>>> Stashed changes
                                     <constraint firstItem="aqd-7u-W3j" firstAttribute="top" secondItem="LYX-Tu-13m" secondAttribute="bottom" constant="8" id="PcN-t7-JZF"/>
                                     <constraint firstItem="LYX-Tu-13m" firstAttribute="top" secondItem="clY-LH-lqz" secondAttribute="top" constant="8" id="QFn-sz-atU"/>
                                     <constraint firstItem="1eU-E3-Awu" firstAttribute="leading" secondItem="clY-LH-lqz" secondAttribute="leading" id="WE8-Sg-cwV"/>

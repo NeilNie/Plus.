@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+<<<<<<< Updated upstream
    LastUpgradeVersion = "0700"
+=======
+   LastUpgradeVersion = "0800"
+>>>>>>> Stashed changes
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
+<<<<<<< Updated upstream
             buildForAnalyzing = "YES"
             buildForTesting = "YES"
             buildForRunning = "YES"
@@ -18,19 +23,45 @@
                BlueprintName = 'Pods-Tool Box'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-Tool Box.a'>
+=======
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CD2D4AF454AADB19BA9E89766CCAD3DF"
+               BuildableName = "libPods-Tool Box.a"
+               BlueprintName = "Pods-Tool Box"
+               ReferencedContainer = "container:Pods.xcodeproj">
+>>>>>>> Stashed changes
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+<<<<<<< Updated upstream
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
+=======
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+>>>>>>> Stashed changes
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
+<<<<<<< Updated upstream
+=======
+      buildConfiguration = "Debug"
+>>>>>>> Stashed changes
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -38,17 +69,47 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
+<<<<<<< Updated upstream
       buildConfiguration = "Debug"
       allowLocationSimulation = "YES">
+=======
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CD2D4AF454AADB19BA9E89766CCAD3DF"
+            BuildableName = "libPods-Tool Box.a"
+            BlueprintName = "Pods-Tool Box"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+>>>>>>> Stashed changes
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+<<<<<<< Updated upstream
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES">
+=======
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CD2D4AF454AADB19BA9E89766CCAD3DF"
+            BuildableName = "libPods-Tool Box.a"
+            BlueprintName = "Pods-Tool Box"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+>>>>>>> Stashed changes
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
