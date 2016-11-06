@@ -434,10 +434,8 @@
     [self setupViews];
     [super viewDidLoad];
     
-    if (SYSTEM_VERSION_LESS_THAN(@"10.0")) {
-        self.speechButton.hidden = YES;
-        self.table.hidden = YES;
-    }
+    self.speechButton.hidden = YES;
+    self.table.hidden = YES;
 
     // Do any additional setup after loading the view.
 }

@@ -269,7 +269,6 @@
     
 }
 
-
 -(IBAction)AllClear:(id)sender{
     
     Method = 0;
@@ -279,18 +278,37 @@
     
 }
 
+-(void)setShadowforView:(UIView *)view{
+    
+    view.layer.cornerRadius = 15;
+    view.layer.shadowRadius = 2.0f;
+    view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
+    view.layer.shadowOpacity = 0.8f;
+    view.layer.masksToBounds = NO;
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
-    //self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
-    
-    // Do any additional setup after loading the view from its nib.
+    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
+    for (UIButton *button in self.buttons) {
+        [self setShadowforView:button];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize {
+    if (activeDisplayMode == NCWidgetDisplayModeExpanded) {
+        self.preferredContentSize = CGSizeMake(0.0, 350);
+    } else if (activeDisplayMode == NCWidgetDisplayModeCompact) {
+        self.preferredContentSize = maxSize;
+    }
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
@@ -301,23 +319,6 @@
     // If there's an update, use NCUpdateResultNewData
 
     completionHandler(NCUpdateResultNewData);
-}
-
-//-(void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize{
-//    
-//    if (activeDisplayMode == NCWidgetDisplayModeCompact) {
-//        self.preferredContentSize = CGSizeMake(0, 360);
-//    }else{
-//        self.preferredContentSize = CGSizeMake(0, 360);
-//    }
-//}
-
-- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)margins
-{
-    NSLog(@"set up margin");
-    margins.bottom = 8.0f;
-    margins.left = 8.0f;
-    return margins;
 }
 
 @end

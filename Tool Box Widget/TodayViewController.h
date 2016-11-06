@@ -20,6 +20,8 @@
     IBOutlet UILabel *Screen;
     
 }
+
+@property (nonatomic, strong) IBOutletCollection(UIButton) NSMutableArray *buttons;
 -(IBAction)Number1:(id)sender;
 -(IBAction)Number2:(id)sender;
 -(IBAction)Number3:(id)sender;
