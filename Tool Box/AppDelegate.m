@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Rollout/Rollout.h>
 
 @import FirebaseAnalytics;
 @import Firebase;
@@ -21,7 +22,7 @@
 {
     [FIRApp configure];
     
-    
+    [Rollout setupWithKey:@"5820746d86b40e766d9df6c8"];
     // Initialize Parse.
     return YES;
 }
