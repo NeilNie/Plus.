@@ -193,7 +193,7 @@ func initWithTypeWrapper<T>(_ value: T) -> RolloutTypeWrapper {
             return initWithTypeWrapper(originalResult)
         })
         
-        return extractFromTypeWrapper(result)
+        return extractFromTypeWrapper(result!)
     }
 #else
     @inline(__always) func Rollout_shouldPatch(tweakData:RolloutSwiftTweakData?) -> Bool {
