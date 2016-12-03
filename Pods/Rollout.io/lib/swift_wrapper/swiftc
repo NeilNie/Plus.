@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Rollout Swift wrapper: `date`"
+
 unset arch output_file_map module_name
 extract_args() {
     while [[ $# -gt 0 ]]
@@ -36,6 +38,7 @@ if [ "$is_debug" == "swiftc_debug" ]; then
     set -x
     exec 3>&1 4>&2
     debug_mode="-d"
+    export ROLLOUT_REPLACEMENTS_LOG=/tmp/rollout_var/open_replacements.log
 fi
 
 log_debug() {
@@ -112,7 +115,7 @@ error_handler() {
 }
 
 clean() {
-    local debug_path=/tmp/rollout_swiftc_generated_files_debug_location
+    debug_path=/tmp/rollout_swiftc_generated_files_debug_location
     [ -d $debug_path ] && {
       rm -rf $debug_path/"$arch"
       mv "$VAR_DIR" $debug_path/"$arch"
