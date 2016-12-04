@@ -22,7 +22,11 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
+<<<<<<< HEAD
   - Rollout.io (1.7.4)
+=======
+  - Rollout.io (1.7.3)
+>>>>>>> origin/master
 
 DEPENDENCIES:
   - Firebase/AdMob
@@ -38,7 +42,11 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+<<<<<<< HEAD
   Rollout.io: dc9826acb7ded10b7f5faab715055a70f6b9486c
+=======
+  Rollout.io: 9a42cf4c21841307a7580121129f7da0e82a6f8c
+>>>>>>> origin/master
 
 PODFILE CHECKSUM: b2018995122c8838e9dda4eff49f45d4ae304655
 
