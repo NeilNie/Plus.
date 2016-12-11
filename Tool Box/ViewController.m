@@ -170,7 +170,7 @@
 
 -(IBAction)rate:(id)sender{
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/artist/huan-he/id966523275"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/the-toolbox/id992505214?mt=8"] options:@{} completionHandler:nil];
     
 }
 -(IBAction)Foremore:(id)sender{

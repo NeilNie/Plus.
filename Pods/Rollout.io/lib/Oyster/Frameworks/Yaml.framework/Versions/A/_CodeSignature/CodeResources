@@ -6,11 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-<<<<<<< HEAD
 		+yJumkFqYSXTeBphp1wl6YkxbIE=
-=======
-		Ssmoxy4iuZXCDr2z/UnR1Pt7d80=
->>>>>>> origin/master
 		</data>
 	</dict>
 	<key>files2</key>
@@ -19,11 +15,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gqHJi0fcBGuUc1D0eqkmA7Kh5iw=
+			ia8kbYWaVTQgpHA4qU9S16Y5Wsg=
 			</data>
 			<key>hash2</key>
 			<data>
-			x9I+HiF94z1CpYGpSfwGdLFep7tV34ao7ENx1VWTyKM=
+			/li/YmeTSZFp3ZdTNhvqlZbsO5EOLQqmd6h6KcJ5xno=
 			</data>
 		</dict>
 		<key>Headers/Yaml-umbrella.h</key>
@@ -41,30 +37,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3G0ANGNLVtk5oJTBq3KN5nr/rF0=
+			fSe/xjzwS+3A4jdgzUFghKq/UL8=
 			</data>
 			<key>hash2</key>
 			<data>
-			2FnjGcvJqLgLDhPL1yI5o0s+dbiRXQQS9GRBmNxAlOg=
+			kQ1KRNKzlMgMWH2UEw8DbGVm7e8t0EXVaJKigaGMME8=
 			</data>
 		</dict>
 		<key>Modules/Yaml.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-<<<<<<< HEAD
 			gbIX/bhaHiTHT6bABFRfc+31DMk=
 			</data>
 			<key>hash2</key>
 			<data>
 			YgunRn/AuhKn3L1hX5YnvRFljbLk2PxppmIiwu9wQUU=
-=======
-			hZKnMBeOuO2RrRNfeeDbLSNjjcA=
-			</data>
-			<key>hash2</key>
-			<data>
-			b1hUsfTy2YuXGTy6JvTrqWa9tK0wQ5JFioDugiTUarE=
->>>>>>> origin/master
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -82,19 +70,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-<<<<<<< HEAD
 			+yJumkFqYSXTeBphp1wl6YkxbIE=
 			</data>
 			<key>hash2</key>
 			<data>
 			XJSMzG7KP1r9yfSOk8Bre850cUs2judj6EQ3StAL0ng=
-=======
-			Ssmoxy4iuZXCDr2z/UnR1Pt7d80=
-			</data>
-			<key>hash2</key>
-			<data>
-			qNKFUDXFvox8vIkwlsxjzgRXYQT3wfRs9Td1hIjYsMA=
->>>>>>> origin/master
 			</data>
 		</dict>
 	</dict>

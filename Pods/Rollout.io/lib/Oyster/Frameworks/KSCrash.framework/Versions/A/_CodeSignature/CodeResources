@@ -6,11 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-<<<<<<< HEAD
 		Ydg51taXZyW2kR8oPon3H2fuBTs=
-=======
-		Ax6cYAhrDx9Cb02aVt8jdFB7g3Y=
->>>>>>> origin/master
 		</data>
 	</dict>
 	<key>files2</key>
@@ -261,19 +257,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-<<<<<<< HEAD
 			Ydg51taXZyW2kR8oPon3H2fuBTs=
 			</data>
 			<key>hash2</key>
 			<data>
 			TAWU49yuZlbLyUHUyfUw+bNj3fxZHi5z2vQFzluxnn8=
-=======
-			Ax6cYAhrDx9Cb02aVt8jdFB7g3Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			L/4Rvv53MbfQ091BkxIT6TQAhOFBtGDXjuWVQx9Dwwo=
->>>>>>> origin/master
 			</data>
 		</dict>
 	</dict>

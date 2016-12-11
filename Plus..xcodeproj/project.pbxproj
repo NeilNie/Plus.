@@ -13,7 +13,7 @@
 		006FB1A91D047CC300768D92 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FB1A81D047CC300768D92 /* NotificationCenter.framework */; };
 		006FB1AD1D047CC300768D92 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006FB1AC1D047CC300768D92 /* TodayViewController.m */; };
 		006FB1B01D047CC300768D92 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006FB1AE1D047CC300768D92 /* MainInterface.storyboard */; };
-		006FB1B41D047CC300768D92 /* Tool Box Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 006FB1A71D047CC300768D92 /* Tool Box Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		006FB1B41D047CC300768D92 /* Plus. Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 006FB1A71D047CC300768D92 /* Plus. Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = 007A7D441D6A03BE00871577 /* GeoPointCompass.m */; };
 		007A7D481D6A03CE00871577 /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 007A7D471D6A03CE00871577 /* CompassViewController.m */; };
 		007A7D4A1D6A043000871577 /* Compass_Rose-Black 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 007A7D491D6A043000871577 /* Compass_Rose-Black 3.png */; };
@@ -25,8 +25,8 @@
 		284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284737561D85BA0E00B56DB0 /* Speech.framework */; };
 		2872E75D1D8DE699004D0D62 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2872E75C1D8DE699004D0D62 /* AVFoundation.framework */; };
 		2872E7601D8DE929004D0D62 /* Speech.m in Sources */ = {isa = PBXBuildFile; fileRef = 2872E75F1D8DE929004D0D62 /* Speech.m */; };
-		288027701B9C98FC002B9AE4 /* Tool Box WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		288027731B9C98FC002B9AE4 /* Tool Box WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */; };
+		288027701B9C98FC002B9AE4 /* Plus. WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E2A52D1B54B29700126C42 /* Plus. WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		288027731B9C98FC002B9AE4 /* Plus. WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28E2A53C1B54B29700126C42 /* Plus. WatchKit App.app */; };
 		289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 289FC80E1D86336800D3BDAF /* SpeechParser.m */; };
 		28BE24C21D88DF230065D520 /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BE24C11D88DF230065D520 /* microphone.png */; };
 		28BFC6A61B5493DA00E45770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6A51B5493DA00E45770 /* main.m */; };
@@ -44,7 +44,7 @@
 		28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5621B54B39000126C42 /* MessageUI.framework */; };
 		28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5641B54B39400126C42 /* UIKit.framework */; };
 		28E2A5691B54B5E700126C42 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5681B54B5E700126C42 /* Media.xcassets */; };
-		9F1FACAAC0FE91F848EDD915 /* libPods-Tool Box.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */; };
+		5159A41911575F01F3364E70 /* libPods-Plus..a in Frameworks */ = {isa = PBXBuildFile; fileRef = D59A0EAAAC19D585B176A46B /* libPods-Plus..a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				006FB1B41D047CC300768D92 /* Tool Box Widget.appex in Embed App Extensions */,
+				006FB1B41D047CC300768D92 /* Plus. Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,7 +96,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				288027701B9C98FC002B9AE4 /* Tool Box WatchKit Extension.appex in Embed App Extensions */,
+				288027701B9C98FC002B9AE4 /* Plus. WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +107,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				288027731B9C98FC002B9AE4 /* Tool Box WatchKit App.app in Embed Watch Content */,
+				288027731B9C98FC002B9AE4 /* Plus. WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,7 +119,7 @@
 		00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circled_down_filled.png; sourceTree = "<group>"; };
 		005FD1A41D7116C5006225C0 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		005FD1A51D7116C5006225C0 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		006FB1A71D047CC300768D92 /* Tool Box Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tool Box Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		006FB1A71D047CC300768D92 /* Plus. Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Plus. Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		006FB1A81D047CC300768D92 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		006FB1AB1D047CC300768D92 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		006FB1AC1D047CC300768D92 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00B58A1A1D6E935E00B7870E /* compass_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_1.png; sourceTree = "<group>"; };
 		00D6DBD01BE6B53A00BDC277 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
-		1AEDFFBF4924332B0C2E89B9 /* Pods-Tool Box.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool Box.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box.release.xcconfig"; sourceTree = "<group>"; };
+		1567500C16668611F0A3057A /* Pods-Plus..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plus..debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plus./Pods-Plus..debug.xcconfig"; sourceTree = "<group>"; };
 		284737531D85B9CE00B56DB0 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		284737541D85B9CE00B56DB0 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		284737561D85BA0E00B56DB0 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
@@ -144,7 +144,7 @@
 		289FC80D1D86336800D3BDAF /* SpeechParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechParser.h; sourceTree = "<group>"; };
 		289FC80E1D86336800D3BDAF /* SpeechParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechParser.m; sourceTree = "<group>"; };
 		28BE24C11D88DF230065D520 /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphone.png; sourceTree = "<group>"; };
-		28BFC6A01B5493DA00E45770 /* Tool Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tool Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28BFC6A01B5493DA00E45770 /* Plus..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plus..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BFC6A41B5493DA00E45770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28BFC6A51B5493DA00E45770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28BFC6A71B5493DA00E45770 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,17 +152,17 @@
 		28BFC6AA1B5493DA00E45770 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		28BFC6AB1B5493DA00E45770 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		28BFC6B31B5493DA00E45770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		28BFC6B91B5493DA00E45770 /* Tool BoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tool BoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28BFC6B91B5493DA00E45770 /* Plus.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Plus.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BFC6BE1B5493DA00E45770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28BFC6BF1B5493DA00E45770 /* Tool_BoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool_BoxTests.m; sourceTree = "<group>"; };
-		28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tool Box WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E2A52D1B54B29700126C42 /* Plus. WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Plus. WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E2A5301B54B29700126C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28E2A5311B54B29700126C42 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		28E2A5321B54B29700126C42 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
 		28E2A5331B54B29700126C42 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
 		28E2A5351B54B29700126C42 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
 		28E2A5361B54B29700126C42 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
-		28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tool Box WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E2A53C1B54B29700126C42 /* Plus. WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plus. WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E2A5421B54B29700126C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28E2A5441B54B29700126C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		28E2A5581B54B35000126C42 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -172,8 +172,9 @@
 		28E2A5621B54B39000126C42 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		28E2A5641B54B39400126C42 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28E2A5681B54B5E700126C42 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		41E593850244D5392F72B002 /* Pods-Plus..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plus..release.xcconfig"; path = "Pods/Target Support Files/Pods-Plus./Pods-Plus..release.xcconfig"; sourceTree = "<group>"; };
 		BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tool Box.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E12D1843DE2D1060F33585E6 /* Pods-Tool Box.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool Box.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box.debug.xcconfig"; sourceTree = "<group>"; };
+		D59A0EAAAC19D585B176A46B /* libPods-Plus..a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Plus..a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +194,7 @@
 				284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */,
 				28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */,
 				28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */,
-				9F1FACAAC0FE91F848EDD915 /* libPods-Tool Box.a in Frameworks */,
+				5159A41911575F01F3364E70 /* libPods-Plus..a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +291,7 @@
 			children = (
 				28E2A5641B54B39400126C42 /* UIKit.framework */,
 				28E2A5621B54B39000126C42 /* MessageUI.framework */,
-				28BFC6A21B5493DA00E45770 /* Tool Box */,
+				28BFC6A21B5493DA00E45770 /* Plus. */,
 				28BFC6BC1B5493DA00E45770 /* Tool BoxTests */,
 				28E2A52E1B54B29700126C42 /* Tool Box WatchKit Extension */,
 				28E2A5401B54B29700126C42 /* Tool Box WatchKit App */,
@@ -304,16 +305,16 @@
 		28BFC6A11B5493DA00E45770 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				28BFC6A01B5493DA00E45770 /* Tool Box.app */,
-				28BFC6B91B5493DA00E45770 /* Tool BoxTests.xctest */,
-				28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */,
-				28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */,
-				006FB1A71D047CC300768D92 /* Tool Box Widget.appex */,
+				28BFC6A01B5493DA00E45770 /* Plus..app */,
+				28BFC6B91B5493DA00E45770 /* Plus.Tests.xctest */,
+				28E2A52D1B54B29700126C42 /* Plus. WatchKit Extension.appex */,
+				28E2A53C1B54B29700126C42 /* Plus. WatchKit App.app */,
+				006FB1A71D047CC300768D92 /* Plus. Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		28BFC6A21B5493DA00E45770 /* Tool Box */ = {
+		28BFC6A21B5493DA00E45770 /* Plus. */ = {
 			isa = PBXGroup;
 			children = (
 				28BFC6A31B5493DA00E45770 /* Supporting Files */,
@@ -322,6 +323,7 @@
 				00594D3D1D6A9D7F00CB1DB4 /* ViewControllers */,
 				00594D3E1D6A9D8900CB1DB4 /* Classes */,
 			);
+			name = Plus.;
 			path = "Tool Box";
 			sourceTree = "<group>";
 		};
@@ -401,6 +403,7 @@
 				284737561D85BA0E00B56DB0 /* Speech.framework */,
 				BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */,
 				006FB1A81D047CC300768D92 /* NotificationCenter.framework */,
+				D59A0EAAAC19D585B176A46B /* libPods-Plus..a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -408,8 +411,8 @@
 		D47130B1FB6632499E665E24 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E12D1843DE2D1060F33585E6 /* Pods-Tool Box.debug.xcconfig */,
-				1AEDFFBF4924332B0C2E89B9 /* Pods-Tool Box.release.xcconfig */,
+				1567500C16668611F0A3057A /* Pods-Plus..debug.xcconfig */,
+				41E593850244D5392F72B002 /* Pods-Plus..release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -417,9 +420,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		006FB1A61D047CC300768D92 /* Tool Box Widget */ = {
+		006FB1A61D047CC300768D92 /* Plus. Widget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 006FB1B71D047CC300768D92 /* Build configuration list for PBXNativeTarget "Tool Box Widget" */;
+			buildConfigurationList = 006FB1B71D047CC300768D92 /* Build configuration list for PBXNativeTarget "Plus. Widget" */;
 			buildPhases = (
 				006FB1A31D047CC300768D92 /* Sources */,
 				006FB1A41D047CC300768D92 /* Frameworks */,
@@ -429,14 +432,14 @@
 			);
 			dependencies = (
 			);
-			name = "Tool Box Widget";
+			name = "Plus. Widget";
 			productName = "Tool Box Widget";
-			productReference = 006FB1A71D047CC300768D92 /* Tool Box Widget.appex */;
+			productReference = 006FB1A71D047CC300768D92 /* Plus. Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		28BFC69F1B5493DA00E45770 /* Tool Box */ = {
+		28BFC69F1B5493DA00E45770 /* Plus. */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28BFC6C31B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Tool Box" */;
+			buildConfigurationList = 28BFC6C31B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Plus." */;
 			buildPhases = (
 				C8281B5F54D4445D618FBFA7 /* [CP] Check Pods Manifest.lock */,
 				28BFC69C1B5493DA00E45770 /* Sources */,
@@ -453,14 +456,14 @@
 				288027721B9C98FC002B9AE4 /* PBXTargetDependency */,
 				006FB1B31D047CC300768D92 /* PBXTargetDependency */,
 			);
-			name = "Tool Box";
+			name = Plus.;
 			productName = "Tool Box";
-			productReference = 28BFC6A01B5493DA00E45770 /* Tool Box.app */;
+			productReference = 28BFC6A01B5493DA00E45770 /* Plus..app */;
 			productType = "com.apple.product-type.application";
 		};
-		28BFC6B81B5493DA00E45770 /* Tool BoxTests */ = {
+		28BFC6B81B5493DA00E45770 /* Plus.Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28BFC6C61B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Tool BoxTests" */;
+			buildConfigurationList = 28BFC6C61B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Plus.Tests" */;
 			buildPhases = (
 				28BFC6B51B5493DA00E45770 /* Sources */,
 				28BFC6B61B5493DA00E45770 /* Frameworks */,
@@ -471,14 +474,14 @@
 			dependencies = (
 				28BFC6BB1B5493DA00E45770 /* PBXTargetDependency */,
 			);
-			name = "Tool BoxTests";
+			name = Plus.Tests;
 			productName = "Tool BoxTests";
-			productReference = 28BFC6B91B5493DA00E45770 /* Tool BoxTests.xctest */;
+			productReference = 28BFC6B91B5493DA00E45770 /* Plus.Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		28E2A52C1B54B29700126C42 /* Tool Box WatchKit Extension */ = {
+		28E2A52C1B54B29700126C42 /* Plus. WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28E2A5501B54B29700126C42 /* Build configuration list for PBXNativeTarget "Tool Box WatchKit Extension" */;
+			buildConfigurationList = 28E2A5501B54B29700126C42 /* Build configuration list for PBXNativeTarget "Plus. WatchKit Extension" */;
 			buildPhases = (
 				28E2A5291B54B29700126C42 /* Sources */,
 				28E2A52A1B54B29700126C42 /* Frameworks */,
@@ -488,14 +491,14 @@
 			);
 			dependencies = (
 			);
-			name = "Tool Box WatchKit Extension";
+			name = "Plus. WatchKit Extension";
 			productName = "Tool Box WatchKit Extension";
-			productReference = 28E2A52D1B54B29700126C42 /* Tool Box WatchKit Extension.appex */;
+			productReference = 28E2A52D1B54B29700126C42 /* Plus. WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		28E2A53B1B54B29700126C42 /* Tool Box WatchKit App */ = {
+		28E2A53B1B54B29700126C42 /* Plus. WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28E2A54F1B54B29700126C42 /* Build configuration list for PBXNativeTarget "Tool Box WatchKit App" */;
+			buildConfigurationList = 28E2A54F1B54B29700126C42 /* Build configuration list for PBXNativeTarget "Plus. WatchKit App" */;
 			buildPhases = (
 				28E2A53A1B54B29700126C42 /* Resources */,
 				288027741B9C98FC002B9AE4 /* Embed App Extensions */,
@@ -506,9 +509,9 @@
 			dependencies = (
 				2880276F1B9C98FC002B9AE4 /* PBXTargetDependency */,
 			);
-			name = "Tool Box WatchKit App";
+			name = "Plus. WatchKit App";
 			productName = "Tool Box WatchKit App";
-			productReference = 28E2A53C1B54B29700126C42 /* Tool Box WatchKit App.app */;
+			productReference = 28E2A53C1B54B29700126C42 /* Plus. WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 /* End PBXNativeTarget section */
@@ -542,7 +545,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 28BFC69B1B5493DA00E45770 /* Build configuration list for PBXProject "Tool Box" */;
+			buildConfigurationList = 28BFC69B1B5493DA00E45770 /* Build configuration list for PBXProject "Plus." */;
 			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -555,11 +558,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				28BFC69F1B5493DA00E45770 /* Tool Box */,
-				28BFC6B81B5493DA00E45770 /* Tool BoxTests */,
-				28E2A52C1B54B29700126C42 /* Tool Box WatchKit Extension */,
-				28E2A53B1B54B29700126C42 /* Tool Box WatchKit App */,
-				006FB1A61D047CC300768D92 /* Tool Box Widget */,
+				28BFC69F1B5493DA00E45770 /* Plus. */,
+				28BFC6B81B5493DA00E45770 /* Plus.Tests */,
+				28E2A52C1B54B29700126C42 /* Plus. WatchKit Extension */,
+				28E2A53B1B54B29700126C42 /* Plus. WatchKit App */,
+				006FB1A61D047CC300768D92 /* Plus. Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -631,7 +634,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plus./Pods-Plus.-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C2611E511F6D316FBD59C025 /* [CP] Copy Pods Resources */ = {
@@ -646,7 +649,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tool Box/Pods-Tool Box-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plus./Pods-Plus.-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8281B5F54D4445D618FBFA7 /* [CP] Check Pods Manifest.lock */ = {
@@ -713,22 +716,22 @@
 /* Begin PBXTargetDependency section */
 		006FB1B31D047CC300768D92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 006FB1A61D047CC300768D92 /* Tool Box Widget */;
+			target = 006FB1A61D047CC300768D92 /* Plus. Widget */;
 			targetProxy = 006FB1B21D047CC300768D92 /* PBXContainerItemProxy */;
 		};
 		2880276F1B9C98FC002B9AE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 28E2A52C1B54B29700126C42 /* Tool Box WatchKit Extension */;
+			target = 28E2A52C1B54B29700126C42 /* Plus. WatchKit Extension */;
 			targetProxy = 2880276E1B9C98FC002B9AE4 /* PBXContainerItemProxy */;
 		};
 		288027721B9C98FC002B9AE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 28E2A53B1B54B29700126C42 /* Tool Box WatchKit App */;
+			target = 28E2A53B1B54B29700126C42 /* Plus. WatchKit App */;
 			targetProxy = 288027711B9C98FC002B9AE4 /* PBXContainerItemProxy */;
 		};
 		28BFC6BB1B5493DA00E45770 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 28BFC69F1B5493DA00E45770 /* Tool Box */;
+			target = 28BFC69F1B5493DA00E45770 /* Plus. */;
 			targetProxy = 28BFC6BA1B5493DA00E45770 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -879,7 +882,7 @@
 		};
 		28BFC6C41B5493DA00E45770 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E12D1843DE2D1060F33585E6 /* Pods-Tool Box.debug.xcconfig */;
+			baseConfigurationReference = 1567500C16668611F0A3057A /* Pods-Plus..debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -900,7 +903,7 @@
 		};
 		28BFC6C51B5493DA00E45770 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AEDFFBF4924332B0C2E89B9 /* Pods-Tool Box.release.xcconfig */;
+			baseConfigurationReference = 41E593850244D5392F72B002 /* Pods-Plus..release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -935,7 +938,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tool Box.app/Tool Box";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plus..app/Plus.";
 			};
 			name = Debug;
 		};
@@ -951,7 +954,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tool Box.app/Tool Box";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plus..app/Plus.";
 			};
 			name = Release;
 		};
@@ -1028,7 +1031,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		006FB1B71D047CC300768D92 /* Build configuration list for PBXNativeTarget "Tool Box Widget" */ = {
+		006FB1B71D047CC300768D92 /* Build configuration list for PBXNativeTarget "Plus. Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				006FB1B51D047CC300768D92 /* Debug */,
@@ -1037,7 +1040,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28BFC69B1B5493DA00E45770 /* Build configuration list for PBXProject "Tool Box" */ = {
+		28BFC69B1B5493DA00E45770 /* Build configuration list for PBXProject "Plus." */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28BFC6C11B5493DA00E45770 /* Debug */,
@@ -1046,7 +1049,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28BFC6C31B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Tool Box" */ = {
+		28BFC6C31B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Plus." */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28BFC6C41B5493DA00E45770 /* Debug */,
@@ -1055,7 +1058,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28BFC6C61B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Tool BoxTests" */ = {
+		28BFC6C61B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Plus.Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28BFC6C71B5493DA00E45770 /* Debug */,
@@ -1064,7 +1067,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28E2A54F1B54B29700126C42 /* Build configuration list for PBXNativeTarget "Tool Box WatchKit App" */ = {
+		28E2A54F1B54B29700126C42 /* Build configuration list for PBXNativeTarget "Plus. WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28E2A54D1B54B29700126C42 /* Debug */,
@@ -1073,7 +1076,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28E2A5501B54B29700126C42 /* Build configuration list for PBXNativeTarget "Tool Box WatchKit Extension" */ = {
+		28E2A5501B54B29700126C42 /* Build configuration list for PBXNativeTarget "Plus. WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28E2A54B1B54B29700126C42 /* Debug */,
