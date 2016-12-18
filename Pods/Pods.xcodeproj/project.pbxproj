@@ -32,7 +32,6 @@
 		07AE355F90BFB64C156261E010BB6B9D /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		0FDEF6CFF8B3AC413A13765F17AE9FD9 /* libPods-Plus..a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Plus..a"; path = "libPods-Plus..a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDAA8F484C66507AB41C529A791A074 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
-		24051830FA74F69F0FD0AC7D7FA7157D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		25BCBB93C5C26ACBE04392106B403166 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
 		416E7D54DB2D7DDAD251373E14530EB4 /* Pods-Plus.-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Plus.-acknowledgements.plist"; sourceTree = "<group>"; };
 		4DF95471A79F782EBECB5D45056C1694 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		5B594D4B86256AF89C7B714E564190A4 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
 		6E923AB6A3A32CB0608F3B0F133FFF97 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		83C260DD5CAF9FA59DB43B5C59A76E66 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		84AB1D3E29BF98E6340933DC67A8B030 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		85A887F62ACE1213DF709EE2DA40778F /* Pods-Plus.-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Plus.-resources.sh"; sourceTree = "<group>"; };
 		889ED46E0C519F06B352F7386395D217 /* Pods-Plus..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Plus..debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -249,7 +249,7 @@
 		B9D431FF8777CB4120DA98791E7CB40A /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				CD46F78DED15740597C68E8BD2ADA1C1 /* Frameworks */,
+				C6EE32B33E40F207CED2C8FFF5A74D3B /* Frameworks */,
 			);
 			name = "Google-Mobile-Ads-SDK";
 			path = "Google-Mobile-Ads-SDK";
@@ -263,10 +263,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CD46F78DED15740597C68E8BD2ADA1C1 /* Frameworks */ = {
+		C6EE32B33E40F207CED2C8FFF5A74D3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				24051830FA74F69F0FD0AC7D7FA7157D /* GoogleMobileAds.framework */,
+				84AB1D3E29BF98E6340933DC67A8B030 /* GoogleMobileAds.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
