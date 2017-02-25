@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *width;
 
 //
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *vHeight;
+//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *vHeight;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (nonatomic, strong) CLLocationManager *locationManager;

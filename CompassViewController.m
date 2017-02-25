@@ -26,7 +26,7 @@ GeoPointCompass *geoPointCompass;
 
 -(void)GeoPointCompass:(GeoPointCompass *)compass didUpdateHeading:(CLHeading *)newHeading{
     
-    self.degrees.text = [NSString stringWithFormat:@"%.00f", newHeading.trueHeading];
+    self.degrees.text = [NSString stringWithFormat:@"%.00f°N", newHeading.trueHeading];
 }
 
 #pragma mark - MapView Delegate
@@ -42,16 +42,19 @@ GeoPointCompass *geoPointCompass;
     self.location.text = newCoder;
 }
 
-#pragma mark Life Cycle
+#pragma mark - Private Methods
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+-(void)setShadowforView:(UIView *)view{
+    
+    view.layer.cornerRadius = 15;
+    view.layer.shadowRadius = 2.0f;
+    view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
+    view.layer.shadowOpacity = 0.8f;
+    view.layer.masksToBounds = NO;
 }
+
+#pragma mark - Life Cycle
 
 -(void)viewDidDisappear:(BOOL)animated{
     
@@ -61,7 +64,7 @@ GeoPointCompass *geoPointCompass;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
- 
+    
     // Create the image for the compass
     geoPointCompass = [[GeoPointCompass alloc] init];
     
@@ -72,7 +75,7 @@ GeoPointCompass *geoPointCompass;
     geoPointCompass.latitudeOfTargetedPoint = 90.0;
     geoPointCompass.longitudeOfTargetedPoint = 0.0;
     geoPointCompass.delegate = self;
-
+    
     [super viewDidAppear:YES];
 }
 
@@ -85,13 +88,15 @@ GeoPointCompass *geoPointCompass;
         self.width.constant = 300;
     }
     
-    if(areAdsRemoved == YES){
+    if(areAdsRemoved == YES)
         self.banner.hidden = YES;
-    }else{
+    else{
         self.banner.adUnitID = @"ca-app-pub-7942613644553368/1714159132";
         self.banner.rootViewController = self;
         [self.banner loadRequest:[GADRequest request]];
     }
+    
+    [self setShadowforView:self.contentView];
     
     self.mapView.showsUserLocation = YES;
     MKCoordinateRegion mapRegion;

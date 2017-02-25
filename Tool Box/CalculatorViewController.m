@@ -14,16 +14,6 @@
 
 @implementation CalculatorViewController
 
-/*
- *  System Versioning Preprocessor Macros
- */
-
-#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
-#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
-
 #pragma mark Calculator Methods
 
 -(IBAction)selectedNumber:(id)sender{
@@ -309,7 +299,6 @@
                 }
             }];
             self.answerLabel.text = [NSString stringWithFormat:@"%@ = %f", parse.equation, parse.result.floatValue];
-            
         }
     }];
     
@@ -323,9 +312,6 @@
     [audioEngine prepare];
     
     [audioEngine startAndReturnError:nil];
-    
-    //self.speechResult.text = @"Say Something, I'm listening";
-
 }
 
 -(void)setUpSpeechRecognition{
@@ -408,7 +394,7 @@
         [self setShadowforView:button];
     }
     self.tableHeight.constant = 415;
-    [self setShadowforView:self.table];
+    [self setShadowforView:self.listenResult];
     [self setShadowforView:self.speechButton];
     UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeGesture:)];
     swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
@@ -433,9 +419,6 @@
     [self setUpSpeechRecognition];
     [self setupViews];
     [super viewDidLoad];
-    
-    self.speechButton.hidden = YES;
-    self.table.hidden = YES;
 
     // Do any additional setup after loading the view.
 }

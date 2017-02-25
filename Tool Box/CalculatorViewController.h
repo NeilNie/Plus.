@@ -31,7 +31,7 @@
     AVAudioEngine *audioEngine;
 }
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeight;
-@property (weak, nonatomic) IBOutlet UIView *table;
+@property (weak, nonatomic) IBOutlet UIView *listenResult;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet GADBannerView *banner;
