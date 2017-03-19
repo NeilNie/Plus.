@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		000401101DA94FA3005E51E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0004010F1DA94FA3005E51E9 /* Main.storyboard */; };
 		00594D3A1D6A9BF300CB1DB4 /* circled_down_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */; };
-		005FD1A61D7116C5006225C0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005FD1A51D7116C5006225C0 /* MasterViewController.m */; };
 		006FB1A91D047CC300768D92 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FB1A81D047CC300768D92 /* NotificationCenter.framework */; };
 		006FB1AD1D047CC300768D92 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006FB1AC1D047CC300768D92 /* TodayViewController.m */; };
 		006FB1B01D047CC300768D92 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006FB1AE1D047CC300768D92 /* MainInterface.storyboard */; };
 		006FB1B41D047CC300768D92 /* Plus. Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 006FB1A71D047CC300768D92 /* Plus. Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = 007A7D441D6A03BE00871577 /* GeoPointCompass.m */; };
-		007A7D481D6A03CE00871577 /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 007A7D471D6A03CE00871577 /* CompassViewController.m */; };
 		007A7D4A1D6A043000871577 /* Compass_Rose-Black 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 007A7D491D6A043000871577 /* Compass_Rose-Black 3.png */; };
 		007A7D4C1D6A061E00871577 /* compass_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 007A7D4B1D6A061E00871577 /* compass_arrow.png */; };
 		008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */; };
@@ -117,8 +115,6 @@
 /* Begin PBXFileReference section */
 		0004010F1DA94FA3005E51E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circled_down_filled.png; sourceTree = "<group>"; };
-		005FD1A41D7116C5006225C0 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		005FD1A51D7116C5006225C0 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		006FB1A71D047CC300768D92 /* Plus. Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Plus. Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		006FB1A81D047CC300768D92 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		006FB1AB1D047CC300768D92 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -127,8 +123,6 @@
 		006FB1B11D047CC300768D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		007A7D431D6A03BE00871577 /* GeoPointCompass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointCompass.h; sourceTree = "<group>"; };
 		007A7D441D6A03BE00871577 /* GeoPointCompass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointCompass.m; sourceTree = "<group>"; };
-		007A7D461D6A03CE00871577 /* CompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompassViewController.h; path = ../CompassViewController.h; sourceTree = "<group>"; };
-		007A7D471D6A03CE00871577 /* CompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompassViewController.m; path = ../CompassViewController.m; sourceTree = "<group>"; };
 		007A7D491D6A043000871577 /* Compass_Rose-Black 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Compass_Rose-Black 3.png"; sourceTree = "<group>"; };
 		007A7D4B1D6A061E00871577 /* compass_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_arrow.png; sourceTree = "<group>"; };
 		008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -248,10 +242,6 @@
 		00594D3D1D6A9D7F00CB1DB4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				005FD1A41D7116C5006225C0 /* MasterViewController.h */,
-				005FD1A51D7116C5006225C0 /* MasterViewController.m */,
-				007A7D461D6A03CE00871577 /* CompassViewController.h */,
-				007A7D471D6A03CE00871577 /* CompassViewController.m */,
 				28BFC6AA1B5493DA00E45770 /* ViewController.h */,
 				28BFC6AB1B5493DA00E45770 /* ViewController.m */,
 				284737531D85B9CE00B56DB0 /* CalculatorViewController.h */,
@@ -686,9 +676,7 @@
 				28BFC6AC1B5493DA00E45770 /* ViewController.m in Sources */,
 				28BFC6A91B5493DA00E45770 /* AppDelegate.m in Sources */,
 				284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */,
-				007A7D481D6A03CE00871577 /* CompassViewController.m in Sources */,
 				28BFC6A61B5493DA00E45770 /* main.m in Sources */,
-				005FD1A61D7116C5006225C0 /* MasterViewController.m in Sources */,
 				289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */,
 				007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */,
 			);

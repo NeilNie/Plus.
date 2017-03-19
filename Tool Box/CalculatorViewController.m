@@ -349,7 +349,7 @@
     
     switch ([[AVAudioSession sharedInstance] recordPermission]) {
         case AVAudioSessionRecordPermissionGranted:
-            
+            enabled = YES;
             break;
         case AVAudioSessionRecordPermissionDenied:
             [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
