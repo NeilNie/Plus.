@@ -119,11 +119,8 @@
 }
 -(IBAction)Plus:(id)sender{
     
-    if (RunningTotal == 0) {
-        
+    if (RunningTotal == 0)
         RunningTotal = SelectNumber;
-        
-    }
     
     else{
         
@@ -143,7 +140,6 @@
             default:
                 break;
         }
-        
     }
     
     Method = 4;
@@ -152,11 +148,8 @@
 }
 -(IBAction)Equals:(id)sender{
     
-    if (RunningTotal == 0) {
-        
+    if (RunningTotal == 0)
         RunningTotal = SelectNumber;
-        
-    }
     
     else{
         
@@ -197,11 +190,10 @@
 
 -(void)speechRecognizer:(SFSpeechRecognizer *)speechRecognizer availabilityDidChange:(BOOL)available{
     
-    if (available) {
+    if (available)
         self.speechButton.enabled = YES;
-    }else{
+    else
         self.speechButton.enabled = NO;
-    }
 }
 
 #pragma mark - IBActions
@@ -293,10 +285,8 @@
             [parse parseEquation];
             [parse parseNumbersOperators:^(BOOL success, NSString *error) {
                 
-                if (success) {
+                if (success)
                     [parse calculate];
-                    
-                }
             }];
             self.answerLabel.text = [NSString stringWithFormat:@"%@ = %f", parse.equation, parse.result.floatValue];
         }
@@ -312,6 +302,10 @@
     [audioEngine prepare];
     
     [audioEngine startAndReturnError:nil];
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 }
 
 -(void)setUpSpeechRecognition{

@@ -55,10 +55,9 @@
         [productsRequest start];
         
     }
-    else{
+    else
         NSLog(@"User cannot make payments due to parental controls");
         //this is called the user cannot make payments, most likely due to parental controls
-    }
 }
 - (IBAction)tapsRemoveAdsButton2{
     NSLog(@"User requests to remove ads");
@@ -71,10 +70,9 @@
         [productsRequest start];
         
     }
-    else{
+    else
         NSLog(@"User cannot make payments due to parental controls");
         //this is called the user cannot make payments, most likely due to parental controls
-    }
 }
 
 
@@ -86,10 +84,9 @@
         NSLog(@"Products Available!");
         [self purchase:validProduct];
     }
-    else if(!validProduct){
+    else if(!validProduct)
         NSLog(@"No products available");
         //this is called if your product id is not valid, this shouldn't be called unless that happens.
-    }
 }
 
 - (IBAction)purchase:(SKProduct *)product{
@@ -111,8 +108,7 @@
 - (void) paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
 {
     NSLog(@"received restored transactions: %lu", (unsigned long)queue.transactions.count);
-    for (SKPaymentTransaction *transaction in queue.transactions)
-    {
+    for (SKPaymentTransaction *transaction in queue.transactions){
         if(transaction.transactionState == SKPaymentTransactionStateRestored){
             NSLog(@"Transaction state -> Restored");
             //called when the user successfully restores a purchase
@@ -120,9 +116,7 @@
             [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
             break;
         }
-        
     }
-    
 }
 
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions{
@@ -166,7 +160,6 @@
     
 }
 
-
 -(IBAction)rate:(id)sender{
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/the-toolbox/id992505214?mt=8"] options:@{} completionHandler:nil];
@@ -177,14 +170,7 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://nspiresoftware.net"] options:@{} completionHandler:nil];
 }
 
-//
-//
-//Timer
-//
-//
-//
-//
-//
+#pragma mark - Timer methods 
 
 -(IBAction)start:(id)sender{
     

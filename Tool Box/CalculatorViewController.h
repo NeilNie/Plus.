@@ -3,7 +3,7 @@
 //  
 //
 //  Created by Yongyang Nie on 9/11/16.
-//
+//  (c) Yongyang Nie 2017
 //
 
 #import "SpeechParser.h"
@@ -41,13 +41,5 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSMutableArray *buttons;
 @property (strong, nonatomic) IBOutletCollection(NSLayoutConstraint) NSMutableArray *width;
 @property (strong, nonatomic) IBOutletCollection(NSLayoutConstraint) NSMutableArray *height;
-
-//Calc
--(IBAction)Times:(id)sender;
--(IBAction)Divide:(id)sender;
--(IBAction)Subtract:(id)sender;
--(IBAction)Plus:(id)sender;
--(IBAction)Equals:(id)sender;
--(IBAction)AllClear:(id)sender;
 
 @end
