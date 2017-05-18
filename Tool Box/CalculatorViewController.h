@@ -35,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet GADBannerView *banner;
+@property (nonatomic, strong) GADInterstitial *interstitial;
 @property (weak, nonatomic) IBOutlet UIButton *speechButton;
 @property (weak, nonatomic) IBOutlet UILabel *listening;
 

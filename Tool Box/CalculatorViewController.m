@@ -197,6 +197,17 @@
 }
 
 #pragma mark - IBActions
+- (IBAction)cancelSpeech:(id)sender {
+    
+    [UIView animateWithDuration:0.75 animations:^{
+        self.tableHeight.constant = 415;
+        [self.view layoutIfNeeded];
+    }];
+    if (audioEngine.isRunning) {
+        [audioEngine stop];
+        [recognitionRequest endAudio];
+    }
+}
 
 -(IBAction)microphoneTapped:(id)sender{
     
@@ -208,10 +219,17 @@
     if (audioEngine.isRunning) {
         [audioEngine stop];
         [recognitionRequest endAudio];
-        self.speechButton.enabled = NO;
+        [UIView animateWithDuration:0.75 animations:^{
+            self.tableHeight.constant = 415;
+            [self.view layoutIfNeeded];
+        }];
     }else{
         [self startRecording];
     }
+    int i = arc4random()%5;
+    [self createAndLoadInterstitial];
+    //if (i == 1)
+        
 }
 
 -(void)swipeGesture:(UISwipeGestureRecognizer *)swipeUp{
@@ -219,7 +237,6 @@
     if (audioEngine.isRunning) {
         [audioEngine stop];
         [recognitionRequest endAudio];
-        self.speechButton.enabled = NO;
     }
     
     if (swipeUp.direction == UISwipeGestureRecognizerDirectionUp) {
@@ -236,6 +253,12 @@
 }
 
 #pragma mark - Private
+
+- (void)createAndLoadInterstitial {
+    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7942613644553368/5594711931"];
+    GADRequest *request = [GADRequest request];
+    [self.interstitial loadRequest:request];
+}
 
 -(void)startRecording{
     
@@ -302,10 +325,6 @@
     [audioEngine prepare];
     
     [audioEngine startAndReturnError:nil];
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 }
 
 -(void)setUpSpeechRecognition{
