@@ -14,24 +14,61 @@
 		006FB1B01D047CC300768D92 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006FB1AE1D047CC300768D92 /* MainInterface.storyboard */; };
 		006FB1B41D047CC300768D92 /* Plus. Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 006FB1A71D047CC300768D92 /* Plus. Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = 007A7D441D6A03BE00871577 /* GeoPointCompass.m */; };
-		007A7D4A1D6A043000871577 /* Compass_Rose-Black 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 007A7D491D6A043000871577 /* Compass_Rose-Black 3.png */; };
-		007A7D4C1D6A061E00871577 /* compass_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 007A7D4B1D6A061E00871577 /* compass_arrow.png */; };
 		008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */; };
 		00B58A1B1D6E935E00B7870E /* compass_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B58A1A1D6E935E00B7870E /* compass_1.png */; };
 		00D6DBD11BE6B53A00BDC277 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D6DBD01BE6B53A00BDC277 /* left.png */; };
+		282FB0BC1EE8BF7600EBECED /* PreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282FB0BB1EE8BF7600EBECED /* PreferenceViewController.m */; };
+		282FB0C11EE8C06300EBECED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 282FB0C01EE8BFF800EBECED /* AppDelegate.m */; };
 		284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284737541D85B9CE00B56DB0 /* CalculatorViewController.m */; };
 		284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284737561D85BA0E00B56DB0 /* Speech.framework */; };
 		2872E75D1D8DE699004D0D62 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2872E75C1D8DE699004D0D62 /* AVFoundation.framework */; };
 		2872E7601D8DE929004D0D62 /* Speech.m in Sources */ = {isa = PBXBuildFile; fileRef = 2872E75F1D8DE929004D0D62 /* Speech.m */; };
+		2874B3FD1EE895CC00EDDD86 /* SFCompactDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D31EE8903900EDDD86 /* SFCompactDisplay-Heavy.otf */; };
+		2874B3FE1EE895CC00EDDD86 /* SFCompactText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D41EE8903900EDDD86 /* SFCompactText-Medium.otf */; };
+		2874B3FF1EE895CC00EDDD86 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D51EE8903900EDDD86 /* SF-Pro-Display-Thin.otf */; };
+		2874B4001EE895CC00EDDD86 /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D61EE8903900EDDD86 /* SF-Pro-Display-SemiboldItalic.otf */; };
+		2874B4011EE895CC00EDDD86 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D71EE8903900EDDD86 /* SF-Pro-Text-Heavy.otf */; };
+		2874B4021EE895CC00EDDD86 /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D81EE8903900EDDD86 /* SF-Pro-Display-RegularItalic.otf */; };
+		2874B4031EE895CC00EDDD86 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D91EE8903900EDDD86 /* SF-Pro-Display-Light.otf */; };
+		2874B4041EE895CC00EDDD86 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3DA1EE8903900EDDD86 /* SF-Pro-Display-Regular.otf */; };
+		2874B4051EE895CC00EDDD86 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3DB1EE8903900EDDD86 /* SF-Pro-Text-MediumItalic.otf */; };
+		2874B4061EE895CC00EDDD86 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3DC1EE8903900EDDD86 /* SF-Pro-Display-Bold.otf */; };
+		2874B4071EE895CC00EDDD86 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3DD1EE8903900EDDD86 /* SF-Pro-Display-Medium.otf */; };
+		2874B4081EE895CC00EDDD86 /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3DE1EE8903900EDDD86 /* SF-Pro-Display-Heavy.otf */; };
+		2874B4091EE895CC00EDDD86 /* SFCompactDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3DF1EE8903900EDDD86 /* SFCompactDisplay-Light.otf */; };
+		2874B40A1EE895CC00EDDD86 /* SFCompactText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E01EE8903900EDDD86 /* SFCompactText-Regular.otf */; };
+		2874B40B1EE895CC00EDDD86 /* SFCompactDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E11EE8903900EDDD86 /* SFCompactDisplay-Semibold.otf */; };
+		2874B40C1EE895CC00EDDD86 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E21EE8903900EDDD86 /* SF-Pro-Text-Light.otf */; };
+		2874B40D1EE895CD00EDDD86 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E31EE8903900EDDD86 /* SF-Pro-Display-Semibold.otf */; };
+		2874B40E1EE895CD00EDDD86 /* SFCompactDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E41EE8903900EDDD86 /* SFCompactDisplay-Medium.otf */; };
+		2874B40F1EE895CD00EDDD86 /* SFCompactDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E51EE8903900EDDD86 /* SFCompactDisplay-Black.otf */; };
+		2874B4101EE895CD00EDDD86 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E61EE8903900EDDD86 /* SF-Pro-Text-Regular.otf */; };
+		2874B4111EE895CD00EDDD86 /* SFCompactDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E71EE8903900EDDD86 /* SFCompactDisplay-Regular.otf */; };
+		2874B4121EE895CD00EDDD86 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E81EE8903900EDDD86 /* SF-Pro-Text-Bold.otf */; };
+		2874B4131EE895CD00EDDD86 /* SFCompactText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3E91EE8903900EDDD86 /* SFCompactText-MediumItalic.otf */; };
+		2874B4141EE895CD00EDDD86 /* SFCompactText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3EA1EE8903900EDDD86 /* SFCompactText-Semibold.otf */; };
+		2874B4151EE895CD00EDDD86 /* SFCompactText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3EB1EE8903900EDDD86 /* SFCompactText-RegularItalic.otf */; };
+		2874B4161EE895CD00EDDD86 /* SFCompactText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3EC1EE8903900EDDD86 /* SFCompactText-Light.otf */; };
+		2874B4171EE895CD00EDDD86 /* SF-Pro-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3ED1EE8903900EDDD86 /* SF-Pro-Display-Ultralight.otf */; };
+		2874B4181EE895CD00EDDD86 /* SF-Pro-Display-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3EE1EE8903900EDDD86 /* SF-Pro-Display-UltralightItalic.otf */; };
+		2874B4191EE895CD00EDDD86 /* SFCompactDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3EF1EE8903900EDDD86 /* SFCompactDisplay-Bold.otf */; };
+		2874B41A1EE895CD00EDDD86 /* SFCompactText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F01EE8903900EDDD86 /* SFCompactText-Bold.otf */; };
+		2874B41B1EE895CD00EDDD86 /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F11EE8903900EDDD86 /* SF-Pro-Display-Black.otf */; };
+		2874B41C1EE895CD00EDDD86 /* SFCompactDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F21EE8903900EDDD86 /* SFCompactDisplay-Ultralight.otf */; };
+		2874B41D1EE895CD00EDDD86 /* SFCompactText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F31EE8903900EDDD86 /* SFCompactText-Heavy.otf */; };
+		2874B41E1EE895CD00EDDD86 /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F41EE8903900EDDD86 /* SF-Pro-Text-BoldItalic.otf */; };
+		2874B41F1EE895CD00EDDD86 /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F51EE8903900EDDD86 /* SF-Pro-Text-RegularItalic.otf */; };
+		2874B4201EE895CD00EDDD86 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F61EE8903900EDDD86 /* SF-Pro-Text-Semibold.otf */; };
+		2874B4211EE895CD00EDDD86 /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F71EE8903900EDDD86 /* SF-Pro-Display-ThinItalic.otf */; };
+		2874B4221EE895CD00EDDD86 /* SFCompactText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F81EE8903900EDDD86 /* SFCompactText-LightItalic.otf */; };
+		2874B4231EE895CD00EDDD86 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F91EE8903900EDDD86 /* SF-Pro-Text-Medium.otf */; };
+		2874B4241EE895CD00EDDD86 /* SFCompactDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3FA1EE8903900EDDD86 /* SFCompactDisplay-Thin.otf */; };
 		288027701B9C98FC002B9AE4 /* Plus. WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E2A52D1B54B29700126C42 /* Plus. WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		288027731B9C98FC002B9AE4 /* Plus. WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28E2A53C1B54B29700126C42 /* Plus. WatchKit App.app */; };
 		289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 289FC80E1D86336800D3BDAF /* SpeechParser.m */; };
 		28BE24C21D88DF230065D520 /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BE24C11D88DF230065D520 /* microphone.png */; };
 		28BFC6A61B5493DA00E45770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6A51B5493DA00E45770 /* main.m */; };
-		28BFC6A91B5493DA00E45770 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6A81B5493DA00E45770 /* AppDelegate.m */; };
-		28BFC6AC1B5493DA00E45770 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6AB1B5493DA00E45770 /* ViewController.m */; };
 		28BFC6B41B5493DA00E45770 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */; };
-		28BFC6C01B5493DA00E45770 /* Tool_BoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6BF1B5493DA00E45770 /* Tool_BoxTests.m */; };
 		28E2A5341B54B29700126C42 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E2A5331B54B29700126C42 /* InterfaceController.m */; };
 		28E2A5371B54B29700126C42 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E2A5361B54B29700126C42 /* NotificationController.m */; };
 		28E2A5451B54B29700126C42 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5431B54B29700126C42 /* Interface.storyboard */; };
@@ -42,7 +79,8 @@
 		28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5621B54B39000126C42 /* MessageUI.framework */; };
 		28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5641B54B39400126C42 /* UIKit.framework */; };
 		28E2A5691B54B5E700126C42 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5681B54B5E700126C42 /* Media.xcassets */; };
-		5159A41911575F01F3364E70 /* libPods-Plus..a in Frameworks */ = {isa = PBXBuildFile; fileRef = D59A0EAAAC19D585B176A46B /* libPods-Plus..a */; };
+		28FBF2B01EE87DDE004D83BF /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBF2AF1EE87DDE004D83BF /* SpeechViewController.swift */; };
+		A59844EBE63A8A074A7F772E /* Pods_Plus_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58073B63F2B362F1EB56DABA /* Pods_Plus_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,13 +104,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 28E2A53B1B54B29700126C42;
 			remoteInfo = "Tool Box WatchKit App";
-		};
-		28BFC6BA1B5493DA00E45770 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 28BFC6981B5493DA00E45770 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 28BFC69F1B5493DA00E45770;
-			remoteInfo = "Tool Box";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -123,32 +154,68 @@
 		006FB1B11D047CC300768D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		007A7D431D6A03BE00871577 /* GeoPointCompass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointCompass.h; sourceTree = "<group>"; };
 		007A7D441D6A03BE00871577 /* GeoPointCompass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointCompass.m; sourceTree = "<group>"; };
-		007A7D491D6A043000871577 /* Compass_Rose-Black 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Compass_Rose-Black 3.png"; sourceTree = "<group>"; };
-		007A7D4B1D6A061E00871577 /* compass_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_arrow.png; sourceTree = "<group>"; };
 		008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00B58A1A1D6E935E00B7870E /* compass_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_1.png; sourceTree = "<group>"; };
 		00D6DBD01BE6B53A00BDC277 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		1567500C16668611F0A3057A /* Pods-Plus..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plus..debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plus./Pods-Plus..debug.xcconfig"; sourceTree = "<group>"; };
+		282FB0BA1EE8BF7600EBECED /* PreferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceViewController.h; sourceTree = "<group>"; };
+		282FB0BB1EE8BF7600EBECED /* PreferenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceViewController.m; sourceTree = "<group>"; };
+		282FB0BE1EE8BF9100EBECED /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/HandwritingViewController.swift; sourceTree = "<group>"; };
+		282FB0BF1EE8BFF800EBECED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		282FB0C01EE8BFF800EBECED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		284737531D85B9CE00B56DB0 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		284737541D85B9CE00B56DB0 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		284737561D85BA0E00B56DB0 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		2872E75C1D8DE699004D0D62 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2872E75E1D8DE929004D0D62 /* Speech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speech.h; sourceTree = "<group>"; };
 		2872E75F1D8DE929004D0D62 /* Speech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speech.m; sourceTree = "<group>"; };
+		2874B3D31EE8903900EDDD86 /* SFCompactDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Heavy.otf"; sourceTree = "<group>"; };
+		2874B3D41EE8903900EDDD86 /* SFCompactText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Medium.otf"; sourceTree = "<group>"; };
+		2874B3D51EE8903900EDDD86 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
+		2874B3D61EE8903900EDDD86 /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		2874B3D71EE8903900EDDD86 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		2874B3D81EE8903900EDDD86 /* SF-Pro-Display-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-RegularItalic.otf"; sourceTree = "<group>"; };
+		2874B3D91EE8903900EDDD86 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		2874B3DA1EE8903900EDDD86 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		2874B3DB1EE8903900EDDD86 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
+		2874B3DC1EE8903900EDDD86 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		2874B3DD1EE8903900EDDD86 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		2874B3DE1EE8903900EDDD86 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		2874B3DF1EE8903900EDDD86 /* SFCompactDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Light.otf"; sourceTree = "<group>"; };
+		2874B3E01EE8903900EDDD86 /* SFCompactText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Regular.otf"; sourceTree = "<group>"; };
+		2874B3E11EE8903900EDDD86 /* SFCompactDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		2874B3E21EE8903900EDDD86 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		2874B3E31EE8903900EDDD86 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		2874B3E41EE8903900EDDD86 /* SFCompactDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Medium.otf"; sourceTree = "<group>"; };
+		2874B3E51EE8903900EDDD86 /* SFCompactDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Black.otf"; sourceTree = "<group>"; };
+		2874B3E61EE8903900EDDD86 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		2874B3E71EE8903900EDDD86 /* SFCompactDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.otf"; sourceTree = "<group>"; };
+		2874B3E81EE8903900EDDD86 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		2874B3E91EE8903900EDDD86 /* SFCompactText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-MediumItalic.otf"; sourceTree = "<group>"; };
+		2874B3EA1EE8903900EDDD86 /* SFCompactText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Semibold.otf"; sourceTree = "<group>"; };
+		2874B3EB1EE8903900EDDD86 /* SFCompactText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-RegularItalic.otf"; sourceTree = "<group>"; };
+		2874B3EC1EE8903900EDDD86 /* SFCompactText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Light.otf"; sourceTree = "<group>"; };
+		2874B3ED1EE8903900EDDD86 /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		2874B3EE1EE8903900EDDD86 /* SF-Pro-Display-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-UltralightItalic.otf"; sourceTree = "<group>"; };
+		2874B3EF1EE8903900EDDD86 /* SFCompactDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Bold.otf"; sourceTree = "<group>"; };
+		2874B3F01EE8903900EDDD86 /* SFCompactText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Bold.otf"; sourceTree = "<group>"; };
+		2874B3F11EE8903900EDDD86 /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
+		2874B3F21EE8903900EDDD86 /* SFCompactDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Ultralight.otf"; sourceTree = "<group>"; };
+		2874B3F31EE8903900EDDD86 /* SFCompactText-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Heavy.otf"; sourceTree = "<group>"; };
+		2874B3F41EE8903900EDDD86 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
+		2874B3F51EE8903900EDDD86 /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
+		2874B3F61EE8903900EDDD86 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		2874B3F71EE8903900EDDD86 /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
+		2874B3F81EE8903900EDDD86 /* SFCompactText-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-LightItalic.otf"; sourceTree = "<group>"; };
+		2874B3F91EE8903900EDDD86 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		2874B3FA1EE8903900EDDD86 /* SFCompactDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Thin.otf"; sourceTree = "<group>"; };
 		289FC80D1D86336800D3BDAF /* SpeechParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechParser.h; sourceTree = "<group>"; };
 		289FC80E1D86336800D3BDAF /* SpeechParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechParser.m; sourceTree = "<group>"; };
 		28BE24C11D88DF230065D520 /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphone.png; sourceTree = "<group>"; };
 		28BFC6A01B5493DA00E45770 /* Plus..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plus..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BFC6A41B5493DA00E45770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28BFC6A51B5493DA00E45770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		28BFC6A71B5493DA00E45770 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		28BFC6A81B5493DA00E45770 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		28BFC6AA1B5493DA00E45770 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		28BFC6AB1B5493DA00E45770 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		28BFC6B31B5493DA00E45770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		28BFC6B91B5493DA00E45770 /* Plus.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Plus.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		28BFC6BE1B5493DA00E45770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28BFC6BF1B5493DA00E45770 /* Tool_BoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool_BoxTests.m; sourceTree = "<group>"; };
 		28E2A52D1B54B29700126C42 /* Plus. WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Plus. WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E2A5301B54B29700126C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28E2A5311B54B29700126C42 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -166,9 +233,11 @@
 		28E2A5621B54B39000126C42 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		28E2A5641B54B39400126C42 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28E2A5681B54B5E700126C42 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		28FBF2AA1EE87D76004D83BF /* Plus.-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plus.-Bridging-Header.h"; sourceTree = "<group>"; };
+		28FBF2AF1EE87DDE004D83BF /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		41E593850244D5392F72B002 /* Pods-Plus..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plus..release.xcconfig"; path = "Pods/Target Support Files/Pods-Plus./Pods-Plus..release.xcconfig"; sourceTree = "<group>"; };
+		58073B63F2B362F1EB56DABA /* Pods_Plus_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plus_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tool Box.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D59A0EAAAC19D585B176A46B /* libPods-Plus..a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Plus..a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,14 +257,7 @@
 				284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */,
 				28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */,
 				28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */,
-				5159A41911575F01F3364E70 /* libPods-Plus..a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28BFC6B61B5493DA00E45770 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A59844EBE63A8A074A7F772E /* Pods_Plus_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,12 +281,10 @@
 		00594D3B1D6A9D5000CB1DB4 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				28E2A5681B54B5E700126C42 /* Media.xcassets */,
 				28BE24C11D88DF230065D520 /* microphone.png */,
 				00B58A1A1D6E935E00B7870E /* compass_1.png */,
 				00D6DBD01BE6B53A00BDC277 /* left.png */,
-				28E2A5681B54B5E700126C42 /* Media.xcassets */,
-				007A7D4B1D6A061E00871577 /* compass_arrow.png */,
-				007A7D491D6A043000871577 /* Compass_Rose-Black 3.png */,
 				00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */,
 			);
 			name = Media;
@@ -235,6 +295,7 @@
 			children = (
 				0004010F1DA94FA3005E51E9 /* Main.storyboard */,
 				28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */,
+				28FBF2AA1EE87D76004D83BF /* Plus.-Bridging-Header.h */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -242,8 +303,10 @@
 		00594D3D1D6A9D7F00CB1DB4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				28BFC6AA1B5493DA00E45770 /* ViewController.h */,
-				28BFC6AB1B5493DA00E45770 /* ViewController.m */,
+				28FBF2AF1EE87DDE004D83BF /* SpeechViewController.swift */,
+				282FB0BD1EE8BF9100EBECED /* HandwritingViewController.swift */,
+				282FB0BA1EE8BF7600EBECED /* PreferenceViewController.h */,
+				282FB0BB1EE8BF7600EBECED /* PreferenceViewController.m */,
 				284737531D85B9CE00B56DB0 /* CalculatorViewController.h */,
 				284737541D85B9CE00B56DB0 /* CalculatorViewController.m */,
 			);
@@ -259,8 +322,6 @@
 				289FC80E1D86336800D3BDAF /* SpeechParser.m */,
 				007A7D431D6A03BE00871577 /* GeoPointCompass.h */,
 				007A7D441D6A03BE00871577 /* GeoPointCompass.m */,
-				28BFC6A71B5493DA00E45770 /* AppDelegate.h */,
-				28BFC6A81B5493DA00E45770 /* AppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -276,13 +337,59 @@
 			path = "Tool Box Widget";
 			sourceTree = "<group>";
 		};
+		2874B3D21EE8903900EDDD86 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2874B3D31EE8903900EDDD86 /* SFCompactDisplay-Heavy.otf */,
+				2874B3D41EE8903900EDDD86 /* SFCompactText-Medium.otf */,
+				2874B3D51EE8903900EDDD86 /* SF-Pro-Display-Thin.otf */,
+				2874B3D61EE8903900EDDD86 /* SF-Pro-Display-SemiboldItalic.otf */,
+				2874B3D71EE8903900EDDD86 /* SF-Pro-Text-Heavy.otf */,
+				2874B3D81EE8903900EDDD86 /* SF-Pro-Display-RegularItalic.otf */,
+				2874B3D91EE8903900EDDD86 /* SF-Pro-Display-Light.otf */,
+				2874B3DA1EE8903900EDDD86 /* SF-Pro-Display-Regular.otf */,
+				2874B3DB1EE8903900EDDD86 /* SF-Pro-Text-MediumItalic.otf */,
+				2874B3DC1EE8903900EDDD86 /* SF-Pro-Display-Bold.otf */,
+				2874B3DD1EE8903900EDDD86 /* SF-Pro-Display-Medium.otf */,
+				2874B3DE1EE8903900EDDD86 /* SF-Pro-Display-Heavy.otf */,
+				2874B3DF1EE8903900EDDD86 /* SFCompactDisplay-Light.otf */,
+				2874B3E01EE8903900EDDD86 /* SFCompactText-Regular.otf */,
+				2874B3E11EE8903900EDDD86 /* SFCompactDisplay-Semibold.otf */,
+				2874B3E21EE8903900EDDD86 /* SF-Pro-Text-Light.otf */,
+				2874B3E31EE8903900EDDD86 /* SF-Pro-Display-Semibold.otf */,
+				2874B3E41EE8903900EDDD86 /* SFCompactDisplay-Medium.otf */,
+				2874B3E51EE8903900EDDD86 /* SFCompactDisplay-Black.otf */,
+				2874B3E61EE8903900EDDD86 /* SF-Pro-Text-Regular.otf */,
+				2874B3E71EE8903900EDDD86 /* SFCompactDisplay-Regular.otf */,
+				2874B3E81EE8903900EDDD86 /* SF-Pro-Text-Bold.otf */,
+				2874B3E91EE8903900EDDD86 /* SFCompactText-MediumItalic.otf */,
+				2874B3EA1EE8903900EDDD86 /* SFCompactText-Semibold.otf */,
+				2874B3EB1EE8903900EDDD86 /* SFCompactText-RegularItalic.otf */,
+				2874B3EC1EE8903900EDDD86 /* SFCompactText-Light.otf */,
+				2874B3ED1EE8903900EDDD86 /* SF-Pro-Display-Ultralight.otf */,
+				2874B3EE1EE8903900EDDD86 /* SF-Pro-Display-UltralightItalic.otf */,
+				2874B3EF1EE8903900EDDD86 /* SFCompactDisplay-Bold.otf */,
+				2874B3F01EE8903900EDDD86 /* SFCompactText-Bold.otf */,
+				2874B3F11EE8903900EDDD86 /* SF-Pro-Display-Black.otf */,
+				2874B3F21EE8903900EDDD86 /* SFCompactDisplay-Ultralight.otf */,
+				2874B3F31EE8903900EDDD86 /* SFCompactText-Heavy.otf */,
+				2874B3F41EE8903900EDDD86 /* SF-Pro-Text-BoldItalic.otf */,
+				2874B3F51EE8903900EDDD86 /* SF-Pro-Text-RegularItalic.otf */,
+				2874B3F61EE8903900EDDD86 /* SF-Pro-Text-Semibold.otf */,
+				2874B3F71EE8903900EDDD86 /* SF-Pro-Display-ThinItalic.otf */,
+				2874B3F81EE8903900EDDD86 /* SFCompactText-LightItalic.otf */,
+				2874B3F91EE8903900EDDD86 /* SF-Pro-Text-Medium.otf */,
+				2874B3FA1EE8903900EDDD86 /* SFCompactDisplay-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		28BFC6971B5493DA00E45770 = {
 			isa = PBXGroup;
 			children = (
 				28E2A5641B54B39400126C42 /* UIKit.framework */,
 				28E2A5621B54B39000126C42 /* MessageUI.framework */,
 				28BFC6A21B5493DA00E45770 /* Plus. */,
-				28BFC6BC1B5493DA00E45770 /* Tool BoxTests */,
 				28E2A52E1B54B29700126C42 /* Tool Box WatchKit Extension */,
 				28E2A5401B54B29700126C42 /* Tool Box WatchKit App */,
 				006FB1AA1D047CC300768D92 /* Tool Box Widget */,
@@ -296,7 +403,6 @@
 			isa = PBXGroup;
 			children = (
 				28BFC6A01B5493DA00E45770 /* Plus..app */,
-				28BFC6B91B5493DA00E45770 /* Plus.Tests.xctest */,
 				28E2A52D1B54B29700126C42 /* Plus. WatchKit Extension.appex */,
 				28E2A53C1B54B29700126C42 /* Plus. WatchKit App.app */,
 				006FB1A71D047CC300768D92 /* Plus. Widget.appex */,
@@ -307,6 +413,7 @@
 		28BFC6A21B5493DA00E45770 /* Plus. */ = {
 			isa = PBXGroup;
 			children = (
+				2874B3D21EE8903900EDDD86 /* Fonts */,
 				28BFC6A31B5493DA00E45770 /* Supporting Files */,
 				00594D3B1D6A9D5000CB1DB4 /* Media */,
 				00594D3C1D6A9D7000CB1DB4 /* Nibs */,
@@ -323,23 +430,8 @@
 				008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */,
 				28BFC6A41B5493DA00E45770 /* Info.plist */,
 				28BFC6A51B5493DA00E45770 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		28BFC6BC1B5493DA00E45770 /* Tool BoxTests */ = {
-			isa = PBXGroup;
-			children = (
-				28BFC6BF1B5493DA00E45770 /* Tool_BoxTests.m */,
-				28BFC6BD1B5493DA00E45770 /* Supporting Files */,
-			);
-			path = "Tool BoxTests";
-			sourceTree = "<group>";
-		};
-		28BFC6BD1B5493DA00E45770 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				28BFC6BE1B5493DA00E45770 /* Info.plist */,
+				282FB0C01EE8BFF800EBECED /* AppDelegate.m */,
+				282FB0BF1EE8BFF800EBECED /* AppDelegate.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -393,7 +485,7 @@
 				284737561D85BA0E00B56DB0 /* Speech.framework */,
 				BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */,
 				006FB1A81D047CC300768D92 /* NotificationCenter.framework */,
-				D59A0EAAAC19D585B176A46B /* libPods-Plus..a */,
+				58073B63F2B362F1EB56DABA /* Pods_Plus_.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -451,24 +543,6 @@
 			productReference = 28BFC6A01B5493DA00E45770 /* Plus..app */;
 			productType = "com.apple.product-type.application";
 		};
-		28BFC6B81B5493DA00E45770 /* Plus.Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 28BFC6C61B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Plus.Tests" */;
-			buildPhases = (
-				28BFC6B51B5493DA00E45770 /* Sources */,
-				28BFC6B61B5493DA00E45770 /* Frameworks */,
-				28BFC6B71B5493DA00E45770 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				28BFC6BB1B5493DA00E45770 /* PBXTargetDependency */,
-			);
-			name = Plus.Tests;
-			productName = "Tool BoxTests";
-			productReference = 28BFC6B91B5493DA00E45770 /* Plus.Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		28E2A52C1B54B29700126C42 /* Plus. WatchKit Extension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28E2A5501B54B29700126C42 /* Build configuration list for PBXNativeTarget "Plus. WatchKit Extension" */;
@@ -510,7 +584,7 @@
 		28BFC6981B5493DA00E45770 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Yongyang Nie";
 				TargetAttributes = {
 					006FB1A61D047CC300768D92 = {
@@ -520,10 +594,7 @@
 					28BFC69F1B5493DA00E45770 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 8NZ8K5GNH8;
-					};
-					28BFC6B81B5493DA00E45770 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 28BFC69F1B5493DA00E45770;
+						LastSwiftMigration = 0900;
 					};
 					28E2A52C1B54B29700126C42 = {
 						CreatedOnToolsVersion = 6.4;
@@ -549,7 +620,6 @@
 			projectRoot = "";
 			targets = (
 				28BFC69F1B5493DA00E45770 /* Plus. */,
-				28BFC6B81B5493DA00E45770 /* Plus.Tests */,
 				28E2A52C1B54B29700126C42 /* Plus. WatchKit Extension */,
 				28E2A53B1B54B29700126C42 /* Plus. WatchKit App */,
 				006FB1A61D047CC300768D92 /* Plus. Widget */,
@@ -570,23 +640,54 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2874B40F1EE895CD00EDDD86 /* SFCompactDisplay-Black.otf in Resources */,
+				2874B4001EE895CC00EDDD86 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
+				2874B4131EE895CD00EDDD86 /* SFCompactText-MediumItalic.otf in Resources */,
+				2874B4121EE895CD00EDDD86 /* SF-Pro-Text-Bold.otf in Resources */,
+				2874B4151EE895CD00EDDD86 /* SFCompactText-RegularItalic.otf in Resources */,
+				2874B4141EE895CD00EDDD86 /* SFCompactText-Semibold.otf in Resources */,
+				2874B4081EE895CC00EDDD86 /* SF-Pro-Display-Heavy.otf in Resources */,
+				2874B41F1EE895CD00EDDD86 /* SF-Pro-Text-RegularItalic.otf in Resources */,
+				2874B41D1EE895CD00EDDD86 /* SFCompactText-Heavy.otf in Resources */,
+				2874B4181EE895CD00EDDD86 /* SF-Pro-Display-UltralightItalic.otf in Resources */,
+				2874B4241EE895CD00EDDD86 /* SFCompactDisplay-Thin.otf in Resources */,
+				2874B4051EE895CC00EDDD86 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				00B58A1B1D6E935E00B7870E /* compass_1.png in Resources */,
 				000401101DA94FA3005E51E9 /* Main.storyboard in Resources */,
+				2874B4101EE895CD00EDDD86 /* SF-Pro-Text-Regular.otf in Resources */,
 				28E2A5691B54B5E700126C42 /* Media.xcassets in Resources */,
+				2874B40E1EE895CD00EDDD86 /* SFCompactDisplay-Medium.otf in Resources */,
 				28BFC6B41B5493DA00E45770 /* LaunchScreen.xib in Resources */,
-				007A7D4C1D6A061E00871577 /* compass_arrow.png in Resources */,
+				2874B4071EE895CC00EDDD86 /* SF-Pro-Display-Medium.otf in Resources */,
+				2874B4061EE895CC00EDDD86 /* SF-Pro-Display-Bold.otf in Resources */,
+				2874B4221EE895CD00EDDD86 /* SFCompactText-LightItalic.otf in Resources */,
+				2874B3FD1EE895CC00EDDD86 /* SFCompactDisplay-Heavy.otf in Resources */,
+				2874B41C1EE895CD00EDDD86 /* SFCompactDisplay-Ultralight.otf in Resources */,
+				2874B4201EE895CD00EDDD86 /* SF-Pro-Text-Semibold.otf in Resources */,
+				2874B4011EE895CC00EDDD86 /* SF-Pro-Text-Heavy.otf in Resources */,
+				2874B40C1EE895CC00EDDD86 /* SF-Pro-Text-Light.otf in Resources */,
+				2874B4171EE895CD00EDDD86 /* SF-Pro-Display-Ultralight.otf in Resources */,
+				2874B3FF1EE895CC00EDDD86 /* SF-Pro-Display-Thin.otf in Resources */,
+				2874B3FE1EE895CC00EDDD86 /* SFCompactText-Medium.otf in Resources */,
+				2874B4111EE895CD00EDDD86 /* SFCompactDisplay-Regular.otf in Resources */,
+				2874B40D1EE895CD00EDDD86 /* SF-Pro-Display-Semibold.otf in Resources */,
+				2874B4191EE895CD00EDDD86 /* SFCompactDisplay-Bold.otf in Resources */,
 				00D6DBD11BE6B53A00BDC277 /* left.png in Resources */,
-				007A7D4A1D6A043000871577 /* Compass_Rose-Black 3.png in Resources */,
+				2874B4021EE895CC00EDDD86 /* SF-Pro-Display-RegularItalic.otf in Resources */,
+				2874B4211EE895CD00EDDD86 /* SF-Pro-Display-ThinItalic.otf in Resources */,
+				2874B4031EE895CC00EDDD86 /* SF-Pro-Display-Light.otf in Resources */,
+				2874B40B1EE895CC00EDDD86 /* SFCompactDisplay-Semibold.otf in Resources */,
+				2874B41A1EE895CD00EDDD86 /* SFCompactText-Bold.otf in Resources */,
 				00594D3A1D6A9BF300CB1DB4 /* circled_down_filled.png in Resources */,
+				2874B4231EE895CD00EDDD86 /* SF-Pro-Text-Medium.otf in Resources */,
 				008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */,
+				2874B40A1EE895CC00EDDD86 /* SFCompactText-Regular.otf in Resources */,
+				2874B41E1EE895CD00EDDD86 /* SF-Pro-Text-BoldItalic.otf in Resources */,
+				2874B4161EE895CD00EDDD86 /* SFCompactText-Light.otf in Resources */,
+				2874B41B1EE895CD00EDDD86 /* SF-Pro-Display-Black.otf in Resources */,
+				2874B4041EE895CC00EDDD86 /* SF-Pro-Display-Regular.otf in Resources */,
 				28BE24C21D88DF230065D520 /* microphone.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28BFC6B71B5493DA00E45770 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2874B4091EE895CC00EDDD86 /* SFCompactDisplay-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,21 +773,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				282FB0BC1EE8BF7600EBECED /* PreferenceViewController.m in Sources */,
 				2872E7601D8DE929004D0D62 /* Speech.m in Sources */,
-				28BFC6AC1B5493DA00E45770 /* ViewController.m in Sources */,
-				28BFC6A91B5493DA00E45770 /* AppDelegate.m in Sources */,
+				282FB0C11EE8C06300EBECED /* AppDelegate.m in Sources */,
 				284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */,
+				28FBF2B01EE87DDE004D83BF /* SpeechViewController.swift in Sources */,
 				28BFC6A61B5493DA00E45770 /* main.m in Sources */,
 				289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */,
 				007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28BFC6B51B5493DA00E45770 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28BFC6C01B5493DA00E45770 /* Tool_BoxTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,11 +811,6 @@
 			target = 28E2A53B1B54B29700126C42 /* Plus. WatchKit App */;
 			targetProxy = 288027711B9C98FC002B9AE4 /* PBXContainerItemProxy */;
 		};
-		28BFC6BB1B5493DA00E45770 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 28BFC69F1B5493DA00E45770 /* Plus. */;
-			targetProxy = 28BFC6BA1B5493DA00E45770 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -731,6 +820,14 @@
 				006FB1AF1D047CC300768D92 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		282FB0BD1EE8BF9100EBECED /* HandwritingViewController.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				282FB0BE1EE8BF9100EBECED /* Base */,
+			);
+			name = HandwritingViewController.swift;
 			sourceTree = "<group>";
 		};
 		28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */ = {
@@ -789,14 +886,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -836,14 +939,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -873,6 +982,7 @@
 			baseConfigurationReference = 1567500C16668611F0A3057A /* Pods-Plus..debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
@@ -885,6 +995,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tool Box/Plus.-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -894,6 +1008,7 @@
 			baseConfigurationReference = 41E593850244D5392F72B002 /* Pods-Plus..release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
@@ -906,43 +1021,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tool Box/Plus.-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		28BFC6C71B5493DA00E45770 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Tool BoxTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plus..app/Plus.";
-			};
-			name = Debug;
-		};
-		28BFC6C81B5493DA00E45770 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Tool BoxTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plus..app/Plus.";
 			};
 			name = Release;
 		};
@@ -1042,15 +1124,6 @@
 			buildConfigurations = (
 				28BFC6C41B5493DA00E45770 /* Debug */,
 				28BFC6C51B5493DA00E45770 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		28BFC6C61B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Plus.Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				28BFC6C71B5493DA00E45770 /* Debug */,
-				28BFC6C81B5493DA00E45770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

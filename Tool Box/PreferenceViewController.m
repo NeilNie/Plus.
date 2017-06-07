@@ -1,31 +1,22 @@
 //
-//  ViewController.m
-//  ToolBox Apple Watch
+//  PreferenceViewController.m
+//  Plus.
 //
-//  Created by Neil Nie on 5/29/15.
-//  Copyright (c) 2015 Yongyang Nie. All rights reserved.
+//  Created by Yongyang Nie on 6/7/17.
+//  Copyright © 2017 Yongyang Nie. All rights reserved.
 //
 
-#import "ViewController.h"
-#import <sys/sysctl.h>
+#import "PreferenceViewController.h"
 
-@interface ViewController ()
-
-@property (strong, nonatomic) NSArray *DistanceUnitArray;
-@property (strong, nonatomic) NSArray *MassUnitArray;
-@property (strong, nonatomic) NSArray *TemperatureArray;
-@property (strong, nonatomic) NSArray *VolumeArray;
+@interface PreferenceViewController ()
 
 @end
 
-@implementation ViewController
+@implementation PreferenceViewController
 
 #define kRemoveAdsProductIdentifier @"noads.toolbox"
 #define kRemoveAdsProductIdentifier2 @"donation.toobox"
 
-//Setting
-//
-//
 -(IBAction)feedback:(id)sender{
     
     MFMailComposeViewController *mailcontroller = [[MFMailComposeViewController alloc] init];
@@ -35,7 +26,6 @@
     [mailcontroller setSubject:@"Contact Us/subsribe"];
     [mailcontroller setMessageBody:@"Your Email:               Your Message:        " isHTML:NO];
     [self presentViewController:mailcontroller animated:YES completion:nil];
-    
 }
 
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
@@ -57,24 +47,8 @@
     }
     else
         NSLog(@"User cannot make payments due to parental controls");
-        //this is called the user cannot make payments, most likely due to parental controls
+    //this is called the user cannot make payments, most likely due to parental controls
 }
-- (IBAction)tapsRemoveAdsButton2{
-    NSLog(@"User requests to remove ads");
-    
-    if([SKPaymentQueue canMakePayments]){
-        NSLog(@"User can make payments");
-        
-        SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:kRemoveAdsProductIdentifier2]];
-        productsRequest.delegate = self;
-        [productsRequest start];
-        
-    }
-    else
-        NSLog(@"User cannot make payments due to parental controls");
-        //this is called the user cannot make payments, most likely due to parental controls
-}
-
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
     SKProduct *validProduct = nil;
@@ -86,7 +60,7 @@
     }
     else if(!validProduct)
         NSLog(@"No products available");
-        //this is called if your product id is not valid, this shouldn't be called unless that happens.
+    //this is called if your product id is not valid, this shouldn't be called unless that happens.
 }
 
 - (IBAction)purchase:(SKProduct *)product{
@@ -165,82 +139,42 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/the-toolbox/id992505214?mt=8"] options:@{} completionHandler:nil];
     
 }
--(IBAction)Foremore:(id)sender{
+-(IBAction)foremore:(id)sender{
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://nspiresoftware.net"] options:@{} completionHandler:nil];
 }
 
-#pragma mark - Timer methods 
+#pragma mark - Private
 
--(IBAction)start:(id)sender{
+- (void)viewDidLoad {
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(Timercount) userInfo:nil repeats:YES];
-    Start.enabled = NO;
-}
--(void)Timercount{
-    
-    countnumber = countnumber + 1;
-    timerdisplay.text = [NSString stringWithFormat:@"%i", countnumber];
-    if (countnumber == 100) {
-        countnumber2 = countnumber2 + 1;
-        countnumber = 0;
-    }
-    if (countnumber2 == 60) {
-        countnumber3 = countnumber3 + 1;
-        countnumber2 = 0;
-    }
-    timerdisplay3.text = [NSString stringWithFormat:@"%i", countnumber3];
-    timerdisplay2.text = [NSString stringWithFormat:@"%i", countnumber2];
-}
--(IBAction)stop:(id)sender{
-    
-    [timer invalidate];
-    Start.enabled = YES;
-    
-}
--(IBAction)restart:(id)sender{
-    
-    [timer invalidate];
-    countnumber = 0;
-    countnumber2 = 0;
-    countnumber3 = 0;
-    timerdisplay.text = [NSString stringWithFormat:@"00"];
-    timerdisplay2.text = [NSString stringWithFormat:@"00"];
-    timerdisplay3.text = [NSString stringWithFormat:@"00"];
-}
-
--(void)setShadowforView:(UIView *)view{
-    
-    view.layer.cornerRadius = 15;
-    view.layer.shadowRadius = 2.0f;
-    view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
-    view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
-    view.layer.shadowOpacity = 0.8f;
-    view.layer.masksToBounds = NO;
-    
-}
-
--(void)viewDidLoad {
-    
-    if(areAdsRemoved == YES){
-        self.banner.hidden = YES;
-    }else{
-        self.banner.adUnitID = @"ca-app-pub-7942613644553368/1714159132";
-        self.banner.rootViewController = self;
-        [self.banner loadRequest:[GADRequest request]];
-    }
-    
-    for (UIButton *button in self.buttons) {
-        [self setShadowforView:button];
-    }
-    
+    /*
+     for button: UIButton in buttons {
+     aroundCornerView(view: button)
+     }
+     
+     for label: UILabel in self.titles {
+     label.font = UIFont(name: "SFProDisplay-Regular", size: 19)
+     }
+     // Do any additional setup after loading the view.
+     */
     [super viewDidLoad];
-    
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
