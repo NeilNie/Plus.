@@ -79,6 +79,7 @@
 		28E2A5631B54B39000126C42 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5621B54B39000126C42 /* MessageUI.framework */; };
 		28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5641B54B39400126C42 /* UIKit.framework */; };
 		28E2A5691B54B5E700126C42 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5681B54B5E700126C42 /* Media.xcassets */; };
+		28F8E3871EE9AB400091D9E2 /* libWritePadRecoUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F5D2841EE9AA5D00D00054 /* libWritePadRecoUniversal.a */; };
 		28FBF2B01EE87DDE004D83BF /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBF2AF1EE87DDE004D83BF /* SpeechViewController.swift */; };
 		A59844EBE63A8A074A7F772E /* Pods_Plus_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58073B63F2B362F1EB56DABA /* Pods_Plus_.framework */; };
 /* End PBXBuildFile section */
@@ -233,6 +234,75 @@
 		28E2A5621B54B39000126C42 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		28E2A5641B54B39400126C42 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28E2A5681B54B5E700126C42 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		28F5D2841EE9AA5D00D00054 /* libWritePadRecoUniversal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWritePadRecoUniversal.a; sourceTree = "<group>"; };
+		28F8E33C1EE9AAD40091D9E2 /* RecognizerApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognizerApi.h; sourceTree = "<group>"; };
+		28F8E33D1EE9AAD40091D9E2 /* langid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = langid.h; sourceTree = "<group>"; };
+		28F8E33E1EE9AAD40091D9E2 /* recodefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = recodefs.h; sourceTree = "<group>"; };
+		28F8E33F1EE9AAD40091D9E2 /* gestures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gestures.h; sourceTree = "<group>"; };
+		28F8E3401EE9AAD40091D9E2 /* InkWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkWrapper.h; sourceTree = "<group>"; };
+		28F8E3411EE9AAD40091D9E2 /* recotypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = recotypes.h; sourceTree = "<group>"; };
+		28F8E3421EE9AAD40091D9E2 /* RecognizerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognizerWrapper.h; sourceTree = "<group>"; };
+		28F8E3451EE9AAD40091D9E2 /* InkCollectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkCollectorView.h; sourceTree = "<group>"; };
+		28F8E3461EE9AAD40091D9E2 /* InkCollectorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkCollectorView.m; sourceTree = "<group>"; };
+		28F8E3481EE9AAD40091D9E2 /* NSMutableArray+AddUnique.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+AddUnique.m"; sourceTree = "<group>"; };
+		28F8E3491EE9AAD40091D9E2 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		28F8E34A1EE9AAD40091D9E2 /* WritePadPersistentData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WritePadPersistentData.m; sourceTree = "<group>"; };
+		28F8E34B1EE9AAD40091D9E2 /* RecognizerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognizerManager.m; sourceTree = "<group>"; };
+		28F8E34C1EE9AAD40091D9E2 /* LanguageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguageManager.m; sourceTree = "<group>"; };
+		28F8E34D1EE9AAD40091D9E2 /* RectObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RectObject.h; sourceTree = "<group>"; };
+		28F8E34E1EE9AAD40091D9E2 /* SuggestionsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsView.h; sourceTree = "<group>"; };
+		28F8E34F1EE9AAD40091D9E2 /* OptionKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionKeys.h; sourceTree = "<group>"; };
+		28F8E3501EE9AAD40091D9E2 /* WPTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPTextView.m; sourceTree = "<group>"; };
+		28F8E3511EE9AAD40091D9E2 /* UIConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConst.h; sourceTree = "<group>"; };
+		28F8E3521EE9AAD40091D9E2 /* RecognizerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognizerManager.h; sourceTree = "<group>"; };
+		28F8E3531EE9AAD40091D9E2 /* WritePadPersistentData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WritePadPersistentData.h; sourceTree = "<group>"; };
+		28F8E3541EE9AAD40091D9E2 /* utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
+		28F8E3551EE9AAD40091D9E2 /* NSMutableArray+AddUnique.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+AddUnique.h"; sourceTree = "<group>"; };
+		28F8E3561EE9AAD40091D9E2 /* LanguageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
+		28F8E3571EE9AAD40091D9E2 /* SuggestionsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuggestionsView.m; sourceTree = "<group>"; };
+		28F8E3581EE9AAD40091D9E2 /* RectObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RectObject.m; sourceTree = "<group>"; };
+		28F8E3591EE9AAD40091D9E2 /* WPTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPTextView.h; sourceTree = "<group>"; };
+		28F8E35B1EE9AAD40091D9E2 /* LetterGroupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LetterGroupView.h; sourceTree = "<group>"; };
+		28F8E35C1EE9AAD40091D9E2 /* LetterShapesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LetterShapesController.h; sourceTree = "<group>"; };
+		28F8E35D1EE9AAD40091D9E2 /* ThumbImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThumbImageView.m; sourceTree = "<group>"; };
+		28F8E35E1EE9AAD40091D9E2 /* lidt_ger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lidt_ger.h; sourceTree = "<group>"; };
+		28F8E35F1EE9AAD40091D9E2 /* lidt_eng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lidt_eng.h; sourceTree = "<group>"; };
+		28F8E3601EE9AAD40091D9E2 /* letimg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = letimg.h; sourceTree = "<group>"; };
+		28F8E3611EE9AAD40091D9E2 /* liintern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = liintern.h; sourceTree = "<group>"; };
+		28F8E3621EE9AAD40091D9E2 /* ligstate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ligstate.h; sourceTree = "<group>"; };
+		28F8E3631EE9AAD40091D9E2 /* ShapeAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeAPI.h; sourceTree = "<group>"; };
+		28F8E3641EE9AAD40091D9E2 /* LetterGroupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LetterGroupView.m; sourceTree = "<group>"; };
+		28F8E3651EE9AAD40091D9E2 /* lidatadf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lidatadf.h; sourceTree = "<group>"; };
+		28F8E3661EE9AAD40091D9E2 /* ThumbImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThumbImageView.h; sourceTree = "<group>"; };
+		28F8E3671EE9AAD40091D9E2 /* LetterShapesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LetterShapesController.m; sourceTree = "<group>"; };
+		28F8E3681EE9AAD40091D9E2 /* letimg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = letimg.c; sourceTree = "<group>"; };
+		28F8E3691EE9AAD40091D9E2 /* lidt_fre.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lidt_fre.h; sourceTree = "<group>"; };
+		28F8E36A1EE9AAD40091D9E2 /* lidata.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lidata.c; sourceTree = "<group>"; };
+		28F8E36C1EE9AAD40091D9E2 /* Shortcuts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shortcuts.m; sourceTree = "<group>"; };
+		28F8E36D1EE9AAD40091D9E2 /* Shortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shortcut.h; sourceTree = "<group>"; };
+		28F8E36E1EE9AAD40091D9E2 /* Shortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shortcut.m; sourceTree = "<group>"; };
+		28F8E36F1EE9AAD40091D9E2 /* Shortcuts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shortcuts.h; sourceTree = "<group>"; };
+		28F8E3711EE9AAD40091D9E2 /* AsyncResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncResultView.h; sourceTree = "<group>"; };
+		28F8E3721EE9AAD40091D9E2 /* WritePadInputPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WritePadInputPanel.h; sourceTree = "<group>"; };
+		28F8E3731EE9AAD40091D9E2 /* WritePadInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WritePadInputView.h; sourceTree = "<group>"; };
+		28F8E3741EE9AAD40091D9E2 /* AsyncResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncResultView.m; sourceTree = "<group>"; };
+		28F8E3751EE9AAD40091D9E2 /* WritePadInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WritePadInputView.m; sourceTree = "<group>"; };
+		28F8E3761EE9AAD40091D9E2 /* WritePadInputPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WritePadInputPanel.m; sourceTree = "<group>"; };
+		28F8E3781EE9AAD40091D9E2 /* MedicalUS.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = MedicalUS.dct; sourceTree = "<group>"; };
+		28F8E3791EE9AAD40091D9E2 /* English.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = English.dct; sourceTree = "<group>"; };
+		28F8E37A1EE9AAD40091D9E2 /* Brazilian.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brazilian.dct; sourceTree = "<group>"; };
+		28F8E37B1EE9AAD40091D9E2 /* Spanish.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spanish.dct; sourceTree = "<group>"; };
+		28F8E37C1EE9AAD40091D9E2 /* Italian.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Italian.dct; sourceTree = "<group>"; };
+		28F8E37D1EE9AAD40091D9E2 /* Portuguese.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Portuguese.dct; sourceTree = "<group>"; };
+		28F8E37E1EE9AAD40091D9E2 /* Dutch.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dutch.dct; sourceTree = "<group>"; };
+		28F8E37F1EE9AAD40091D9E2 /* German.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = German.dct; sourceTree = "<group>"; };
+		28F8E3801EE9AAD40091D9E2 /* Indonesian.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Indonesian.dct; sourceTree = "<group>"; };
+		28F8E3811EE9AAD40091D9E2 /* Norwegian.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Norwegian.dct; sourceTree = "<group>"; };
+		28F8E3821EE9AAD40091D9E2 /* Swedish.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Swedish.dct; sourceTree = "<group>"; };
+		28F8E3831EE9AAD40091D9E2 /* EnglishUK.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = EnglishUK.dct; sourceTree = "<group>"; };
+		28F8E3841EE9AAD40091D9E2 /* Finnish.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Finnish.dct; sourceTree = "<group>"; };
+		28F8E3851EE9AAD40091D9E2 /* French.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = French.dct; sourceTree = "<group>"; };
+		28F8E3861EE9AAD40091D9E2 /* Danish.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Danish.dct; sourceTree = "<group>"; };
 		28FBF2AA1EE87D76004D83BF /* Plus.-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plus.-Bridging-Header.h"; sourceTree = "<group>"; };
 		28FBF2AF1EE87DDE004D83BF /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		41E593850244D5392F72B002 /* Pods-Plus..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plus..release.xcconfig"; path = "Pods/Target Support Files/Pods-Plus./Pods-Plus..release.xcconfig"; sourceTree = "<group>"; };
@@ -253,6 +323,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28F8E3871EE9AB400091D9E2 /* libWritePadRecoUniversal.a in Frameworks */,
 				2872E75D1D8DE699004D0D62 /* AVFoundation.framework in Frameworks */,
 				284737571D85BA0E00B56DB0 /* Speech.framework in Frameworks */,
 				28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */,
@@ -295,7 +366,6 @@
 			children = (
 				0004010F1DA94FA3005E51E9 /* Main.storyboard */,
 				28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */,
-				28FBF2AA1EE87D76004D83BF /* Plus.-Bridging-Header.h */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -413,7 +483,9 @@
 		28BFC6A21B5493DA00E45770 /* Plus. */ = {
 			isa = PBXGroup;
 			children = (
-				2874B3D21EE8903900EDDD86 /* Fonts */,
+				28F5D2841EE9AA5D00D00054 /* libWritePadRecoUniversal.a */,
+				28F8E33B1EE9AAD40091D9E2 /* include */,
+				28F8E3431EE9AAD40091D9E2 /* Shared */,
 				28BFC6A31B5493DA00E45770 /* Supporting Files */,
 				00594D3B1D6A9D5000CB1DB4 /* Media */,
 				00594D3C1D6A9D7000CB1DB4 /* Nibs */,
@@ -427,6 +499,9 @@
 		28BFC6A31B5493DA00E45770 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28FBF2AA1EE87D76004D83BF /* Plus.-Bridging-Header.h */,
+				2874B3D21EE8903900EDDD86 /* Fonts */,
+				28F8E3771EE9AAD40091D9E2 /* Dictionaries */,
 				008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */,
 				28BFC6A41B5493DA00E45770 /* Info.plist */,
 				28BFC6A51B5493DA00E45770 /* main.m */,
@@ -476,6 +551,135 @@
 				28E2A5421B54B29700126C42 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28F8E33B1EE9AAD40091D9E2 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				28F8E33C1EE9AAD40091D9E2 /* RecognizerApi.h */,
+				28F8E33D1EE9AAD40091D9E2 /* langid.h */,
+				28F8E33E1EE9AAD40091D9E2 /* recodefs.h */,
+				28F8E33F1EE9AAD40091D9E2 /* gestures.h */,
+				28F8E3401EE9AAD40091D9E2 /* InkWrapper.h */,
+				28F8E3411EE9AAD40091D9E2 /* recotypes.h */,
+				28F8E3421EE9AAD40091D9E2 /* RecognizerWrapper.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		28F8E3431EE9AAD40091D9E2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				28F8E3441EE9AAD40091D9E2 /* WriteAnywhere */,
+				28F8E3471EE9AAD40091D9E2 /* Utilities */,
+				28F8E35A1EE9AAD40091D9E2 /* ShapeSelector */,
+				28F8E36B1EE9AAD40091D9E2 /* Shortcuts */,
+				28F8E3701EE9AAD40091D9E2 /* WritePanel */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		28F8E3441EE9AAD40091D9E2 /* WriteAnywhere */ = {
+			isa = PBXGroup;
+			children = (
+				28F8E3451EE9AAD40091D9E2 /* InkCollectorView.h */,
+				28F8E3461EE9AAD40091D9E2 /* InkCollectorView.m */,
+			);
+			path = WriteAnywhere;
+			sourceTree = "<group>";
+		};
+		28F8E3471EE9AAD40091D9E2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				28F8E3481EE9AAD40091D9E2 /* NSMutableArray+AddUnique.m */,
+				28F8E3491EE9AAD40091D9E2 /* utils.h */,
+				28F8E34A1EE9AAD40091D9E2 /* WritePadPersistentData.m */,
+				28F8E34B1EE9AAD40091D9E2 /* RecognizerManager.m */,
+				28F8E34C1EE9AAD40091D9E2 /* LanguageManager.m */,
+				28F8E34D1EE9AAD40091D9E2 /* RectObject.h */,
+				28F8E34E1EE9AAD40091D9E2 /* SuggestionsView.h */,
+				28F8E34F1EE9AAD40091D9E2 /* OptionKeys.h */,
+				28F8E3501EE9AAD40091D9E2 /* WPTextView.m */,
+				28F8E3511EE9AAD40091D9E2 /* UIConst.h */,
+				28F8E3521EE9AAD40091D9E2 /* RecognizerManager.h */,
+				28F8E3531EE9AAD40091D9E2 /* WritePadPersistentData.h */,
+				28F8E3541EE9AAD40091D9E2 /* utils.m */,
+				28F8E3551EE9AAD40091D9E2 /* NSMutableArray+AddUnique.h */,
+				28F8E3561EE9AAD40091D9E2 /* LanguageManager.h */,
+				28F8E3571EE9AAD40091D9E2 /* SuggestionsView.m */,
+				28F8E3581EE9AAD40091D9E2 /* RectObject.m */,
+				28F8E3591EE9AAD40091D9E2 /* WPTextView.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		28F8E35A1EE9AAD40091D9E2 /* ShapeSelector */ = {
+			isa = PBXGroup;
+			children = (
+				28F8E35B1EE9AAD40091D9E2 /* LetterGroupView.h */,
+				28F8E35C1EE9AAD40091D9E2 /* LetterShapesController.h */,
+				28F8E35D1EE9AAD40091D9E2 /* ThumbImageView.m */,
+				28F8E35E1EE9AAD40091D9E2 /* lidt_ger.h */,
+				28F8E35F1EE9AAD40091D9E2 /* lidt_eng.h */,
+				28F8E3601EE9AAD40091D9E2 /* letimg.h */,
+				28F8E3611EE9AAD40091D9E2 /* liintern.h */,
+				28F8E3621EE9AAD40091D9E2 /* ligstate.h */,
+				28F8E3631EE9AAD40091D9E2 /* ShapeAPI.h */,
+				28F8E3641EE9AAD40091D9E2 /* LetterGroupView.m */,
+				28F8E3651EE9AAD40091D9E2 /* lidatadf.h */,
+				28F8E3661EE9AAD40091D9E2 /* ThumbImageView.h */,
+				28F8E3671EE9AAD40091D9E2 /* LetterShapesController.m */,
+				28F8E3681EE9AAD40091D9E2 /* letimg.c */,
+				28F8E3691EE9AAD40091D9E2 /* lidt_fre.h */,
+				28F8E36A1EE9AAD40091D9E2 /* lidata.c */,
+			);
+			path = ShapeSelector;
+			sourceTree = "<group>";
+		};
+		28F8E36B1EE9AAD40091D9E2 /* Shortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				28F8E36C1EE9AAD40091D9E2 /* Shortcuts.m */,
+				28F8E36D1EE9AAD40091D9E2 /* Shortcut.h */,
+				28F8E36E1EE9AAD40091D9E2 /* Shortcut.m */,
+				28F8E36F1EE9AAD40091D9E2 /* Shortcuts.h */,
+			);
+			path = Shortcuts;
+			sourceTree = "<group>";
+		};
+		28F8E3701EE9AAD40091D9E2 /* WritePanel */ = {
+			isa = PBXGroup;
+			children = (
+				28F8E3711EE9AAD40091D9E2 /* AsyncResultView.h */,
+				28F8E3721EE9AAD40091D9E2 /* WritePadInputPanel.h */,
+				28F8E3731EE9AAD40091D9E2 /* WritePadInputView.h */,
+				28F8E3741EE9AAD40091D9E2 /* AsyncResultView.m */,
+				28F8E3751EE9AAD40091D9E2 /* WritePadInputView.m */,
+				28F8E3761EE9AAD40091D9E2 /* WritePadInputPanel.m */,
+			);
+			path = WritePanel;
+			sourceTree = "<group>";
+		};
+		28F8E3771EE9AAD40091D9E2 /* Dictionaries */ = {
+			isa = PBXGroup;
+			children = (
+				28F8E3781EE9AAD40091D9E2 /* MedicalUS.dct */,
+				28F8E3791EE9AAD40091D9E2 /* English.dct */,
+				28F8E37A1EE9AAD40091D9E2 /* Brazilian.dct */,
+				28F8E37B1EE9AAD40091D9E2 /* Spanish.dct */,
+				28F8E37C1EE9AAD40091D9E2 /* Italian.dct */,
+				28F8E37D1EE9AAD40091D9E2 /* Portuguese.dct */,
+				28F8E37E1EE9AAD40091D9E2 /* Dutch.dct */,
+				28F8E37F1EE9AAD40091D9E2 /* German.dct */,
+				28F8E3801EE9AAD40091D9E2 /* Indonesian.dct */,
+				28F8E3811EE9AAD40091D9E2 /* Norwegian.dct */,
+				28F8E3821EE9AAD40091D9E2 /* Swedish.dct */,
+				28F8E3831EE9AAD40091D9E2 /* EnglishUK.dct */,
+				28F8E3841EE9AAD40091D9E2 /* Finnish.dct */,
+				28F8E3851EE9AAD40091D9E2 /* French.dct */,
+				28F8E3861EE9AAD40091D9E2 /* Danish.dct */,
+			);
+			path = Dictionaries;
 			sourceTree = "<group>";
 		};
 		7D9B626185536093D39BCFD3 /* Frameworks */ = {
@@ -992,6 +1196,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Tool\\ Box",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1018,6 +1223,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Tool\\ Box",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";

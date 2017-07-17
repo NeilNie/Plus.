@@ -9,7 +9,9 @@
 import UIKit
 
 class HandwritingViewController: UIViewController {
-
+    
+    @IBOutlet weak var textView : WPTextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
