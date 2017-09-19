@@ -7,7 +7,7 @@
 //
 
 #import "SpeechParser.h"
-#import "ViewController.h"
+#import "PreferenceViewController.h"
 #import <UIKit/UIKit.h>
 #import <Speech/Speech.h>
 #import <AVFoundation/AVFoundation.h>

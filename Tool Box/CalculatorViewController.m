@@ -226,10 +226,8 @@
     }else{
         [self startRecording];
     }
-    int i = arc4random()%5;
-    [self createAndLoadInterstitial];
-    //if (i == 1)
-        
+    
+    [self createAndLoadInterstitial];    
 }
 
 -(void)swipeGesture:(UISwipeGestureRecognizer *)swipeUp{
