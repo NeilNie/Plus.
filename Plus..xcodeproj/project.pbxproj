@@ -66,7 +66,7 @@
 		288027701B9C98FC002B9AE4 /* Plus. WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E2A52D1B54B29700126C42 /* Plus. WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		288027731B9C98FC002B9AE4 /* Plus. WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28E2A53C1B54B29700126C42 /* Plus. WatchKit App.app */; };
 		289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 289FC80E1D86336800D3BDAF /* SpeechParser.m */; };
-		28BE24C21D88DF230065D520 /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BE24C11D88DF230065D520 /* microphone.png */; };
+		28BE24C21D88DF230065D520 /* microphone-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BE24C11D88DF230065D520 /* microphone-1.png */; };
 		28BFC6A61B5493DA00E45770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC6A51B5493DA00E45770 /* main.m */; };
 		28BFC6B41B5493DA00E45770 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */; };
 		28E2A5341B54B29700126C42 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E2A5331B54B29700126C42 /* InterfaceController.m */; };
@@ -212,7 +212,7 @@
 		2874B3FA1EE8903900EDDD86 /* SFCompactDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Thin.otf"; sourceTree = "<group>"; };
 		289FC80D1D86336800D3BDAF /* SpeechParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechParser.h; sourceTree = "<group>"; };
 		289FC80E1D86336800D3BDAF /* SpeechParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechParser.m; sourceTree = "<group>"; };
-		28BE24C11D88DF230065D520 /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphone.png; sourceTree = "<group>"; };
+		28BE24C11D88DF230065D520 /* microphone-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone-1.png"; sourceTree = "<group>"; };
 		28BFC6A01B5493DA00E45770 /* Plus..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plus..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BFC6A41B5493DA00E45770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28BFC6A51B5493DA00E45770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -353,7 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				28E2A5681B54B5E700126C42 /* Media.xcassets */,
-				28BE24C11D88DF230065D520 /* microphone.png */,
+				28BE24C11D88DF230065D520 /* microphone-1.png */,
 				00B58A1A1D6E935E00B7870E /* compass_1.png */,
 				00D6DBD01BE6B53A00BDC277 /* left.png */,
 				00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */,
@@ -890,7 +890,7 @@
 				2874B4161EE895CD00EDDD86 /* SFCompactText-Light.otf in Resources */,
 				2874B41B1EE895CD00EDDD86 /* SF-Pro-Display-Black.otf in Resources */,
 				2874B4041EE895CC00EDDD86 /* SF-Pro-Display-Regular.otf in Resources */,
-				28BE24C21D88DF230065D520 /* microphone.png in Resources */,
+				28BE24C21D88DF230065D520 /* microphone-1.png in Resources */,
 				2874B4091EE895CC00EDDD86 /* SFCompactDisplay-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -923,14 +923,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Plus./Pods-Plus.-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -958,16 +953,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Plus.-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
