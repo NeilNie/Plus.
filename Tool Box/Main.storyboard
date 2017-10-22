@@ -667,14 +667,24 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
+<<<<<<< HEAD
                                         <exclude reference="Prt-0A-hKD"/>
                                         <exclude reference="xc3-qg-tSr"/>
+=======
+                                        <exclude reference="xc3-qg-tSr"/>
+                                        <exclude reference="Prt-0A-hKD"/>
+>>>>>>> 366c64175cb8ea774809870edf67e1926ab890ce
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
+<<<<<<< HEAD
                                         <include reference="Prt-0A-hKD"/>
                                         <include reference="xc3-qg-tSr"/>
+=======
+                                        <include reference="xc3-qg-tSr"/>
+                                        <include reference="Prt-0A-hKD"/>
+>>>>>>> 366c64175cb8ea774809870edf67e1926ab890ce
                                     </mask>
                                 </variation>
                                 <connections>
@@ -754,14 +764,24 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
+<<<<<<< HEAD
                                         <exclude reference="HFY-3d-U43"/>
                                         <exclude reference="Zvh-Pb-J6B"/>
+=======
+                                        <exclude reference="Zvh-Pb-J6B"/>
+                                        <exclude reference="HFY-3d-U43"/>
+>>>>>>> 366c64175cb8ea774809870edf67e1926ab890ce
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
+<<<<<<< HEAD
                                         <include reference="HFY-3d-U43"/>
                                         <include reference="Zvh-Pb-J6B"/>
+=======
+                                        <include reference="Zvh-Pb-J6B"/>
+                                        <include reference="HFY-3d-U43"/>
+>>>>>>> 366c64175cb8ea774809870edf67e1926ab890ce
                                     </mask>
                                 </variation>
                                 <connections>
@@ -940,7 +960,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am listening...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orY-QK-cXS">
+<<<<<<< HEAD
                                 <rect key="frame" x="68.5" y="313" width="239" height="40"/>
+=======
+                                <rect key="frame" x="71.5" y="312.5" width="232.5" height="41"/>
+>>>>>>> 366c64175cb8ea774809870edf67e1926ab890ce
                                 <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
