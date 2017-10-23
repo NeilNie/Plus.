@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2548a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Thin</string>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Light.otf">
+            <string>SFProText-Light</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -22,294 +29,577 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="360"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="viM-MU-Fd7">
-                                <rect key="frame" x="50" y="8" width="300" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auK-0E-jwn">
+                                <rect key="frame" x="206.5" y="189" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="LRR-WF-W9Q"/>
-                                    <constraint firstAttribute="height" constant="60" id="iYO-b1-rhl"/>
+                                    <constraint firstAttribute="width" constant="60" id="bhn-Jy-Vex" userLabel="4width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="h2M-2V-0ZP" userLabel="4height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="67"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnv-9s-mOT">
-                                <rect key="frame" x="215" y="146" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="WaI-Id-0Yc"/>
-                                    <constraint firstAttribute="height" constant="50" id="rv0-0C-R5I"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="4">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="Number4:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="eUJ-qD-lPT"/>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="aiq-tR-Zef"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN3-fF-khm">
-                                <rect key="frame" x="50" y="146" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-w0-8U7">
+                                <rect key="frame" x="285.5" y="422" width="70" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="R0y-tP-WMb"/>
-                                    <constraint firstAttribute="height" constant="50" id="aoW-iC-mdi"/>
+                                    <constraint firstAttribute="width" constant="60" id="2Cl-hy-HIa">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="tet-uy-Swl">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="40"/>
+                                <state key="normal" title="+/-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orS-2j-ltU">
+                                <rect key="frame" x="50" y="189" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="S93-s5-bkd" userLabel="6height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="p1f-3F-rCw" userLabel="6width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="6">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="S93-s5-bkd"/>
+                                        <exclude reference="p1f-3F-rCw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="S93-s5-bkd"/>
+                                        <include reference="p1f-3F-rCw"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="Number6:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="X6B-TN-xq1"/>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="8O4-c7-cch"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbB-Wd-ejg">
-                                <rect key="frame" x="50" y="269" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLh-9h-NF3">
+                                <rect key="frame" x="49.5" y="422" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="h2P-34-lyS"/>
-                                    <constraint firstAttribute="width" constant="60" id="rfN-c1-Cpb"/>
+                                    <constraint firstAttribute="height" constant="50" id="iHb-PQ-mCc" userLabel="cheight = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="kPx-oy-Vl6" userLabel="cwidth = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="0">
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <state key="normal" title="C">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kPx-oy-Vl6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="kPx-oy-Vl6"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="Number0:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="3Ek-0k-yA5"/>
+                                    <action selector="AllClear:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Iey-aS-bp4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj7-GG-kGM">
-                                <rect key="frame" x="215" y="207" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ5-LF-q2B">
+                                <rect key="frame" x="128" y="347" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="UjC-Yr-0yT"/>
-                                    <constraint firstAttribute="height" constant="50" id="nxO-Bc-QdS"/>
+                                    <constraint firstAttribute="height" constant="50" id="4BK-BS-YSa" userLabel="cheight = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="pL7-ux-BDi" userLabel="cwidth = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="1">
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <state key="normal" title=".">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pL7-ux-BDi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="pL7-ux-BDi"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="Number1:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Wk2-08-hgW"/>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="NQW-bQ-Ie1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vit-1E-WDQ">
-                                <rect key="frame" x="50" y="85" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-39-vip">
+                                <rect key="frame" x="285.5" y="108" width="70" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hcY-3r-7xB"/>
-                                    <constraint firstAttribute="width" constant="60" id="kC0-DN-NTa"/>
+                                    <constraint firstAttribute="height" constant="50" id="BO2-iU-kre" userLabel="+height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="Ytu-qS-nca" userLabel="+width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="9">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-8" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BO2-iU-kre"/>
+                                        <exclude reference="Ytu-qS-nca"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="BO2-iU-kre"/>
+                                        <include reference="Ytu-qS-nca"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="Plus:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="v3H-yJ-PmV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egt-Ae-gBs">
+                                <rect key="frame" x="285.5" y="270" width="70" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="APT-fs-MoI" userLabel="*width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="y3I-6e-9S0" userLabel="*height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-6" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="×">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="Number9:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Dqe-Gv-EKb"/>
+                                    <action selector="Times:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="bZa-G7-g6K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeP-yQ-5Di">
-                                <rect key="frame" x="127" y="207" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFX-g2-FsC">
+                                <rect key="frame" x="128" y="267" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="EjH-cj-ckP"/>
-                                    <constraint firstAttribute="height" constant="50" id="rYG-6c-uOT"/>
+                                    <constraint firstAttribute="width" constant="60" id="dwU-P0-8Uz" userLabel="2width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="jEs-No-V4v" userLabel="2height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="2">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jEs-No-V4v"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="jEs-No-V4v"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="8HG-2s-Re0"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-Z5-Z70">
-                                <rect key="frame" x="215" y="85" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guz-w7-02N">
+                                <rect key="frame" x="206.5" y="108" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Ut7-uJ-PMy"/>
-                                    <constraint firstAttribute="height" constant="50" id="txt-eN-Cnf"/>
+                                    <constraint firstAttribute="width" constant="60" id="4Ua-0f-IFt" userLabel="7width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="CGz-JC-T15" userLabel="7height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="7">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="Number7:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Wyi-0T-mjG"/>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="dWo-st-jtE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIF-h4-swr">
-                                <rect key="frame" x="50" y="207" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIv-Yr-gZK">
+                                <rect key="frame" x="128" y="189" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="uhF-fO-Ooy"/>
-                                    <constraint firstAttribute="width" constant="60" id="zjB-GC-tn4"/>
+                                    <constraint firstAttribute="width" constant="60" id="AY9-lk-RY8" userLabel="5width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="IdP-5t-JJL" userLabel="5height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="3">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="Number3:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="BlE-N4-u73"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFm-XG-at0">
-                                <rect key="frame" x="127" y="146" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="DNZ-MB-8LS"/>
-                                    <constraint firstAttribute="width" constant="60" id="Rxf-le-KBu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="5">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AY9-lk-RY8"/>
+                                        <exclude reference="IdP-5t-JJL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="AY9-lk-RY8"/>
+                                        <include reference="IdP-5t-JJL"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="Number5:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="5Q0-Jp-cMZ"/>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Rbg-g4-IkC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsp-Sm-ZGc">
-                                <rect key="frame" x="127" y="85" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.88200557231903076" green="0.88200557231903076" blue="0.88200557231903076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pk-8N-Bwe">
+                                <rect key="frame" x="128.5" y="422" width="70" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="H47-lr-Vjb"/>
-                                    <constraint firstAttribute="width" constant="60" id="uyd-XA-HtY"/>
+                                    <constraint firstAttribute="height" constant="50" id="FFP-zO-7s0" userLabel="=height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="cS5-3n-zbS" userLabel="=width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="40"/>
+                                <state key="normal" title="%">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FFP-zO-7s0"/>
+                                        <exclude reference="cS5-3n-zbS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="FFP-zO-7s0"/>
+                                        <include reference="cS5-3n-zbS"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jla-Kk-GZt">
+                                <rect key="frame" x="206.5" y="422" width="70" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Bvw-eg-WSl" userLabel="=width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="VvQ-mA-Fka" userLabel="=height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="30"/>
+                                <state key="normal" title="X^2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bvw-eg-WSl"/>
+                                        <exclude reference="VvQ-mA-Fka"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Bvw-eg-WSl"/>
+                                        <include reference="VvQ-mA-Fka"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-MK-MgW">
+                                <rect key="frame" x="128" y="108" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="adu-qg-5Pr" userLabel="8width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="km4-Ko-PUu" userLabel="8height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="8">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="Number8:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="B9C-SR-uEo"/>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="y2I-zX-LOC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8M-hz-0vr">
-                                <rect key="frame" x="127" y="269" width="60" height="50"/>
-                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp6-00-bPf">
+                                <rect key="frame" x="50" y="267" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Neh-yT-ruI"/>
-                                    <constraint firstAttribute="height" constant="50" id="cqI-3f-cx8"/>
+                                    <constraint firstAttribute="height" constant="50" id="Wic-MD-niq" userLabel="3height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="hFf-AL-bim" userLabel="3width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="37"/>
-                                <state key="normal" title="C">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Wic-MD-niq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Wic-MD-niq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Z4B-zu-TuN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jo4-eJ-wdn">
+                                <rect key="frame" x="50" y="347" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AMq-Vo-bWN" userLabel="0height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="nSg-hE-n7t" userLabel="0width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="AllClear:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="aKU-ST-xOc"/>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="GWi-YG-ogB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKJ-eR-duF">
-                                <rect key="frame" x="290" y="85" width="60" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14j-Je-Afc">
+                                <rect key="frame" x="285.5" y="347" width="70" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Rvb-kT-yt8"/>
-                                    <constraint firstAttribute="height" constant="50" id="k2D-n7-II9"/>
+                                    <constraint firstAttribute="width" constant="60" id="6jx-Df-RpG">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="rb4-7e-rvo">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="37"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="-8" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="Plus:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="xc5-CK-4Ue"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UED-ht-9v4">
-                                <rect key="frame" x="215" y="269" width="60" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Ulf-Xt-HKj"/>
-                                    <constraint firstAttribute="height" constant="50" id="wtr-x2-bsd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="37"/>
-                                <state key="normal" title="=">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="Equals:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="hFD-dS-UpP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XB-5s-x5U">
-                                <rect key="frame" x="290" y="207" width="60" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="SPU-rw-V1D"/>
-                                    <constraint firstAttribute="height" constant="50" id="YGC-cp-tk5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="37"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="-6" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="×">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="Times:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="AAm-BK-V8o"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aZ-l8-OAS">
-                                <rect key="frame" x="290" y="269" width="60" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BGQ-b2-tpZ"/>
-                                    <constraint firstAttribute="width" constant="60" id="g9f-Nt-Ap2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="37"/>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="/">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="Divide:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="EmI-do-VJy"/>
+                                    <action selector="Divide:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="tNc-pp-72g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XY-Ka-QtX">
-                                <rect key="frame" x="290" y="146" width="60" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToK-ic-17j">
+                                <rect key="frame" x="50" y="108" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FqJ-sv-n5g" userLabel="9height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="G0H-uZ-Ub6" userLabel="9width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G0H-uZ-Ub6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="G0H-uZ-Ub6"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="7cV-fG-2Sy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvy-Mu-5Qb">
+                                <rect key="frame" x="285.5" y="189" width="70" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3yY-C4-7wM"/>
-                                    <constraint firstAttribute="width" constant="60" id="aqT-cd-E0x"/>
+                                    <constraint firstAttribute="height" constant="50" id="4i5-mn-CVD" userLabel="-height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="joB-FT-KVL" userLabel="-width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="37"/>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="-">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4i5-mn-CVD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4i5-mn-CVD"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nui-ns-JMH">
+                                <rect key="frame" x="206.5" y="347" width="70" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="KY8-aH-GSy" userLabel="=width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="gB7-hx-0wd" userLabel="=height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KY8-aH-GSy"/>
+                                        <exclude reference="gB7-hx-0wd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="KY8-aH-GSy"/>
+                                        <include reference="gB7-hx-0wd"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="Subtract:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="0sM-ab-AkU"/>
+                                    <action selector="Equals:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="oFA-dd-ksO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIf-vv-FBT">
+                                <rect key="frame" x="206.5" y="270" width="70" height="60"/>
+                                <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Pa6-M2-wvq" userLabel="1height = 65">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="60" id="hUW-R6-HLU" userLabel="1width = 70">
+                                        <variation key="widthClass=compact" constant="70"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Pa6-M2-wvq"/>
+                                        <exclude reference="hUW-R6-HLU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Pa6-M2-wvq"/>
+                                        <include reference="hUW-R6-HLU"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="selectedNumber:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="goP-s4-aLO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hmi-Fe-kSm">
+                                <rect key="frame" x="50" y="28" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="H4g-VE-szM"/>
+                                    <constraint firstAttribute="height" constant="60" id="c8u-XC-HuY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="75"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="UED-ht-9v4" firstAttribute="centerY" secondItem="5aZ-l8-OAS" secondAttribute="centerY" id="0BZ-5p-5e7"/>
-                            <constraint firstItem="vit-1E-WDQ" firstAttribute="centerX" secondItem="aN3-fF-khm" secondAttribute="centerX" id="29S-r0-sFc"/>
-                            <constraint firstItem="4XY-Ka-QtX" firstAttribute="centerX" secondItem="TKJ-eR-duF" secondAttribute="centerX" id="41M-We-RBK"/>
-                            <constraint firstItem="zbB-Wd-ejg" firstAttribute="top" secondItem="oIF-h4-swr" secondAttribute="bottom" constant="12" id="9ul-O6-weM"/>
-                            <constraint firstItem="TKJ-eR-duF" firstAttribute="top" secondItem="viM-MU-Fd7" secondAttribute="bottom" constant="17" id="Aho-87-XPa"/>
-                            <constraint firstItem="zbB-Wd-ejg" firstAttribute="centerY" secondItem="j8M-hz-0vr" secondAttribute="centerY" id="BCx-4n-wQQ"/>
-                            <constraint firstItem="viM-MU-Fd7" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="Ghn-IL-s3O"/>
-                            <constraint firstItem="5aZ-l8-OAS" firstAttribute="top" secondItem="6XB-5s-x5U" secondAttribute="bottom" constant="12" id="KVi-Nx-YUa"/>
-                            <constraint firstItem="fsp-Sm-ZGc" firstAttribute="leading" secondItem="vit-1E-WDQ" secondAttribute="trailing" constant="17" id="Kua-rM-eH9"/>
-                            <constraint firstItem="4XY-Ka-QtX" firstAttribute="leading" secondItem="xnv-9s-mOT" secondAttribute="trailing" constant="15" id="Mmv-sr-VhW"/>
-                            <constraint firstItem="0aP-Z5-Z70" firstAttribute="centerY" secondItem="TKJ-eR-duF" secondAttribute="centerY" id="Mnk-SX-knf"/>
-                            <constraint firstItem="LFm-XG-at0" firstAttribute="centerY" secondItem="aN3-fF-khm" secondAttribute="centerY" id="SCT-qu-vi7"/>
-                            <constraint firstItem="6XB-5s-x5U" firstAttribute="top" secondItem="4XY-Ka-QtX" secondAttribute="bottom" constant="11" id="SM2-zH-oAi"/>
-                            <constraint firstItem="5aZ-l8-OAS" firstAttribute="leading" secondItem="UED-ht-9v4" secondAttribute="trailing" constant="15" id="ThD-4F-NWz"/>
-                            <constraint firstItem="TKJ-eR-duF" firstAttribute="leading" secondItem="0aP-Z5-Z70" secondAttribute="trailing" constant="15" id="Uzs-CY-RZg"/>
-                            <constraint firstItem="oIF-h4-swr" firstAttribute="top" secondItem="aN3-fF-khm" secondAttribute="bottom" constant="11" id="WAN-yb-Gkk"/>
-                            <constraint firstItem="j8M-hz-0vr" firstAttribute="leading" secondItem="zbB-Wd-ejg" secondAttribute="trailing" constant="17" id="Y3B-JZ-A3U"/>
-                            <constraint firstItem="4XY-Ka-QtX" firstAttribute="top" secondItem="TKJ-eR-duF" secondAttribute="bottom" constant="11" id="a9X-Mu-uEj"/>
-                            <constraint firstItem="vit-1E-WDQ" firstAttribute="centerY" secondItem="fsp-Sm-ZGc" secondAttribute="centerY" id="aPu-PF-Ro0"/>
-                            <constraint firstItem="aN3-fF-khm" firstAttribute="top" secondItem="vit-1E-WDQ" secondAttribute="bottom" constant="11" id="b9q-Ld-1KM"/>
-                            <constraint firstItem="5aZ-l8-OAS" firstAttribute="centerX" secondItem="6XB-5s-x5U" secondAttribute="centerX" id="chC-Vo-Hdy"/>
-                            <constraint firstItem="6XB-5s-x5U" firstAttribute="leading" secondItem="Vj7-GG-kGM" secondAttribute="trailing" constant="15" id="iXI-0k-mmI"/>
-                            <constraint firstItem="YeP-yQ-5Di" firstAttribute="leading" secondItem="oIF-h4-swr" secondAttribute="trailing" constant="17" id="ipD-8L-u6h"/>
-                            <constraint firstItem="zbB-Wd-ejg" firstAttribute="centerX" secondItem="oIF-h4-swr" secondAttribute="centerX" id="jRo-J1-RzD"/>
-                            <constraint firstItem="vit-1E-WDQ" firstAttribute="top" secondItem="viM-MU-Fd7" secondAttribute="bottom" constant="17" id="keQ-AH-3tI"/>
-                            <constraint firstItem="Vj7-GG-kGM" firstAttribute="centerY" secondItem="6XB-5s-x5U" secondAttribute="centerY" id="lVb-xC-JQp"/>
-                            <constraint firstItem="oIF-h4-swr" firstAttribute="centerX" secondItem="aN3-fF-khm" secondAttribute="centerX" id="oCq-6E-26l"/>
-                            <constraint firstItem="4XY-Ka-QtX" firstAttribute="centerX" secondItem="6XB-5s-x5U" secondAttribute="centerX" id="p2M-TL-H3q"/>
-                            <constraint firstItem="TKJ-eR-duF" firstAttribute="trailing" secondItem="viM-MU-Fd7" secondAttribute="trailing" id="q1C-zR-QIY"/>
-                            <constraint firstItem="vit-1E-WDQ" firstAttribute="leading" secondItem="viM-MU-Fd7" secondAttribute="leading" id="qfa-NS-iMD"/>
-                            <constraint firstItem="xnv-9s-mOT" firstAttribute="centerY" secondItem="4XY-Ka-QtX" secondAttribute="centerY" id="rWm-ZZ-h3B"/>
-                            <constraint firstItem="YeP-yQ-5Di" firstAttribute="centerY" secondItem="oIF-h4-swr" secondAttribute="centerY" id="tZh-y6-nzK"/>
-                            <constraint firstItem="viM-MU-Fd7" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="tg7-F0-4SJ"/>
-                            <constraint firstItem="LFm-XG-at0" firstAttribute="leading" secondItem="aN3-fF-khm" secondAttribute="trailing" constant="17" id="wzL-sK-t9L"/>
+                            <constraint firstItem="14j-Je-Afc" firstAttribute="centerX" secondItem="Egt-Ae-gBs" secondAttribute="centerX" id="0Sm-VX-H4w"/>
+                            <constraint firstItem="ToK-ic-17j" firstAttribute="top" secondItem="hmi-Fe-kSm" secondAttribute="bottom" constant="20" id="15F-6E-5dB"/>
+                            <constraint firstItem="ZIv-Yr-gZK" firstAttribute="leading" secondItem="orS-2j-ltU" secondAttribute="trailing" constant="8" id="2jW-sF-FbZ"/>
+                            <constraint firstItem="14j-Je-Afc" firstAttribute="leading" secondItem="Nui-ns-JMH" secondAttribute="trailing" constant="9" id="4rK-rU-Tmj"/>
+                            <constraint firstItem="wZt-39-vip" firstAttribute="trailing" secondItem="hmi-Fe-kSm" secondAttribute="trailing" constant="5.5" id="4sy-Bb-mfz"/>
+                            <constraint firstItem="vvy-Mu-5Qb" firstAttribute="top" secondItem="wZt-39-vip" secondAttribute="bottom" constant="21" id="5b6-rW-GvL"/>
+                            <constraint firstItem="e3k-w0-8U7" firstAttribute="top" secondItem="14j-Je-Afc" secondAttribute="bottom" constant="15" id="75Y-o2-33E"/>
+                            <constraint firstItem="zp6-00-bPf" firstAttribute="centerX" secondItem="orS-2j-ltU" secondAttribute="centerX" id="8sF-JH-uMI"/>
+                            <constraint firstItem="ToK-ic-17j" firstAttribute="leading" secondItem="hmi-Fe-kSm" secondAttribute="leading" id="9Kt-fb-d5P"/>
+                            <constraint firstItem="OhE-MK-MgW" firstAttribute="leading" secondItem="ToK-ic-17j" secondAttribute="trailing" constant="8" id="AcS-bd-lHV"/>
+                            <constraint firstItem="XJ5-LF-q2B" firstAttribute="leading" secondItem="Jo4-eJ-wdn" secondAttribute="trailing" constant="8" id="BCS-t8-R0L"/>
+                            <constraint firstItem="hmi-Fe-kSm" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="BD8-Xr-wtx"/>
+                            <constraint firstItem="oFX-g2-FsC" firstAttribute="centerY" secondItem="zp6-00-bPf" secondAttribute="centerY" id="Bb4-dr-euZ"/>
+                            <constraint firstItem="auK-0E-jwn" firstAttribute="centerY" secondItem="vvy-Mu-5Qb" secondAttribute="centerY" id="DEt-aO-XDC"/>
+                            <constraint firstItem="orS-2j-ltU" firstAttribute="top" secondItem="ToK-ic-17j" secondAttribute="bottom" constant="21" id="EVe-sv-K58"/>
+                            <constraint firstItem="Jo4-eJ-wdn" firstAttribute="centerY" secondItem="XJ5-LF-q2B" secondAttribute="centerY" id="EXm-56-MN0"/>
+                            <constraint firstItem="guz-w7-02N" firstAttribute="centerY" secondItem="wZt-39-vip" secondAttribute="centerY" id="IAk-T4-iY7"/>
+                            <constraint firstItem="Jla-Kk-GZt" firstAttribute="top" secondItem="Nui-ns-JMH" secondAttribute="bottom" constant="15" id="Imf-WZ-BRV"/>
+                            <constraint firstItem="14j-Je-Afc" firstAttribute="top" secondItem="Egt-Ae-gBs" secondAttribute="bottom" constant="17" id="J4h-Zw-u1w"/>
+                            <constraint firstItem="vvy-Mu-5Qb" firstAttribute="centerX" secondItem="Egt-Ae-gBs" secondAttribute="centerX" id="KsW-PV-4xH"/>
+                            <constraint firstItem="hmi-Fe-kSm" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="Lxp-ad-IJn"/>
+                            <constraint firstItem="wZt-39-vip" firstAttribute="top" secondItem="hmi-Fe-kSm" secondAttribute="bottom" constant="20" id="NCt-Xt-DbE"/>
+                            <constraint firstItem="ToK-ic-17j" firstAttribute="centerY" secondItem="OhE-MK-MgW" secondAttribute="centerY" id="S7B-4K-vPb"/>
+                            <constraint firstItem="Jo4-eJ-wdn" firstAttribute="top" secondItem="zp6-00-bPf" secondAttribute="bottom" constant="20" id="THW-bt-4xZ"/>
+                            <constraint firstItem="ZIv-Yr-gZK" firstAttribute="centerY" secondItem="orS-2j-ltU" secondAttribute="centerY" id="Vgh-NM-B2m"/>
+                            <constraint firstItem="Nui-ns-JMH" firstAttribute="centerY" secondItem="14j-Je-Afc" secondAttribute="centerY" id="WAZ-BH-Bl5"/>
+                            <constraint firstItem="wLh-9h-NF3" firstAttribute="top" secondItem="Jo4-eJ-wdn" secondAttribute="bottom" constant="15" id="XKh-0I-GY5"/>
+                            <constraint firstItem="wZt-39-vip" firstAttribute="leading" secondItem="guz-w7-02N" secondAttribute="trailing" constant="9" id="b0C-12-mce"/>
+                            <constraint firstItem="Jla-Kk-GZt" firstAttribute="leading" secondItem="4pk-8N-Bwe" secondAttribute="trailing" constant="8" id="bl1-df-wKa"/>
+                            <constraint firstItem="ToK-ic-17j" firstAttribute="centerX" secondItem="orS-2j-ltU" secondAttribute="centerX" id="fgE-ml-wgY"/>
+                            <constraint firstItem="vvy-Mu-5Qb" firstAttribute="centerX" secondItem="wZt-39-vip" secondAttribute="centerX" id="pyC-mh-j1V"/>
+                            <constraint firstItem="Egt-Ae-gBs" firstAttribute="leading" secondItem="LIf-vv-FBT" secondAttribute="trailing" constant="9" id="qu1-cz-mNX"/>
+                            <constraint firstItem="4pk-8N-Bwe" firstAttribute="top" secondItem="XJ5-LF-q2B" secondAttribute="bottom" constant="15" id="s0z-EJ-Vyy"/>
+                            <constraint firstItem="4pk-8N-Bwe" firstAttribute="leading" secondItem="wLh-9h-NF3" secondAttribute="trailing" constant="9" id="sjE-Lz-3qd"/>
+                            <constraint firstItem="e3k-w0-8U7" firstAttribute="centerX" secondItem="14j-Je-Afc" secondAttribute="centerX" id="uMD-5z-eKE"/>
+                            <constraint firstItem="LIf-vv-FBT" firstAttribute="centerY" secondItem="Egt-Ae-gBs" secondAttribute="centerY" id="wdB-Di-6Tv"/>
+                            <constraint firstItem="zp6-00-bPf" firstAttribute="top" secondItem="orS-2j-ltU" secondAttribute="bottom" constant="18" id="wi8-Kf-RwW"/>
+                            <constraint firstItem="e3k-w0-8U7" firstAttribute="leading" secondItem="Jla-Kk-GZt" secondAttribute="trailing" constant="9" id="xKD-wl-eTi"/>
+                            <constraint firstItem="Egt-Ae-gBs" firstAttribute="top" secondItem="vvy-Mu-5Qb" secondAttribute="bottom" constant="21" id="xRA-pe-b17"/>
+                            <constraint firstItem="Jo4-eJ-wdn" firstAttribute="centerX" secondItem="zp6-00-bPf" secondAttribute="centerX" id="xu9-jE-RTk"/>
+                            <constraint firstItem="oFX-g2-FsC" firstAttribute="leading" secondItem="zp6-00-bPf" secondAttribute="trailing" constant="7.5" id="yzr-6R-jdf"/>
+                            <constraint firstItem="vvy-Mu-5Qb" firstAttribute="leading" secondItem="auK-0E-jwn" secondAttribute="trailing" constant="9" id="zXL-yS-cVp"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -317,25 +607,29 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="400" height="360"/>
+                    <size key="freeformSize" width="400" height="500"/>
                     <connections>
-                        <outlet property="Screen" destination="viM-MU-Fd7" id="PHA-v1-uti"/>
-                        <outletCollection property="buttons" destination="vit-1E-WDQ" collectionClass="NSMutableArray" id="h8L-hy-HnP"/>
-                        <outletCollection property="buttons" destination="fsp-Sm-ZGc" collectionClass="NSMutableArray" id="817-yf-tZv"/>
-                        <outletCollection property="buttons" destination="0aP-Z5-Z70" collectionClass="NSMutableArray" id="gWw-Bu-C0z"/>
-                        <outletCollection property="buttons" destination="TKJ-eR-duF" collectionClass="NSMutableArray" id="EzM-Ym-Eyp"/>
-                        <outletCollection property="buttons" destination="aN3-fF-khm" collectionClass="NSMutableArray" id="yHw-hd-S5j"/>
-                        <outletCollection property="buttons" destination="LFm-XG-at0" collectionClass="NSMutableArray" id="kzE-Xo-JFl"/>
-                        <outletCollection property="buttons" destination="xnv-9s-mOT" collectionClass="NSMutableArray" id="10h-rp-Ipz"/>
-                        <outletCollection property="buttons" destination="4XY-Ka-QtX" collectionClass="NSMutableArray" id="2GJ-SG-tAj"/>
-                        <outletCollection property="buttons" destination="oIF-h4-swr" collectionClass="NSMutableArray" id="Hq4-UQ-eHv"/>
-                        <outletCollection property="buttons" destination="YeP-yQ-5Di" collectionClass="NSMutableArray" id="Cen-Im-6Fw"/>
-                        <outletCollection property="buttons" destination="Vj7-GG-kGM" collectionClass="NSMutableArray" id="uRc-Gr-4JJ"/>
-                        <outletCollection property="buttons" destination="6XB-5s-x5U" collectionClass="NSMutableArray" id="QE5-qU-iu0"/>
-                        <outletCollection property="buttons" destination="zbB-Wd-ejg" collectionClass="NSMutableArray" id="acQ-u1-eqn"/>
-                        <outletCollection property="buttons" destination="j8M-hz-0vr" collectionClass="NSMutableArray" id="sbY-wV-DKP"/>
-                        <outletCollection property="buttons" destination="UED-ht-9v4" collectionClass="NSMutableArray" id="Trp-BR-2TO"/>
-                        <outletCollection property="buttons" destination="5aZ-l8-OAS" collectionClass="NSMutableArray" id="mfz-5B-fl8"/>
+                        <outlet property="screen" destination="hmi-Fe-kSm" id="W4K-0v-T1r"/>
+                        <outletCollection property="buttons" destination="ToK-ic-17j" collectionClass="NSMutableArray" id="bO4-7N-2gC"/>
+                        <outletCollection property="buttons" destination="OhE-MK-MgW" collectionClass="NSMutableArray" id="Qzs-zf-Syq"/>
+                        <outletCollection property="buttons" destination="guz-w7-02N" collectionClass="NSMutableArray" id="jsd-xc-Gpt"/>
+                        <outletCollection property="buttons" destination="wZt-39-vip" collectionClass="NSMutableArray" id="Pjz-KB-u7A"/>
+                        <outletCollection property="buttons" destination="orS-2j-ltU" collectionClass="NSMutableArray" id="Kit-SG-XB5"/>
+                        <outletCollection property="buttons" destination="ZIv-Yr-gZK" collectionClass="NSMutableArray" id="cSc-cT-ECF"/>
+                        <outletCollection property="buttons" destination="auK-0E-jwn" collectionClass="NSMutableArray" id="Kfr-yk-AnX"/>
+                        <outletCollection property="buttons" destination="vvy-Mu-5Qb" collectionClass="NSMutableArray" id="x2S-Mx-Kmi"/>
+                        <outletCollection property="buttons" destination="zp6-00-bPf" collectionClass="NSMutableArray" id="uxR-sV-VDs"/>
+                        <outletCollection property="buttons" destination="oFX-g2-FsC" collectionClass="NSMutableArray" id="gbK-t3-LBd"/>
+                        <outletCollection property="buttons" destination="LIf-vv-FBT" collectionClass="NSMutableArray" id="Br7-Gj-hDY"/>
+                        <outletCollection property="buttons" destination="Egt-Ae-gBs" collectionClass="NSMutableArray" id="ZOZ-lX-mce"/>
+                        <outletCollection property="buttons" destination="Jo4-eJ-wdn" collectionClass="NSMutableArray" id="hSD-Wc-Qx3"/>
+                        <outletCollection property="buttons" destination="XJ5-LF-q2B" collectionClass="NSMutableArray" id="mqR-4h-HnS"/>
+                        <outletCollection property="buttons" destination="Nui-ns-JMH" collectionClass="NSMutableArray" id="DpY-0B-zGM"/>
+                        <outletCollection property="buttons" destination="14j-Je-Afc" collectionClass="NSMutableArray" id="IA4-1r-3hZ"/>
+                        <outletCollection property="buttons" destination="wLh-9h-NF3" collectionClass="NSMutableArray" id="fjI-9K-bvb"/>
+                        <outletCollection property="buttons" destination="4pk-8N-Bwe" collectionClass="NSMutableArray" id="6xp-it-ozl"/>
+                        <outletCollection property="buttons" destination="Jla-Kk-GZt" collectionClass="NSMutableArray" id="qtZ-kM-USf"/>
+                        <outletCollection property="buttons" destination="e3k-w0-8U7" collectionClass="NSMutableArray" id="PWW-J8-sGl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,9 +637,4 @@
             <point key="canvasLocation" x="516" y="285"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		000401101DA94FA3005E51E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0004010F1DA94FA3005E51E9 /* Main.storyboard */; };
+		001E872A1F9E8CFC0040F5B1 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E87291F9E8CFC0040F5B1 /* StopWatchViewController.swift */; };
 		00594D3A1D6A9BF300CB1DB4 /* circled_down_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */; };
 		006FB1A91D047CC300768D92 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FB1A81D047CC300768D92 /* NotificationCenter.framework */; };
 		006FB1AD1D047CC300768D92 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006FB1AC1D047CC300768D92 /* TodayViewController.m */; };
@@ -146,6 +147,7 @@
 
 /* Begin PBXFileReference section */
 		0004010F1DA94FA3005E51E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		001E87291F9E8CFC0040F5B1 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circled_down_filled.png; sourceTree = "<group>"; };
 		006FB1A71D047CC300768D92 /* Plus. Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Plus. Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		006FB1A81D047CC300768D92 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -375,6 +377,7 @@
 			children = (
 				28FBF2AF1EE87DDE004D83BF /* SpeechViewController.swift */,
 				282FB0BD1EE8BF9100EBECED /* HandwritingViewController.swift */,
+				001E87291F9E8CFC0040F5B1 /* StopWatchViewController.swift */,
 				282FB0BA1EE8BF7600EBECED /* PreferenceViewController.h */,
 				282FB0BB1EE8BF7600EBECED /* PreferenceViewController.m */,
 				284737531D85B9CE00B56DB0 /* CalculatorViewController.h */,
@@ -981,6 +984,7 @@
 				2872E7601D8DE929004D0D62 /* Speech.m in Sources */,
 				282FB0C11EE8C06300EBECED /* AppDelegate.m in Sources */,
 				284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */,
+				001E872A1F9E8CFC0040F5B1 /* StopWatchViewController.swift in Sources */,
 				28FBF2B01EE87DDE004D83BF /* SpeechViewController.swift in Sources */,
 				28BFC6A61B5493DA00E45770 /* main.m in Sources */,
 				289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */,
@@ -1176,6 +1180,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

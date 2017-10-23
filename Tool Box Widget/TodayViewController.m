@@ -15,272 +15,110 @@
 
 @implementation TodayViewController
 
--(IBAction)Number1:(id)sender{
+#pragma mark Calculator Methods
+
+-(IBAction)selectedNumber:(id)sender{
     
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 1;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
+    NSString *string = [(UIButton *)sender titleLabel].text;
+    self.selectString = [self.selectString stringByAppendingString:string];
+    self.screen.text = self.selectString;
 }
--(IBAction)Number2:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 2;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-    
-}
--(IBAction)Number3:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 3;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-}
--(IBAction)Number4:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 4;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-}
--(IBAction)Number5:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 5;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-}
--(IBAction)Number6:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 6;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-    
-}
--(IBAction)Number7:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 7;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-    
-}
--(IBAction)Number8:(id)sender{
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 8;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-}
--(IBAction)Number9:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 9;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-}
--(IBAction)Number0:(id)sender{
-    
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + 0;
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
-    
-    
-    
-}
+
 -(IBAction)Times:(id)sender{
     
-    if (RunningTotal == 0) {
-        
-        RunningTotal = SelectNumber;
-        
-    }
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
     
-    else{
-        
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-        
-        
-    }
+    else
+        [self calculate:Method];
     
     Method = 1;
-    SelectNumber = 0;
-    
-    
-    
+    self.selectString = @"";
 }
+
 -(IBAction)Divide:(id)sender{
     
-    if (RunningTotal == 0) {
-        
-        RunningTotal = SelectNumber;
-        
-    }
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
     
-    else{
-        
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-        
-    }
-    
+    else
+        [self calculate:Method];
     
     Method = 2;
-    SelectNumber = 0;
-    
-    
+    self.selectString = @"";
 }
+
 -(IBAction)Subtract:(id)sender{
     
     
-    if (RunningTotal == 0) {
-        
-        RunningTotal = SelectNumber;
-        
-    }
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
     
-    else{
-        
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-        
-    }
+    else
+        [self calculate:Method];
     
     Method = 3;
-    SelectNumber = 0;
+    self.selectString = @"";
     
 }
 -(IBAction)Plus:(id)sender{
     
-    if (RunningTotal == 0) {
-        
-        RunningTotal = SelectNumber;
-        
-    }
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
     
-    else{
-        
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-        
-    }
+    else
+        [self calculate:Method];
     
     Method = 4;
-    SelectNumber = 0;
+    self.selectString = @"";
     
 }
 -(IBAction)Equals:(id)sender{
     
-    if (RunningTotal == 0) {
-        
-        RunningTotal = SelectNumber;
-        
-    }
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
     
-    else{
-        
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-        
-    }
+    else
+        [self calculate:Method];
     
     Method = 0;
-    SelectNumber = 0;
-    Screen.text = [NSString stringWithFormat:@"%f", RunningTotal];
-    
-    
+    self.selectString = 0;
+    self.screen.text = [NSString stringWithFormat:@"%.7f", self.runningTotal];
 }
+
 
 -(IBAction)AllClear:(id)sender{
     
     Method = 0;
-    RunningTotal = 0;
-    SelectNumber = 0;
-    Screen.text = [NSString stringWithFormat:@"0"];
-    
+    self.runningTotal = 0;
+    self.selectString = @"";
+    self.screen.text = [NSString stringWithFormat:@"0"];
 }
+
+-(void)calculate:(int)method{
+    
+    switch (method) {
+        case 1:
+            self.runningTotal = self.runningTotal * [self.selectString doubleValue];
+            break;
+        case 2:
+            self.runningTotal = self.runningTotal / [self.selectString doubleValue];
+            break;
+        case 3:
+            self.runningTotal = self.runningTotal - [self.selectString doubleValue];
+            break;
+        case 4:
+            self.runningTotal = self.runningTotal + [self.selectString doubleValue];
+            break;
+        default:
+            break;
+    }
+}
+
 
 -(void)setShadowforView:(UIView *)view{
     
-    view.layer.cornerRadius = 15;
+    view.layer.cornerRadius = 10;
     view.layer.shadowRadius = 2.0f;
     view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
     view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
@@ -288,14 +126,23 @@
     view.layer.masksToBounds = NO;
 }
 
+-(void)setupViews{
+    
+    for (UIButton *button in self.buttons) {
+        [self setShadowforView:button];
+    }
+}
+
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
+    self.selectString = @"";
     self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
-    for (UIButton *button in self.buttons) {
-        [self setShadowforView:button];
-    }
+    [self setupViews];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -304,8 +151,9 @@
 }
 
 - (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize {
+    
     if (activeDisplayMode == NCWidgetDisplayModeExpanded) {
-        self.preferredContentSize = CGSizeMake(0.0, 350);
+        self.preferredContentSize = CGSizeMake(0.0, 500);
     } else if (activeDisplayMode == NCWidgetDisplayModeCompact) {
         self.preferredContentSize = maxSize;
     }
@@ -317,7 +165,6 @@
     // If an error is encountered, use NCUpdateResultFailed
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
-
     completionHandler(NCUpdateResultNewData);
 }
 

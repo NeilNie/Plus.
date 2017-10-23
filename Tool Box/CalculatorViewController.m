@@ -19,171 +19,103 @@
 -(IBAction)selectedNumber:(id)sender{
     
     NSString *string = [(UIButton *)sender titleLabel].text;
-    SelectNumber = SelectNumber * 10;
-    SelectNumber = SelectNumber + [string intValue];
-    Screen.text = [NSString stringWithFormat:@"%i", SelectNumber];
+    self.selectString = [self.selectString stringByAppendingString:string];
+    self.screen.text = self.selectString;
+//
+//    self.selectString = self.selectString * 10;
+//    self.selectString = self.selectString + [string intValue];
+//    self.screen.text = [NSString stringWithFormat:@"%i", self.selectString];
 }
 
 -(IBAction)Times:(id)sender{
     
-    if (RunningTotal == 0) {
-        
-        RunningTotal = SelectNumber;
-    }
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
     
-    else{
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-    }
+    else
+        [self calculate:Method];
     
     Method = 1;
-    SelectNumber = 0;
-    
+    self.selectString = @"";
 }
+
 -(IBAction)Divide:(id)sender{
     
-    if (RunningTotal == 0) {
-        
-        RunningTotal = SelectNumber;
-        
-    }
-    
-    else{
-        
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-        
-    }
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
+
+    else
+        [self calculate:Method];
     
     Method = 2;
-    SelectNumber = 0;
+    self.selectString = @"";
 }
+
 -(IBAction)Subtract:(id)sender{
     
     
-    if (RunningTotal == 0) {
-        
-        RunningTotal = SelectNumber;
-    }
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
     
-    else{
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-    }
+    else
+        [self calculate:Method];
     
     Method = 3;
-    SelectNumber = 0;
+    self.selectString = @"";
     
 }
 -(IBAction)Plus:(id)sender{
     
-    if (RunningTotal == 0)
-        RunningTotal = SelectNumber;
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
     
-    else{
-        
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-    }
+    else
+        [self calculate:Method];
     
     Method = 4;
-    SelectNumber = 0;
+    self.selectString = @"";
     
 }
 -(IBAction)Equals:(id)sender{
     
-    if (RunningTotal == 0)
-        RunningTotal = SelectNumber;
+    if (self.runningTotal == 0)
+        self.runningTotal = [self.selectString doubleValue];
     
-    else{
-        
-        switch (Method) {
-            case 1:
-                RunningTotal = RunningTotal * SelectNumber;
-                break;
-            case 2:
-                RunningTotal = RunningTotal / SelectNumber;
-                break;
-            case 3:
-                RunningTotal = RunningTotal - SelectNumber;
-                break;
-            case 4:
-                RunningTotal = RunningTotal + SelectNumber;
-                break;
-            default:
-                break;
-        }
-        
-    }
-    
+    else
+        [self calculate:Method];
+
     Method = 0;
-    SelectNumber = 0;
-    Screen.text = [NSString stringWithFormat:@"%f", RunningTotal];
+    self.selectString = 0;
+    self.screen.text = [NSString stringWithFormat:@"%.7f", self.runningTotal];
 }
 
 
 -(IBAction)AllClear:(id)sender{
     
     Method = 0;
-    RunningTotal = 0;
-    SelectNumber = 0;
-    Screen.text = [NSString stringWithFormat:@"0"];
+    self.runningTotal = 0;
+    self.selectString = @"";
+    self.screen.text = [NSString stringWithFormat:@"0"];
+}
+
+-(void)calculate:(int)method{
+    
+    switch (method) {
+        case 1:
+            self.runningTotal = self.runningTotal * [self.selectString doubleValue];
+            break;
+        case 2:
+            self.runningTotal = self.runningTotal / [self.selectString doubleValue];
+            break;
+        case 3:
+            self.runningTotal = self.runningTotal - [self.selectString doubleValue];
+            break;
+        case 4:
+            self.runningTotal = self.runningTotal + [self.selectString doubleValue];
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - Speech Recognition Methods
@@ -197,7 +129,7 @@
 }
 
 #pragma mark - IBActions
-- (IBAction)cancelSpeech:(id)sender {
+/*- (IBAction)cancelSpeech:(id)sender {
     
     [UIView animateWithDuration:0.75 animations:^{
         self.tableHeight.constant = 415;
@@ -248,7 +180,7 @@
             [self.view layoutIfNeeded];
         }];
     }
-}
+}*/
 
 #pragma mark - Private
 
@@ -257,7 +189,7 @@
     GADRequest *request = [GADRequest request];
     [self.interstitial loadRequest:request];
 }
-
+/*
 -(void)startRecording{
     
     self.listening.hidden = YES;
@@ -387,11 +319,11 @@
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         self.speechButton.enabled = enabled;
     }];
-}
+}*/
 
 -(void)setShadowforView:(UIView *)view{
     
-    view.layer.cornerRadius = 15;
+    view.layer.cornerRadius = 10;
     view.layer.shadowRadius = 2.0f;
     view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
     view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
@@ -404,20 +336,16 @@
     for (UIButton *button in self.buttons) {
         [self setShadowforView:button];
     }
-    self.tableHeight.constant = 415;
-    [self setShadowforView:self.listenResult];
     [self setShadowforView:self.speechButton];
-    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeGesture:)];
-    swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
-    [self.view addGestureRecognizer:swipeUp];
-    
-    self.answerLabel.text = @"";
-    self.questionLabel.text = @"";
 }
 
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    self.selectString = @"";
     
     if(areAdsRemoved == YES){
         self.banner.hidden = YES;
@@ -427,9 +355,8 @@
         [self.banner loadRequest:[GADRequest request]];
     }
 
-    [self setUpSpeechRecognition];
     [self setupViews];
-    [super viewDidLoad];
+    
 
     // Do any additional setup after loading the view.
 }
