@@ -21,10 +21,22 @@
     NSString *string = [(UIButton *)sender titleLabel].text;
     self.selectString = [self.selectString stringByAppendingString:string];
     self.screen.text = self.selectString;
-//
-//    self.selectString = self.selectString * 10;
-//    self.selectString = self.selectString + [string intValue];
-//    self.screen.text = [NSString stringWithFormat:@"%i", self.selectString];
+}
+
+-(IBAction)selectedPercent:(id)sender{
+    
+    if (![self.selectString isEqualToString:@""]) {
+        double n = [self.selectString doubleValue] * 100.0;
+        self.screen.text = [[self extractString:[NSString stringWithFormat:@"%f", n]] stringByAppendingString:@"%"];
+    }
+}
+
+-(IBAction)selectedSquare:(id)sender{
+    
+    if (![self.selectString isEqualToString:@""]) {
+        double n = [self.selectString doubleValue] * [self.selectString doubleValue];
+        self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", n]];
+    }
 }
 
 -(IBAction)Times:(id)sender{
@@ -35,6 +47,7 @@
     else
         [self calculate:Method];
     
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
     Method = 1;
     self.selectString = @"";
 }
@@ -47,6 +60,7 @@
     else
         [self calculate:Method];
     
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
     Method = 2;
     self.selectString = @"";
 }
@@ -60,6 +74,7 @@
     else
         [self calculate:Method];
     
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
     Method = 3;
     self.selectString = @"";
     
@@ -72,10 +87,12 @@
     else
         [self calculate:Method];
     
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
     Method = 4;
     self.selectString = @"";
     
 }
+
 -(IBAction)Equals:(id)sender{
     
     if (self.runningTotal == 0)
@@ -86,7 +103,7 @@
 
     Method = 0;
     self.selectString = 0;
-    self.screen.text = [NSString stringWithFormat:@"%.7f", self.runningTotal];
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
 }
 
 
@@ -96,6 +113,20 @@
     self.runningTotal = 0;
     self.selectString = @"";
     self.screen.text = [NSString stringWithFormat:@"0"];
+}
+
+-(NSString *)extractString:(NSString *)number{
+    
+    NSString *string = number;
+    for (int i = (int)number.length - 1; i >= 0; i--) {
+        if ([[NSString stringWithFormat:@"%c", [number characterAtIndex:i]] isEqualToString:@"0"]) {
+            string = [number substringToIndex:i];
+        }else{
+            break;
+        }
+    }
+    
+    return string;
 }
 
 -(void)calculate:(int)method{

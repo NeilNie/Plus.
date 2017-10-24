@@ -32,6 +32,7 @@
     else
         [self calculate:Method];
     
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
     Method = 1;
     self.selectString = @"";
 }
@@ -44,6 +45,7 @@
     else
         [self calculate:Method];
     
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
     Method = 2;
     self.selectString = @"";
 }
@@ -57,6 +59,7 @@
     else
         [self calculate:Method];
     
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
     Method = 3;
     self.selectString = @"";
     
@@ -69,10 +72,12 @@
     else
         [self calculate:Method];
     
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
     Method = 4;
     self.selectString = @"";
     
 }
+
 -(IBAction)Equals:(id)sender{
     
     if (self.runningTotal == 0)
@@ -83,7 +88,7 @@
     
     Method = 0;
     self.selectString = 0;
-    self.screen.text = [NSString stringWithFormat:@"%.7f", self.runningTotal];
+    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
 }
 
 
@@ -93,6 +98,20 @@
     self.runningTotal = 0;
     self.selectString = @"";
     self.screen.text = [NSString stringWithFormat:@"0"];
+}
+
+-(NSString *)extractString:(NSString *)number{
+    
+    NSString *string = number;
+    for (int i = (int)number.length - 1; i >= 0; i--) {
+        if ([[NSString stringWithFormat:@"%c", [number characterAtIndex:i]] isEqualToString:@"0"]) {
+            string = [number substringToIndex:i];
+        }else{
+            break;
+        }
+    }
+    
+    return string;
 }
 
 -(void)calculate:(int)method{
@@ -153,7 +172,7 @@
 - (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize {
     
     if (activeDisplayMode == NCWidgetDisplayModeExpanded) {
-        self.preferredContentSize = CGSizeMake(0.0, 500);
+        self.preferredContentSize = CGSizeMake(0.0, 450);
     } else if (activeDisplayMode == NCWidgetDisplayModeCompact) {
         self.preferredContentSize = maxSize;
     }

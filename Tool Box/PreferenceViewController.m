@@ -144,20 +144,36 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://nspiresoftware.net"] options:@{} completionHandler:nil];
 }
 
+-(void)setShadowforView:(UIView *)view{
+    
+    view.layer.cornerRadius = 10;
+    view.layer.shadowRadius = 2.0f;
+    view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
+    view.layer.shadowOpacity = 0.8f;
+    view.layer.masksToBounds = NO;
+}
+
+-(void)setupViews{
+    
+    for (UIButton *button in self.buttons) {
+        [self setShadowforView:button];
+    }
+}
+
 #pragma mark - Private
 
 - (void)viewDidLoad {
     
-    /*
-     for button: UIButton in buttons {
-     aroundCornerView(view: button)
-     }
-     
-     for label: UILabel in self.titles {
-     label.font = UIFont(name: "SFProDisplay-Regular", size: 19)
-     }
-     // Do any additional setup after loading the view.
-     */
+    if(areAdsRemoved == YES){
+        self.banner.hidden = YES;
+    }else{
+        self.banner.adUnitID = @"ca-app-pub-7942613644553368/1714159132";
+        self.banner.rootViewController = self;
+        [self.banner loadRequest:[GADRequest request]];
+    }
+    [self setupViews];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -167,14 +183,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

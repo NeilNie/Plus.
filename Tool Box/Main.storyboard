@@ -25,9 +25,6 @@
         <array key="SF-Pro-Text-Medium.otf">
             <string>SFProText-Medium</string>
         </array>
-        <array key="SF-Pro-Text-Regular.otf">
-            <string>SFProText-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Stopwatch-->
@@ -96,8 +93,8 @@
                                     <action selector="resetTimer:" destination="63P-ZH-Za0" eventType="touchUpInside" id="A97-DV-SBk"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EO-sB-Q4s" customClass="GADBannerView">
-                                <rect key="frame" x="27" y="568" width="320" height="50"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EO-sB-Q4s" customClass="GADBannerView">
+                                <rect key="frame" x="27.5" y="568" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Qae-ST-ugR"/>
@@ -249,7 +246,7 @@
                                     <action selector="tapsRemoveAdsButton" destination="0ok-pI-gAy" eventType="touchUpInside" id="z6t-qc-8Al"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-Fn-dAq" customClass="GADBannerView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-Fn-dAq" customClass="GADBannerView">
                                 <rect key="frame" x="27.5" y="504" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -300,6 +297,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Preference" id="hll-8j-CpI"/>
                     <connections>
+                        <outlet property="banner" destination="Mls-Fn-dAq" id="YPJ-wb-x3Z"/>
                         <outletCollection property="buttons" destination="VU2-wv-txJ" collectionClass="NSMutableArray" id="oPg-gN-HF6"/>
                         <outletCollection property="buttons" destination="JNq-C2-zQS" collectionClass="NSMutableArray" id="NXa-Rp-jYa"/>
                         <outletCollection property="buttons" destination="7U0-xn-E8c" collectionClass="NSMutableArray" id="3Uc-Kg-L9e"/>
@@ -338,7 +336,7 @@
                                         <variation key="widthClass=compact" constant="60"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="-">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -367,7 +365,7 @@
                                         <variation key="widthClass=compact" constant="60"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="45"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="-6" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="×">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -435,7 +433,7 @@
                                         <variation key="widthClass=compact" constant="70"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="45"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="-8" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -577,7 +575,7 @@
                                         <variation key="widthClass=compact" constant="60"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="40"/>
                                 <state key="normal" title="C">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -733,7 +731,7 @@
                                         <variation key="widthClass=compact" constant="60"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="45"/>
                                 <state key="normal" title="=">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -764,7 +762,7 @@
                                         <variation key="widthClass=compact" constant="70"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="30"/>
                                 <state key="normal" title="X^2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -780,6 +778,9 @@
                                         <include reference="xc3-qg-tSr"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="selectedSquare:" destination="yEz-n9-hPJ" eventType="touchUpInside" id="2Vs-B3-1OU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFn-VI-R4D">
                                 <rect key="frame" x="273" y="357" width="70" height="60"/>
@@ -792,7 +793,7 @@
                                         <variation key="widthClass=compact" constant="70"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="45"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="35"/>
                                 <state key="normal" title="/">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -811,7 +812,7 @@
                                         <variation key="widthClass=compact" constant="70"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="40"/>
                                 <state key="normal" title="%">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -827,6 +828,9 @@
                                         <include reference="Zvh-Pb-J6B"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="selectedPercent:" destination="yEz-n9-hPJ" eventType="touchUpInside" id="xfd-JH-IEW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTR-kL-Rcu">
                                 <rect key="frame" x="273" y="432" width="70" height="60"/>
@@ -839,10 +843,13 @@
                                         <variation key="widthClass=compact" constant="70"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="40"/>
-                                <state key="normal" title="+/-">
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="30"/>
+                                <state key="normal" title="AC">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="AllClear:" destination="yEz-n9-hPJ" eventType="touchUpInside" id="ogX-V3-QNE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xqs-Lh-eXL">
                                 <rect key="frame" x="37.5" y="28" width="300" height="60"/>
@@ -854,7 +861,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsf-QR-xNk" customClass="GADBannerView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsf-QR-xNk" customClass="GADBannerView">
                                 <rect key="frame" x="27.5" y="568" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1038,13 +1045,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am listening...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orY-QK-cXS">
-                                <rect key="frame" x="69" y="313" width="239" height="40"/>
+                                <rect key="frame" x="71.5" y="313" width="232.5" height="41"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-2B-Vxy">
-                                <rect key="frame" x="147" y="529" width="80" height="80"/>
+                                <rect key="frame" x="147.5" y="529" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="fK8-Jn-6ow"/>
                                     <constraint firstAttribute="height" constant="80" id="gdy-E9-3LQ"/>
