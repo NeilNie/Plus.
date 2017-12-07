@@ -141,7 +141,7 @@
 }
 -(IBAction)foremore:(id)sender{
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://nspiresoftware.net"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://appdevelopmentclub.wixsite.com/nspiresoftware"] options:@{} completionHandler:nil];
 }
 
 -(void)setShadowforView:(UIView *)view{

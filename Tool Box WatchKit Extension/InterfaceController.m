@@ -187,12 +187,10 @@
 }
 -(IBAction)Subtract{
     
-    if (RunningTotal == 0) {
-        
+    if (RunningTotal == 0)
         RunningTotal = SelectNumber;
-        
-    }
-    
+
+
     else{
         
         switch (Method) {
@@ -259,21 +257,17 @@
     if (TempRevert == NO) {
         RunningTotal = SelectNumber * 1.8 + 32;
         if (RunningTotal > SelectNumber) {
-            self.C.text = [NSString stringWithFormat:@"%f℉", RunningTotal];
-            NSLog(@"%fF.", RunningTotal);
+            self.C.text = [NSString stringWithFormat:@"%.3f℉", RunningTotal];
         }else{
-            self.C.text = [NSString stringWithFormat:@"%f℃", RunningTotal];
-            NSLog(@"%fC.", RunningTotal);
+            self.C.text = [NSString stringWithFormat:@"%.3f℃", RunningTotal];
         }
     }else{
         float X = SelectNumber - 32;
         RunningTotal = X / 1.8;
         if (RunningTotal > SelectNumber) {
-            self.C.text = [NSString stringWithFormat:@"%f℉", RunningTotal];
-            NSLog(@"%fF, %f", RunningTotal, X);
+            self.C.text = [NSString stringWithFormat:@"%.3f℉", RunningTotal];
         }else{
-            self.C.text = [NSString stringWithFormat:@"%f℃", RunningTotal];
-            NSLog(@"%fC", RunningTotal);
+            self.C.text = [NSString stringWithFormat:@"%.3f℃", RunningTotal];
         }
     }
     
@@ -283,20 +277,16 @@
     if (inRevert == NO) {
         RunningTotal = SelectNumber * 2.54;
         if (RunningTotal < SelectNumber) {
-            self.In.text = [NSString stringWithFormat:@"%fin", RunningTotal];
-            NSLog(@"%fin", RunningTotal);
+            self.In.text = [NSString stringWithFormat:@"%.3fin", RunningTotal];
         }else{
-            self.In.text = [NSString stringWithFormat:@"%fcm", RunningTotal];
-            NSLog(@"%fcm", RunningTotal);
+            self.In.text = [NSString stringWithFormat:@"%.3fcm", RunningTotal];
         }
     }else if (inRevert == YES){
         RunningTotal = SelectNumber / 2.54;
         if (RunningTotal < SelectNumber) {
-            self.In.text = [NSString stringWithFormat:@"%fin", RunningTotal];
-            NSLog(@"%fin", RunningTotal);
+            self.In.text = [NSString stringWithFormat:@"%.3fin", RunningTotal];
         }else{
-            self.In.text = [NSString stringWithFormat:@"%fcm", RunningTotal];
-            NSLog(@"%fcm", RunningTotal);
+            self.In.text = [NSString stringWithFormat:@"%.3fcm", RunningTotal];
         }
     }
     
@@ -306,19 +296,19 @@
     if (KGRevert == NO) {
         RunningTotal = SelectNumber / 0.453592;
         if (RunningTotal > SelectNumber) {
-            self.Kg.text = [NSString stringWithFormat:@"%fib", RunningTotal];
+            self.Kg.text = [NSString stringWithFormat:@"%.3fib", RunningTotal];
             NSLog(@"%f", RunningTotal);
         }else{
-            self.Kg.text = [NSString stringWithFormat:@"%fkg", RunningTotal];
+            self.Kg.text = [NSString stringWithFormat:@"%.3fkg", RunningTotal];
             NSLog(@"%f", RunningTotal);
         }
     }else if (KGRevert == YES){
         RunningTotal = SelectNumber * 0.453592;
         if (RunningTotal > SelectNumber) {
-            self.Kg.text = [NSString stringWithFormat:@"%fib", RunningTotal];
+            self.Kg.text = [NSString stringWithFormat:@"%.3fib", RunningTotal];
             NSLog(@"%f", RunningTotal);
         }else{
-            self.Kg.text = [NSString stringWithFormat:@"%fkg", RunningTotal];
+            self.Kg.text = [NSString stringWithFormat:@"%.3fkg", RunningTotal];
             NSLog(@"%f", RunningTotal);
         }
     }
@@ -330,19 +320,19 @@
     if (KMRevert == NO) {
         RunningTotal = SelectNumber / 0.62137;
         if (RunningTotal > SelectNumber) {
-            self.KM.text = [NSString stringWithFormat:@"%fkm", RunningTotal];
+            self.KM.text = [NSString stringWithFormat:@"%.3fkm", RunningTotal];
             NSLog(@"%f", RunningTotal);
         }else{
-            self.KM.text = [NSString stringWithFormat:@"%fmi", RunningTotal];
+            self.KM.text = [NSString stringWithFormat:@"%.3fmi", RunningTotal];
             NSLog(@"%f", RunningTotal);
         }
     }else if (KMRevert == YES){
         RunningTotal = SelectNumber * 0.62137;
         if (RunningTotal > SelectNumber) {
-            self.KM.text = [NSString stringWithFormat:@"%fkm", RunningTotal];
+            self.KM.text = [NSString stringWithFormat:@"%.3fkm", RunningTotal];
             NSLog(@"%f", RunningTotal);
         }else{
-            self.KM.text = [NSString stringWithFormat:@"%fmi", RunningTotal];
+            self.KM.text = [NSString stringWithFormat:@"%.3fmi", RunningTotal];
             NSLog(@"%f", RunningTotal);
         }
     }
@@ -351,11 +341,11 @@
 }
 -(IBAction)KGRevert:(id)sender{
     if (KGRevert == YES) {
-        self.Kg.text = [NSString stringWithFormat:@"000ib"];
+        self.Kg.text = [NSString stringWithFormat:@"0 ib"];
         NSLog(@"Converted");
         KGRevert = NO;
     }else{
-        self.Kg.text = [NSString stringWithFormat:@"000kg"];
+        self.Kg.text = [NSString stringWithFormat:@"0 kg"];
         NSLog(@"Converted");
         KGRevert = YES;
     }
@@ -375,11 +365,11 @@
 }
 -(IBAction)OCRevert:(id)sender{
     if (TempRevert == YES) {
-        self.C.text = [NSString stringWithFormat:@"000℉"];
+        self.C.text = [NSString stringWithFormat:@"0 ℉"];
         NSLog(@"ConvertedF");
         TempRevert = NO;
     }else{
-        self.C.text = [NSString stringWithFormat:@"000℃"];
+        self.C.text = [NSString stringWithFormat:@"0 ℃"];
         NSLog(@"ConvertedC");
         TempRevert = YES;
     }
@@ -387,11 +377,11 @@
 }
 -(IBAction)INRevert:(id)sender{
     if (inRevert == YES) {
-        self.In.text = [NSString stringWithFormat:@"000cm"];
+        self.In.text = [NSString stringWithFormat:@"0 cm"];
         NSLog(@"Converted");
         inRevert = NO;
     }else{
-        self.In.text = [NSString stringWithFormat:@"000in"];
+        self.In.text = [NSString stringWithFormat:@"0 in"];
         NSLog(@"Converted");
         inRevert = YES;
     }
@@ -405,10 +395,10 @@
     RunningTotal = 0;
     SelectNumber = 0;
     self.Number.text = [NSString stringWithFormat:@"00"];
-    self.KM.text = [NSString stringWithFormat:@"00"];
-    self.C.text = [NSString stringWithFormat:@"00"];
-    self.In.text = [NSString stringWithFormat:@"00"];
-    self.Kg.text = [NSString stringWithFormat:@"00"];
+    self.KM.text = [NSString stringWithFormat:@"0 km"];
+    self.C.text = [NSString stringWithFormat:@"0 ℃"];
+    self.In.text = [NSString stringWithFormat:@"0 in"];
+    self.Kg.text = [NSString stringWithFormat:@"0 kg"];
 }
 
 
@@ -419,35 +409,35 @@
     KGRevert = YES;
     KMRevert = YES;
     if (KMRevert == YES) {
-        self.KM.text = [NSString stringWithFormat:@"000mi"];
-        self.Number.text = [NSString stringWithFormat:@"00"];
+        self.KM.text = [NSString stringWithFormat:@"0 mi"];
+        self.Number.text = [NSString stringWithFormat:@"0"];
     }else{
-        self.KM.text = [NSString stringWithFormat:@"000km"];
-        self.Number.text = [NSString stringWithFormat:@"00"];
+        self.KM.text = [NSString stringWithFormat:@"0 km"];
+        self.Number.text = [NSString stringWithFormat:@"0"];
     }
     
     if (KGRevert == YES) {
-        self.Kg.text = [NSString stringWithFormat:@"000kg"];
-        self.Number.text = [NSString stringWithFormat:@"00"];
+        self.Kg.text = [NSString stringWithFormat:@"0 kg"];
+        self.Number.text = [NSString stringWithFormat:@"0"];
     }else{
-        self.Kg.text = [NSString stringWithFormat:@"000ib"];
-        self.Number.text = [NSString stringWithFormat:@"00"];
+        self.Kg.text = [NSString stringWithFormat:@"0 ib"];
+        self.Number.text = [NSString stringWithFormat:@"0"];
     }
     
     if (TempRevert == YES) {
-        self.C.text = [NSString stringWithFormat:@"000℃"];
-        self.Number.text = [NSString stringWithFormat:@"00"];
+        self.C.text = [NSString stringWithFormat:@"0 ℃"];
+        self.Number.text = [NSString stringWithFormat:@"0"];
     }else{
-        self.C.text = [NSString stringWithFormat:@"000℉"];
-        self.Number.text = [NSString stringWithFormat:@"00"];
+        self.C.text = [NSString stringWithFormat:@"0 ℉"];
+        self.Number.text = [NSString stringWithFormat:@"0"];
     }
     
     if (inRevert == YES) {
-        self.In.text = [NSString stringWithFormat:@"000cm"];
-        self.Number.text = [NSString stringWithFormat:@"00"];
+        self.In.text = [NSString stringWithFormat:@"0 cm"];
+        self.Number.text = [NSString stringWithFormat:@"0"];
     }else{
-        self.In.text = [NSString stringWithFormat:@"000in"];
-        self.Number.text = [NSString stringWithFormat:@"00"];
+        self.In.text = [NSString stringWithFormat:@"0 in"];
+        self.Number.text = [NSString stringWithFormat:@"0"];
     }
     [super awakeWithContext:context];
     

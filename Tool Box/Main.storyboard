@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N7c-Uq-lr0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N7c-Uq-lr0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,13 +49,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSh-hV-I2K">
-                                <rect key="frame" x="145" y="240" width="85" height="45"/>
+                                <rect key="frame" x="145" y="240" width="95" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="8Fb-3E-IL1"/>
-                                    <constraint firstAttribute="height" constant="45" id="I79-rk-WsL"/>
+                                    <constraint firstAttribute="width" constant="95" id="8Fb-3E-IL1"/>
+                                    <constraint firstAttribute="height" constant="55" id="I79-rk-WsL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="25"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="0.99998790029999995" blue="0.9999920726" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -64,13 +64,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-Gn-0GT">
-                                <rect key="frame" x="145" y="303" width="85" height="45"/>
+                                <rect key="frame" x="145" y="307" width="95" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Hdv-vL-HCu"/>
-                                    <constraint firstAttribute="width" constant="85" id="wbr-S5-p78"/>
+                                    <constraint firstAttribute="height" constant="55" id="Hdv-vL-HCu"/>
+                                    <constraint firstAttribute="width" constant="95" id="wbr-S5-p78"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="25"/>
                                 <state key="normal" title="Pause">
                                     <color key="titleColor" red="1" green="0.99998790029999995" blue="0.9999920726" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -79,13 +79,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy1-pX-wgl">
-                                <rect key="frame" x="145" y="366" width="85" height="45"/>
+                                <rect key="frame" x="145" y="374" width="95" height="55"/>
                                 <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="GKW-MS-Few"/>
-                                    <constraint firstAttribute="width" constant="85" id="OVL-mt-oZE"/>
+                                    <constraint firstAttribute="height" constant="55" id="GKW-MS-Few"/>
+                                    <constraint firstAttribute="width" constant="95" id="OVL-mt-oZE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="25"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -93,7 +93,7 @@
                                     <action selector="resetTimer:" destination="63P-ZH-Za0" eventType="touchUpInside" id="A97-DV-SBk"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EO-sB-Q4s" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EO-sB-Q4s" customClass="GADBannerView">
                                 <rect key="frame" x="27.5" y="568" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -108,13 +108,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="k5S-ax-JlH" secondAttribute="trailing" constant="20" id="4XA-SH-Nbb"/>
                             <constraint firstItem="k5S-ax-JlH" firstAttribute="top" secondItem="SRn-FT-ukC" secondAttribute="bottom" constant="43" id="C5Y-2b-JRI"/>
                             <constraint firstItem="cSh-hV-I2K" firstAttribute="top" secondItem="k5S-ax-JlH" secondAttribute="bottom" constant="117" id="G5z-8o-PHx"/>
-                            <constraint firstItem="Sad-Gn-0GT" firstAttribute="top" secondItem="cSh-hV-I2K" secondAttribute="bottom" constant="18" id="LQb-fB-qRd"/>
-                            <constraint firstItem="Sad-Gn-0GT" firstAttribute="centerX" secondItem="mq7-Aj-j71" secondAttribute="centerX" id="S54-xs-THd"/>
-                            <constraint firstItem="cy1-pX-wgl" firstAttribute="top" secondItem="Sad-Gn-0GT" secondAttribute="bottom" constant="18" id="YmL-js-lja"/>
+                            <constraint firstItem="Sad-Gn-0GT" firstAttribute="top" secondItem="cSh-hV-I2K" secondAttribute="bottom" constant="12" id="LQb-fB-qRd"/>
+                            <constraint firstItem="Sad-Gn-0GT" firstAttribute="centerX" secondItem="mq7-Aj-j71" secondAttribute="centerX" constant="5" id="S54-xs-THd"/>
+                            <constraint firstItem="cy1-pX-wgl" firstAttribute="top" secondItem="Sad-Gn-0GT" secondAttribute="bottom" constant="12" id="YmL-js-lja"/>
                             <constraint firstItem="k5S-ax-JlH" firstAttribute="leading" secondItem="mq7-Aj-j71" secondAttribute="leadingMargin" constant="20" id="bpZ-5i-fPN"/>
-                            <constraint firstItem="cSh-hV-I2K" firstAttribute="centerX" secondItem="mq7-Aj-j71" secondAttribute="centerX" id="cvd-Of-UPS"/>
+                            <constraint firstItem="cSh-hV-I2K" firstAttribute="centerX" secondItem="mq7-Aj-j71" secondAttribute="centerX" constant="5" id="cvd-Of-UPS"/>
                             <constraint firstItem="f1R-vk-CSE" firstAttribute="top" secondItem="4EO-sB-Q4s" secondAttribute="bottom" id="ewv-mn-Pqp"/>
-                            <constraint firstItem="cy1-pX-wgl" firstAttribute="centerX" secondItem="mq7-Aj-j71" secondAttribute="centerX" id="qi9-gU-vjw"/>
+                            <constraint firstItem="cy1-pX-wgl" firstAttribute="centerX" secondItem="mq7-Aj-j71" secondAttribute="centerX" constant="5" id="qi9-gU-vjw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stopwatch" image="timer" selectedImage="timer" id="orD-im-71l"/>
@@ -143,11 +143,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VU2-wv-txJ">
-                                <rect key="frame" x="249.5" y="17.5" width="85" height="35"/>
+                                <rect key="frame" x="249.5" y="15" width="85" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="PWr-zj-Mdt"/>
-                                    <constraint firstAttribute="height" constant="35" id="Vgs-Z8-cwZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="Vgs-Z8-cwZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="15"/>
                                 <state key="normal" title="Rate Us">
@@ -159,11 +159,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNq-C2-zQS">
-                                <rect key="frame" x="250.5" y="70" width="84" height="35"/>
+                                <rect key="frame" x="250.5" y="69" width="84" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="eTu-yE-32z"/>
-                                    <constraint firstAttribute="height" constant="35" id="jVX-2F-V8V"/>
+                                    <constraint firstAttribute="height" constant="45" id="jVX-2F-V8V"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                 <state key="normal" title="Learn More">
@@ -180,36 +180,36 @@
                                     <constraint firstAttribute="width" constant="103" id="CoD-cq-NJu"/>
                                     <constraint firstAttribute="height" constant="26" id="Pc4-HD-Yzj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecZ-84-eh4">
-                                <rect key="frame" x="40.5" y="77" width="136" height="21"/>
+                                <rect key="frame" x="40.5" y="81" width="136" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="136" id="6br-2Z-akC"/>
                                     <constraint firstAttribute="height" constant="21" id="fUL-7O-H2q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Ads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdW-Qq-a4q">
-                                <rect key="frame" x="40.5" y="131" width="136" height="21"/>
+                                <rect key="frame" x="40.5" y="132" width="136" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DdH-Jn-DvB"/>
                                     <constraint firstAttribute="width" constant="136" id="Heg-oM-8hE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfF-Px-xtv">
-                                <rect key="frame" x="250" y="181" width="84" height="32"/>
+                                <rect key="frame" x="250" y="174" width="84" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="2Ly-al-XDD"/>
-                                    <constraint firstAttribute="height" constant="32" id="yjr-hu-oVM"/>
+                                    <constraint firstAttribute="height" constant="40" id="yjr-hu-oVM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="15"/>
                                 <state key="normal" title="Email Us">
@@ -221,21 +221,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact and Subsribe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXu-R1-A23">
-                                <rect key="frame" x="40.5" y="185" width="180" height="22"/>
+                                <rect key="frame" x="40.5" y="183" width="180" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="Co3-z6-JXj"/>
                                     <constraint firstAttribute="height" constant="22" id="hnq-J4-AgT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7U0-xn-E8c">
-                                <rect key="frame" x="250" y="124" width="43" height="35"/>
+                                <rect key="frame" x="250" y="122.5" width="43" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="43" id="c9J-j4-CNo"/>
-                                    <constraint firstAttribute="height" constant="35" id="wQS-Av-Odf"/>
+                                    <constraint firstAttribute="height" constant="40" id="wQS-Av-Odf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                 <state key="normal" title="Buy">
@@ -255,10 +255,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6N3-un-KXI">
-                                <rect key="frame" x="295" y="124.5" width="39" height="35"/>
+                                <rect key="frame" x="295" y="123" width="39" height="40"/>
                                 <color key="backgroundColor" red="0.88200557229999998" green="0.88200557229999998" blue="0.88200557229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="flJ-3o-LeV"/>
+                                    <constraint firstAttribute="height" constant="40" id="flJ-3o-LeV"/>
                                     <constraint firstAttribute="width" constant="39" id="i15-tm-cc7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="10"/>
@@ -280,19 +280,19 @@
                             <constraint firstItem="bac-DG-ZD9" firstAttribute="leading" secondItem="1au-0e-Dro" secondAttribute="leading" constant="40.5" id="IY0-js-qPJ"/>
                             <constraint firstAttribute="trailing" secondItem="VU2-wv-txJ" secondAttribute="trailing" constant="40.5" id="K68-Pk-rlP"/>
                             <constraint firstItem="6N3-un-KXI" firstAttribute="leading" secondItem="7U0-xn-E8c" secondAttribute="trailing" constant="2" id="KCk-Eo-P99"/>
-                            <constraint firstItem="TfF-Px-xtv" firstAttribute="top" secondItem="7U0-xn-E8c" secondAttribute="bottom" constant="22" id="Lhi-lA-OPk"/>
                             <constraint firstItem="ecZ-84-eh4" firstAttribute="leading" secondItem="bac-DG-ZD9" secondAttribute="leading" id="YID-WA-Tug"/>
                             <constraint firstItem="iXu-R1-A23" firstAttribute="leading" secondItem="FdW-Qq-a4q" secondAttribute="leading" id="b1L-Ju-K4a"/>
                             <constraint firstItem="JNq-C2-zQS" firstAttribute="trailing" secondItem="VU2-wv-txJ" secondAttribute="trailing" id="bzM-a7-495"/>
-                            <constraint firstItem="iXu-R1-A23" firstAttribute="top" secondItem="FdW-Qq-a4q" secondAttribute="bottom" constant="33" id="hJH-ML-B94"/>
-                            <constraint firstItem="FdW-Qq-a4q" firstAttribute="top" secondItem="ecZ-84-eh4" secondAttribute="bottom" constant="33" id="hx9-nb-F9F"/>
+                            <constraint firstItem="TfF-Px-xtv" firstAttribute="centerY" secondItem="iXu-R1-A23" secondAttribute="centerY" id="dMa-CH-H0f"/>
+                            <constraint firstItem="iXu-R1-A23" firstAttribute="top" secondItem="FdW-Qq-a4q" secondAttribute="bottom" constant="30" id="hJH-ML-B94"/>
+                            <constraint firstItem="FdW-Qq-a4q" firstAttribute="top" secondItem="ecZ-84-eh4" secondAttribute="bottom" constant="30" id="hx9-nb-F9F"/>
                             <constraint firstItem="TfF-Px-xtv" firstAttribute="leading" secondItem="7U0-xn-E8c" secondAttribute="leading" id="keL-LD-2Pd"/>
                             <constraint firstItem="Qga-Bi-Bzs" firstAttribute="top" secondItem="Mls-Fn-dAq" secondAttribute="bottom" id="kj8-dc-ARs"/>
                             <constraint firstItem="bac-DG-ZD9" firstAttribute="top" secondItem="VAc-6a-bbJ" secondAttribute="bottom" constant="25" id="sRj-a3-aEQ"/>
                             <constraint firstItem="Mls-Fn-dAq" firstAttribute="centerX" secondItem="1au-0e-Dro" secondAttribute="centerX" id="uUz-5c-fBC"/>
                             <constraint firstItem="FdW-Qq-a4q" firstAttribute="leading" secondItem="ecZ-84-eh4" secondAttribute="leading" id="uhy-Jl-iLP"/>
                             <constraint firstItem="7U0-xn-E8c" firstAttribute="leading" secondItem="JNq-C2-zQS" secondAttribute="leading" id="vdj-O3-59u"/>
-                            <constraint firstItem="ecZ-84-eh4" firstAttribute="top" secondItem="bac-DG-ZD9" secondAttribute="bottom" constant="26" id="xv7-PT-RSD"/>
+                            <constraint firstItem="ecZ-84-eh4" firstAttribute="top" secondItem="bac-DG-ZD9" secondAttribute="bottom" constant="30" id="xv7-PT-RSD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Preference" id="hll-8j-CpI"/>
@@ -861,7 +861,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsf-QR-xNk" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsf-QR-xNk" customClass="GADBannerView">
                                 <rect key="frame" x="27.5" y="568" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
