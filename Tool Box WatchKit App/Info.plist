@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Tool Box</string>
+	<string>Plus.</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -21,6 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
+<<<<<<< HEAD
 	<string>1.0.0</string>
 	<key>UIAppFonts</key>
 	<array>
@@ -33,6 +34,9 @@
 		<string>SF-UI-Display-Light.otf</string>
 		<string>SF-UI-Text-Regular.otf</string>
 	</array>
+=======
+	<string>1.0.3</string>
+>>>>>>> 7a6ae8b9b29ceb1e82038c392eec8c4aa7714c6c
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
