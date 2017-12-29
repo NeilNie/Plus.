@@ -32,9 +32,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *screen;
 @property (weak, nonatomic) IBOutlet GADBannerView *banner;
 @property (nonatomic, strong) GADInterstitial *interstitial;
-@property (weak, nonatomic) IBOutlet UIButton *speechButton;
-@property (weak, nonatomic) IBOutlet UILabel *listening;
-
+@property (weak, nonatomic) IBOutlet UIView *mainView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSMutableArray *buttons;
 
 @end

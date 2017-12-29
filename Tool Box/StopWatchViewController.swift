@@ -60,10 +60,10 @@ class StopWatchViewController: UIViewController {
     
     func setupShadow(view: UIView){
         
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = 6
         view.layer.shadowRadius = 2.0
         view.layer.shadowColor = UIColor.lightGray.cgColor
-        view.layer.shadowOpacity = 0.8
+        view.layer.shadowOpacity = 0.6
         view.layer.shadowOffset = CGSize.init(width: -1.0, height: 3.0)
         view.layer.masksToBounds = false
     }

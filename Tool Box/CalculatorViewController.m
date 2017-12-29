@@ -150,7 +150,8 @@
 }
 
 #pragma mark - Speech Recognition Methods
-
+/*
+ 
 -(void)speechRecognizer:(SFSpeechRecognizer *)speechRecognizer availabilityDidChange:(BOOL)available{
     
     if (available)
@@ -160,7 +161,8 @@
 }
 
 #pragma mark - IBActions
-/*- (IBAction)cancelSpeech:(id)sender {
+
+- (IBAction)cancelSpeech:(id)sender {
     
     [UIView animateWithDuration:0.75 animations:^{
         self.tableHeight.constant = 415;
@@ -354,12 +356,12 @@
 
 -(void)setShadowforView:(UIView *)view{
     
-    view.layer.cornerRadius = 10;
+    view.layer.cornerRadius = 5;
     view.layer.shadowRadius = 2.0f;
     view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
     view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
-    view.layer.shadowOpacity = 0.8f;
-    view.layer.masksToBounds = NO;
+    view.layer.shadowOpacity = 0.6f;
+    view.layer.masksToBounds = YES;
 }
 
 -(void)setupViews{
@@ -367,7 +369,6 @@
     for (UIButton *button in self.buttons) {
         [self setShadowforView:button];
     }
-    [self setShadowforView:self.speechButton];
 }
 
 #pragma mark - Life Cycle
@@ -386,8 +387,8 @@
         [self.banner loadRequest:[GADRequest request]];
     }
 
-    [self setupViews];
-    
+    // [self setupViews];
+    [self setShadowforView:self.mainView];
 
     // Do any additional setup after loading the view.
 }

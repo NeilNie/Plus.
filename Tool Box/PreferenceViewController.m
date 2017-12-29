@@ -146,11 +146,11 @@
 
 -(void)setShadowforView:(UIView *)view{
     
-    view.layer.cornerRadius = 10;
+    view.layer.cornerRadius = 6;
     view.layer.shadowRadius = 2.0f;
     view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
     view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
-    view.layer.shadowOpacity = 0.8f;
+    view.layer.shadowOpacity = 0.6f;
     view.layer.masksToBounds = NO;
 }
 
