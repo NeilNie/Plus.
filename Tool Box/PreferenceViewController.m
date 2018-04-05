@@ -21,7 +21,7 @@
     
     MFMailComposeViewController *mailcontroller = [[MFMailComposeViewController alloc] init];
     [mailcontroller setMailComposeDelegate:self];
-    NSArray *emailArray = [[NSArray alloc] initWithObjects:@"neil@nspiresoftware.net", nil];
+    NSArray *emailArray = [[NSArray alloc] initWithObjects:@"appledeveloper.neil@gmail.com", nil];
     [mailcontroller setToRecipients:emailArray];
     [mailcontroller setSubject:@"Contact Us/subsribe"];
     [mailcontroller setMessageBody:@"Your Email:               Your Message:        " isHTML:NO];

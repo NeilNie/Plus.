@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g5F-k8-hFl">
-    <device id="watch42" orientation="portrait">
+    <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,14 +9,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
         <array key="SF-Pro-Display-Semibold.otf">
             <string>SFProDisplay-Semibold</string>
         </array>
         <array key="SFCompactDisplay-Regular.otf">
             <string>SFCompactDisplay-Regular</string>
-        </array>
-        <array key="SFCompactDisplay-Semibold.otf">
-            <string>SFCompactDisplay-Semibold</string>
         </array>
         <array key="SFCompactText-Regular.otf">
             <string>SFCompactText-Regular</string>
@@ -48,25 +48,25 @@
                 <controller identifier="unitconvert" title="Unit Convert" hidesWhenLoading="NO" id="clj-ym-DCo">
                     <items>
                         <button width="1" alignment="left" title="mi -- km" id="9W7-bO-1v4">
-                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="17"/>
+                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="18"/>
                             <connections>
                                 <segue destination="gkG-hM-lb8" kind="push" id="T30-10-Jg8"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="℉ -- ℃" id="je1-SV-WkX">
-                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="17"/>
+                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="18"/>
                             <connections>
                                 <segue destination="gri-hP-LHl" kind="push" id="qkm-dI-iXM"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="cm -- in" id="NTY-mm-FMe">
-                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="17"/>
+                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="18"/>
                             <connections>
                                 <segue destination="LwN-sD-ON0" kind="push" id="lRW-Oh-tRn"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="ib -- kg" id="kCq-B6-rFU">
-                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="17"/>
+                            <fontDescription key="font" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="18"/>
                             <connections>
                                 <segue destination="U8K-Hz-NwY" kind="push" id="bL1-Ng-WHz"/>
                             </connections>
