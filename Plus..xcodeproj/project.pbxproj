@@ -770,7 +770,6 @@
 				28BFC69E1B5493DA00E45770 /* Resources */,
 				288027751B9C98FC002B9AE4 /* Embed Watch Content */,
 				64FB43CA2845996B6C93660E /* [CP] Embed Pods Frameworks */,
-				C2611E511F6D316FBD59C025 /* [CP] Copy Pods Resources */,
 				006FB1B81D047CC300768D92 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -1010,21 +1009,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plus./Pods-Plus.-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C2611E511F6D316FBD59C025 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plus./Pods-Plus.-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8281B5F54D4445D618FBFA7 /* [CP] Check Pods Manifest.lock */ = {
