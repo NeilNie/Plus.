@@ -10,10 +10,6 @@
 		000401101DA94FA3005E51E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0004010F1DA94FA3005E51E9 /* Main.storyboard */; };
 		001E872A1F9E8CFC0040F5B1 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E87291F9E8CFC0040F5B1 /* StopWatchViewController.swift */; };
 		00594D3A1D6A9BF300CB1DB4 /* circled_down_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */; };
-		006FB1A91D047CC300768D92 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FB1A81D047CC300768D92 /* NotificationCenter.framework */; };
-		006FB1AD1D047CC300768D92 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006FB1AC1D047CC300768D92 /* TodayViewController.m */; };
-		006FB1B01D047CC300768D92 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006FB1AE1D047CC300768D92 /* MainInterface.storyboard */; };
-		006FB1B41D047CC300768D92 /* Plus. Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 006FB1A71D047CC300768D92 /* Plus. Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		00736BF91FED5FF1000CC139 /* SFCompactDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D31EE8903900EDDD86 /* SFCompactDisplay-Heavy.otf */; };
 		00736BFA1FED5FF1000CC139 /* SFCompactText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D41EE8903900EDDD86 /* SFCompactText-Medium.otf */; };
 		00736BFB1FED5FF1000CC139 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3D51EE8903900EDDD86 /* SF-Pro-Display-Thin.otf */; };
@@ -54,7 +50,6 @@
 		00736C1E1FED5FF1000CC139 /* SFCompactText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F81EE8903900EDDD86 /* SFCompactText-LightItalic.otf */; };
 		00736C1F1FED5FF1000CC139 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3F91EE8903900EDDD86 /* SF-Pro-Text-Medium.otf */; };
 		00736C201FED5FF1000CC139 /* SFCompactDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2874B3FA1EE8903900EDDD86 /* SFCompactDisplay-Thin.otf */; };
-		007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = 007A7D441D6A03BE00871577 /* GeoPointCompass.m */; };
 		008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */; };
 		00B58A1B1D6E935E00B7870E /* compass_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B58A1A1D6E935E00B7870E /* compass_1.png */; };
 		00D6DBD11BE6B53A00BDC277 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D6DBD01BE6B53A00BDC277 /* left.png */; };
@@ -124,13 +119,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		006FB1B21D047CC300768D92 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 28BFC6981B5493DA00E45770 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 006FB1A61D047CC300768D92;
-			remoteInfo = "Tool Box Widget";
-		};
 		2880276E1B9C98FC002B9AE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 28BFC6981B5493DA00E45770 /* Project object */;
@@ -154,7 +142,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				006FB1B41D047CC300768D92 /* Plus. Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,14 +174,7 @@
 		0004010F1DA94FA3005E51E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		001E87291F9E8CFC0040F5B1 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		00594D391D6A9BF300CB1DB4 /* circled_down_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circled_down_filled.png; sourceTree = "<group>"; };
-		006FB1A71D047CC300768D92 /* Plus. Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Plus. Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		006FB1A81D047CC300768D92 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		006FB1AB1D047CC300768D92 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		006FB1AC1D047CC300768D92 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		006FB1AF1D047CC300768D92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		006FB1B11D047CC300768D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		007A7D431D6A03BE00871577 /* GeoPointCompass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointCompass.h; sourceTree = "<group>"; };
-		007A7D441D6A03BE00871577 /* GeoPointCompass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointCompass.m; sourceTree = "<group>"; };
 		008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00B58A1A1D6E935E00B7870E /* compass_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_1.png; sourceTree = "<group>"; };
 		00D6DBD01BE6B53A00BDC277 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
@@ -349,14 +329,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		006FB1A41D047CC300768D92 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				006FB1A91D047CC300768D92 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		28BFC69D1B5493DA00E45770 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,21 +401,8 @@
 				2872E75F1D8DE929004D0D62 /* Speech.m */,
 				289FC80D1D86336800D3BDAF /* SpeechParser.h */,
 				289FC80E1D86336800D3BDAF /* SpeechParser.m */,
-				007A7D431D6A03BE00871577 /* GeoPointCompass.h */,
-				007A7D441D6A03BE00871577 /* GeoPointCompass.m */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		006FB1AA1D047CC300768D92 /* Tool Box Widget */ = {
-			isa = PBXGroup;
-			children = (
-				006FB1AB1D047CC300768D92 /* TodayViewController.h */,
-				006FB1AC1D047CC300768D92 /* TodayViewController.m */,
-				006FB1AE1D047CC300768D92 /* MainInterface.storyboard */,
-				006FB1B11D047CC300768D92 /* Info.plist */,
-			);
-			path = "Tool Box Widget";
 			sourceTree = "<group>";
 		};
 		2874B3D21EE8903900EDDD86 /* Fonts */ = {
@@ -501,7 +460,6 @@
 				28BFC6A21B5493DA00E45770 /* Plus. */,
 				28E2A52E1B54B29700126C42 /* Tool Box WatchKit Extension */,
 				28E2A5401B54B29700126C42 /* Tool Box WatchKit App */,
-				006FB1AA1D047CC300768D92 /* Tool Box Widget */,
 				28BFC6A11B5493DA00E45770 /* Products */,
 				D47130B1FB6632499E665E24 /* Pods */,
 				7D9B626185536093D39BCFD3 /* Frameworks */,
@@ -514,7 +472,6 @@
 				28BFC6A01B5493DA00E45770 /* Plus..app */,
 				28E2A52D1B54B29700126C42 /* Plus. WatchKit Extension.appex */,
 				28E2A53C1B54B29700126C42 /* Plus. WatchKit App.app */,
-				006FB1A71D047CC300768D92 /* Plus. Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -743,23 +700,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		006FB1A61D047CC300768D92 /* Plus. Widget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 006FB1B71D047CC300768D92 /* Build configuration list for PBXNativeTarget "Plus. Widget" */;
-			buildPhases = (
-				006FB1A31D047CC300768D92 /* Sources */,
-				006FB1A41D047CC300768D92 /* Frameworks */,
-				006FB1A51D047CC300768D92 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Plus. Widget";
-			productName = "Tool Box Widget";
-			productReference = 006FB1A71D047CC300768D92 /* Plus. Widget.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		28BFC69F1B5493DA00E45770 /* Plus. */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28BFC6C31B5493DA00E45770 /* Build configuration list for PBXNativeTarget "Plus." */;
@@ -776,7 +716,6 @@
 			);
 			dependencies = (
 				288027721B9C98FC002B9AE4 /* PBXTargetDependency */,
-				006FB1B31D047CC300768D92 /* PBXTargetDependency */,
 			);
 			name = Plus.;
 			productName = "Tool Box";
@@ -824,13 +763,9 @@
 		28BFC6981B5493DA00E45770 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Yongyang Nie";
 				TargetAttributes = {
-					006FB1A61D047CC300768D92 = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = YC4C987ET6;
-					};
 					28BFC69F1B5493DA00E45770 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = YC4C987ET6;
@@ -848,7 +783,7 @@
 			};
 			buildConfigurationList = 28BFC69B1B5493DA00E45770 /* Build configuration list for PBXProject "Plus." */;
 			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -862,20 +797,11 @@
 				28BFC69F1B5493DA00E45770 /* Plus. */,
 				28E2A52C1B54B29700126C42 /* Plus. WatchKit Extension */,
 				28E2A53B1B54B29700126C42 /* Plus. WatchKit App */,
-				006FB1A61D047CC300768D92 /* Plus. Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		006FB1A51D047CC300768D92 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				006FB1B01D047CC300768D92 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		28BFC69E1B5493DA00E45770 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -997,7 +923,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Plus./Pods-Plus.-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Plus./Pods-Plus.-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -1008,7 +934,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plus./Pods-Plus.-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plus./Pods-Plus.-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8281B5F54D4445D618FBFA7 /* [CP] Check Pods Manifest.lock */ = {
@@ -1032,14 +958,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		006FB1A31D047CC300768D92 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				006FB1AD1D047CC300768D92 /* TodayViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		28BFC69C1B5493DA00E45770 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1052,7 +970,6 @@
 				28FBF2B01EE87DDE004D83BF /* SpeechViewController.swift in Sources */,
 				28BFC6A61B5493DA00E45770 /* main.m in Sources */,
 				289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */,
-				007A7D451D6A03BE00871577 /* GeoPointCompass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,11 +985,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		006FB1B31D047CC300768D92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 006FB1A61D047CC300768D92 /* Plus. Widget */;
-			targetProxy = 006FB1B21D047CC300768D92 /* PBXContainerItemProxy */;
-		};
 		2880276F1B9C98FC002B9AE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 28E2A52C1B54B29700126C42 /* Plus. WatchKit Extension */;
@@ -1086,14 +998,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		006FB1AE1D047CC300768D92 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				006FB1AF1D047CC300768D92 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 		282FB0BD1EE8BF9100EBECED /* HandwritingViewController.swift */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1121,41 +1025,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		006FB1B51D047CC300768D92 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = YC4C987ET6;
-				INFOPLIST_FILE = "Tool Box Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.toobox.Tool-Box-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		006FB1B61D047CC300768D92 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = YC4C987ET6;
-				INFOPLIST_FILE = "Tool Box Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.toobox.Tool-Box-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		28BFC6C11B5493DA00E45770 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1211,6 +1085,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1267,13 +1142,14 @@
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Tool Box/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Tool\\ Box",
 				);
+				MARKETING_VERSION = 1.6.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tool Box/Plus.-Bridging-Header.h";
@@ -1295,13 +1171,14 @@
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Tool Box/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Tool\\ Box",
 				);
+				MARKETING_VERSION = 1.6.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tool Box/Plus.-Bridging-Header.h";
@@ -1388,15 +1265,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		006FB1B71D047CC300768D92 /* Build configuration list for PBXNativeTarget "Plus. Widget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				006FB1B51D047CC300768D92 /* Debug */,
-				006FB1B61D047CC300768D92 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		28BFC69B1B5493DA00E45770 /* Build configuration list for PBXProject "Plus." */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
