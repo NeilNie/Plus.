@@ -8,26 +8,35 @@
 
 #import "CalculatorViewController.h"
 
+#pragma mark - UI Constants
+
+#define TABLE_TOP_SPACE 20
+#define DISPLAY_HEIGHT 70
+#define BUTTON_HEIGHT 60
+#define BUTTON_ROW_COUNT 5
+#define BUTTON_SPACING 3;
+#define BUTTONS_PER_ROW 4
+
 @interface CalculatorViewController ()
 
 @end
 
 @implementation CalculatorViewController
 
-#pragma mark Calculator Methods
+#pragma mark IBActions Methods
 
 -(IBAction)selectedNumber:(id)sender{
     
     NSString *string = [(UIButton *)sender titleLabel].text;
     self.selectString = [self.selectString stringByAppendingString:string];
-    self.screen.text = self.selectString;
+    self.largeResultLabel.text = self.selectString;
 }
 
 -(IBAction)selectedPercent:(id)sender{
     
     if (![self.selectString isEqualToString:@""]) {
         double n = [self.selectString doubleValue] * 100.0;
-        self.screen.text = [[self extractString:[NSString stringWithFormat:@"%f", n]] stringByAppendingString:@"%"];
+        self.largeResultLabel.text = [[self extractString:[NSString stringWithFormat:@"%f", n]] stringByAppendingString:@"%"];
     }
 }
 
@@ -35,92 +44,125 @@
     
     if (![self.selectString isEqualToString:@""]) {
         double n = [self.selectString doubleValue] * [self.selectString doubleValue];
-        self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", n]];
+        self.largeResultLabel.text = [self extractString:[NSString stringWithFormat:@"%f", n]];
     }
 }
 
--(IBAction)Times:(id)sender{
+-(IBAction)selectedOperation:(id)sender {
+    
+    NSString *string = [(UIButton *)sender titleLabel].text;
     
     if (self.runningTotal == 0)
         self.runningTotal = [self.selectString doubleValue];
-    
     else
-        [self calculate:Method];
+        [self calculate:method];
     
-    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
-    Method = 1;
-    self.selectString = @"";
-}
-
--(IBAction)Divide:(id)sender{
+    // set the operation code
+    if ([string isEqualToString:@"+"]) {
+        method = 4;
+    } else if ([string isEqualToString:@"-"]) {
+        method = 3;
+    } else if ([string isEqualToString:@"×"]) {
+        method = 1;
+    } else if ([string isEqualToString:@"/"]) {
+        method = 2;
+    }
     
-    if (self.runningTotal == 0)
-        self.runningTotal = [self.selectString doubleValue];
-
-    else
-        [self calculate:Method];
+    // set initial value and add that to the tableView
+    if (self.initialValue == nil) {
+        self.initialValue = [[NSNumber alloc] initWithDouble:[self.selectString doubleValue]];
+        Result *initialResult = [[Result alloc] initWithOperation:-1 andValue:self.initialValue];
+        [self addNewResult:initialResult];
+    }
     
-    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
-    Method = 2;
-    self.selectString = @"";
-}
-
--(IBAction)Subtract:(id)sender{
-    
-    
-    if (self.runningTotal == 0)
-        self.runningTotal = [self.selectString doubleValue];
-    
-    else
-        [self calculate:Method];
-    
-    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
-    Method = 3;
-    self.selectString = @"";
-    
-}
--(IBAction)Plus:(id)sender{
-    
-    if (self.runningTotal == 0)
-        self.runningTotal = [self.selectString doubleValue];
-    
-    else
-        [self calculate:Method];
-    
-    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
-    Method = 4;
+    self.largeResultLabel.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
     self.selectString = @"";
     
 }
 
--(IBAction)Equals:(id)sender{
+-(IBAction)equals:(id)sender{
     
     if (self.runningTotal == 0)
         self.runningTotal = [self.selectString doubleValue];
     
     else
-        [self calculate:Method];
-
-    Method = 0;
-    self.selectString = 0;
-    self.screen.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
+        [self calculate:method];
+    
+    method = 0;
+    self.selectString = @"0";
+    self.largeResultLabel.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
 }
 
 
--(IBAction)AllClear:(id)sender{
+-(IBAction)allClear:(id)sender{
     
-    Method = 0;
+    method = 0;
     self.runningTotal = 0;
     self.selectString = @"";
-    self.screen.text = [NSString stringWithFormat:@"0"];
+    self.largeResultLabel.text = [NSString stringWithFormat:@"0"];
 }
+
+#pragma mark - UITableView
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.resultsArray.count;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 40;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ResultTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCellID" forIndexPath:indexPath];
+    Result *result = self.resultsArray[indexPath.row];
+    
+    if (indexPath.row == 0) {
+        cell.operationSignLabel.hidden = YES;
+        cell.numberLabel.text = [self.initialValue stringValue];
+
+    } else {
+        cell.operationSignLabel.hidden = NO;
+        cell.numberLabel.text = [result.value stringValue];
+
+        switch (result.operation) {
+            case 0:
+                cell.operationSignLabel.text = @"+";
+                break;
+            case 1:
+                cell.operationSignLabel.text = @"-";
+                break;
+            case 2:
+                cell.operationSignLabel.text = @"✕";
+                break;
+            case 3:
+                cell.operationSignLabel.text = @"÷";
+                break;
+                
+            default:
+                break;
+        }
+    }
+
+    return cell;
+}
+
+#pragma mark - Private Helpers
 
 -(NSString *)extractString:(NSString *)number{
     
     NSString *string = number;
     for (int i = (int)number.length - 1; i >= 0; i--) {
         if ([[NSString stringWithFormat:@"%c", [number characterAtIndex:i]] isEqualToString:@"0"]) {
-            string = [number substringToIndex:i];
+            string = [number substringToIndex:i-1]; // remove the dot
         }else{
             break;
         }
@@ -131,228 +173,42 @@
 
 -(void)calculate:(int)method{
     
+    Result *result;
+    
     switch (method) {
         case 1:
             self.runningTotal = self.runningTotal * [self.selectString doubleValue];
+            result = [[Result alloc] initWithOperation:2 andValue:[NSNumber numberWithDouble:[self.selectString doubleValue]]];
             break;
         case 2:
             self.runningTotal = self.runningTotal / [self.selectString doubleValue];
+            result = [[Result alloc] initWithOperation:3 andValue:[NSNumber numberWithDouble:[self.selectString doubleValue]]];
             break;
         case 3:
             self.runningTotal = self.runningTotal - [self.selectString doubleValue];
+            result = [[Result alloc] initWithOperation:1 andValue:[NSNumber numberWithDouble:[self.selectString doubleValue]]];
             break;
         case 4:
             self.runningTotal = self.runningTotal + [self.selectString doubleValue];
-            break;
-        default:
-            break;
-    }
-}
-
-#pragma mark - Speech Recognition Methods
-/*
- 
--(void)speechRecognizer:(SFSpeechRecognizer *)speechRecognizer availabilityDidChange:(BOOL)available{
-    
-    if (available)
-        self.speechButton.enabled = YES;
-    else
-        self.speechButton.enabled = NO;
-}
-
-#pragma mark - IBActions
-
-- (IBAction)cancelSpeech:(id)sender {
-    
-    [UIView animateWithDuration:0.75 animations:^{
-        self.tableHeight.constant = 415;
-        [self.view layoutIfNeeded];
-    }];
-    if (audioEngine.isRunning) {
-        [audioEngine stop];
-        [recognitionRequest endAudio];
-    }
-}
-
--(IBAction)microphoneTapped:(id)sender{
-    
-    [UIView animateWithDuration:1 animations:^{
-        self.tableHeight.constant = 8;
-        [self.view layoutIfNeeded];
-    }];
-    
-    if (audioEngine.isRunning) {
-        [audioEngine stop];
-        [recognitionRequest endAudio];
-        [UIView animateWithDuration:0.75 animations:^{
-            self.tableHeight.constant = 415;
-            [self.view layoutIfNeeded];
-        }];
-    }else{
-        [self startRecording];
-    }
-    
-    [self createAndLoadInterstitial];    
-}
-
--(void)swipeGesture:(UISwipeGestureRecognizer *)swipeUp{
-    
-    if (audioEngine.isRunning) {
-        [audioEngine stop];
-        [recognitionRequest endAudio];
-    }
-    
-    if (swipeUp.direction == UISwipeGestureRecognizerDirectionUp) {
-        [UIView animateWithDuration:0.75 animations:^{
-            self.tableHeight.constant = 415;
-            [self.view layoutIfNeeded];
-        }];
-    }else if (swipeUp.direction == UISwipeGestureRecognizerDirectionDown){
-        [UIView animateWithDuration:0.75 animations:^{
-            self.tableHeight.constant = 8;
-            [self.view layoutIfNeeded];
-        }];
-    }
-}*/
-
-#pragma mark - Private
-
-- (void)createAndLoadInterstitial {
-    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7942613644553368/5594711931"];
-    GADRequest *request = [GADRequest request];
-    [self.interstitial loadRequest:request];
-}
-/*
--(void)startRecording{
-    
-    self.listening.hidden = YES;
-    
-    if (recognitionTask != nil) {
-        [recognitionTask cancel];
-        recognitionTask = nil;
-    }
-    
-    NSError *error = nil;
-    
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    
-    [audioSession setCategory:AVAudioSessionCategoryRecord error:&error];
-    [audioSession setMode:AVAudioSessionModeMeasurement error:&error];
-    [audioSession setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&error];
-    
-    recognitionRequest = [SFSpeechAudioBufferRecognitionRequest new];
-    
-    AVAudioInputNode *inputNode = audioEngine.inputNode;
-    
-    recognitionRequest.shouldReportPartialResults = YES;
-    
-    SpeechParser *parse = [[SpeechParser alloc] init];
-    
-    recognitionTask = [speech recognitionTaskWithRequest:recognitionRequest resultHandler:^(SFSpeechRecognitionResult * _Nullable result, NSError * _Nullable error) {
-        
-        BOOL isFinal = NO;
-        
-        if (result != nil) {
-            self.questionLabel.text = [NSString stringWithFormat:@"\"%@\"", result.bestTranscription.formattedString];
-            isFinal = result.isFinal;
-        }
-        
-        if (error != nil || isFinal) {
-            
-            [audioEngine stop];
-            [inputNode removeTapOnBus:0];
-            
-            recognitionRequest = nil;
-            recognitionTask = nil;
-            
-            self.speechButton.enabled = YES;
-            
-            parse.text = result.bestTranscription.formattedString;
-            [parse parseEquation];
-            [parse parseNumbersOperators:^(BOOL success, NSString *error) {
-                
-                if (success)
-                    [parse calculate];
-            }];
-            self.answerLabel.text = [NSString stringWithFormat:@"%@ = %f", parse.equation, parse.result.floatValue];
-        }
-    }];
-    
-    NSLog(@"answer %@", parse.result);
-    
-    AVAudioFormat *recordingFormate = [inputNode outputFormatForBus:0];
-    [inputNode installTapOnBus:0 bufferSize:1024 format:recordingFormate block:^(AVAudioPCMBuffer * _Nonnull buffer, AVAudioTime * _Nonnull when) {
-        [recognitionRequest appendAudioPCMBuffer:buffer];
-    }];
-    
-    [audioEngine prepare];
-    
-    [audioEngine startAndReturnError:nil];
-}
-
--(void)setUpSpeechRecognition{
-    
-    audioEngine = [[AVAudioEngine alloc] init];
-    
-    speech = [[SFSpeechRecognizer alloc] initWithLocale:[NSLocale localeWithLocaleIdentifier:@"en-US"]];
-    
-    self.speechButton.enabled = NO;
-    
-    speech.delegate = self;
-    
-    static BOOL enabled;
-    
-    [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
-        
-        switch (status) {
-            case SFSpeechRecognizerAuthorizationStatusDenied:
-                enabled = NO;
-                break;
-            case SFSpeechRecognizerAuthorizationStatusNotDetermined:
-                enabled = YES;
-                break;
-            case SFSpeechRecognizerAuthorizationStatusAuthorized:
-                enabled = YES;
-                break;
-            case SFSpeechRecognizerAuthorizationStatusRestricted:
-                enabled = NO;
-                break;
-                
-            default:
-                break;
-        }
-    }];
-    
-    switch ([[AVAudioSession sharedInstance] recordPermission]) {
-        case AVAudioSessionRecordPermissionGranted:
-            enabled = YES;
-            break;
-        case AVAudioSessionRecordPermissionDenied:
-            [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
-                if (granted) {
-                    NSLog(@"premission granted");
-                }else{
-                    enabled = NO;
-                }
-            }];
-            break;
-        case AVAudioSessionRecordPermissionUndetermined:
-            [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
-                if (granted) {
-                    NSLog(@"premission granted");
-                }else{
-                    enabled = NO;
-                }
-            }];
+            result = [[Result alloc] initWithOperation:0 andValue:[NSNumber numberWithDouble:[self.selectString doubleValue]]];
             break;
         default:
             break;
     }
     
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        self.speechButton.enabled = enabled;
-    }];
-}*/
+    if (method > 0) {
+        [self addNewResult:result];
+    }
+}
+
+-(void)addNewResult:(Result *)result {
+    
+    [self.resultsArray addObject:result];
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[self.resultsArray count] - 1 inSection:0];
+    [self.resultsTableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+#pragma mark - View Helper Methods
 
 -(void)setShadowforView:(UIView *)view{
     
@@ -366,8 +222,32 @@
 
 -(void)setupViews{
     
-    for (UIButton *button in self.buttons) {
+    for (int i = 0; i < self.buttons.count; i++) {
+        
+        UIButton *button = self.buttons[i];
         [self setShadowforView:button];
+        
+        // Calculate the width of the buttons
+        NSLayoutConstraint *width = [NSLayoutConstraint
+                                     constraintWithItem:button
+                                     attribute:NSLayoutAttributeWidth
+                                     relatedBy:NSLayoutRelationEqual
+                                     toItem:nil
+                                     attribute:NSLayoutAttributeNotAnAttribute
+                                     multiplier:0
+                                     constant:((int)self.view.frame.size.width - 3 * 3)  / 4];
+        [button addConstraint:width];
+    }
+}
+
+- (void)runAds {
+    
+    if(areAdsRemoved == YES){
+        self.banner.hidden = YES;
+    }else{
+        self.banner.adUnitID = @"ca-app-pub-7942613644553368/1714159132";
+        self.banner.rootViewController = self;
+        [self.banner loadRequest:[GADRequest request]];
     }
 }
 
@@ -377,19 +257,16 @@
     
     [super viewDidLoad];
     
+    self.resultsTableView.delegate = self;
+    self.resultsTableView.dataSource = self;
+    
+    self.resultsArray = [[NSMutableArray alloc] init];
     self.selectString = @"";
     
-    if(areAdsRemoved == YES){
-        self.banner.hidden = YES;
-    }else{
-        self.banner.adUnitID = @"ca-app-pub-7942613644553368/1714159132";
-        self.banner.rootViewController = self;
-        [self.banner loadRequest:[GADRequest request]];
-    }
-
-    // [self setupViews];
+    [self runAds];
+    [self setupViews];
     [self setShadowforView:self.mainView];
-
+    
     // Do any additional setup after loading the view.
 }
 
