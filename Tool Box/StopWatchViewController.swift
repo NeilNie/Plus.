@@ -6,14 +6,6 @@
 //  Copyright © 2017 Yongyang Nie. All rights reserved.
 //
 
-//
-//  ViewController.swift
-//  IOS10StopWatchTutorial
-//
-//  Created by Arthur Knopper on 19/10/2016.
-//  Copyright © 2016 Arthur Knopper. All rights reserved.
-//
-
 import UIKit
 import GoogleMobileAds
 
@@ -88,7 +80,8 @@ class StopWatchViewController: UIViewController {
         }
     }
     
-    @objc func UpdateTimer() {
+    @objc
+    func UpdateTimer() {
         counter = counter + 0.1
         timeLabel.text = String(format: "%.1f", counter)
     }

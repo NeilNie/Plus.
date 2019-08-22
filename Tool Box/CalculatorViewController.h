@@ -3,7 +3,7 @@
 //  
 //
 //  Created by Yongyang Nie on 9/11/16.
-//  (c) Yongyang Nie 2017
+//  (c) Yongyang Nie 2016 - 2019
 //
 
 #import "SpeechParser.h"
@@ -28,10 +28,11 @@
 
 @property double runningTotal;
 @property (strong, nonatomic) NSNumber *initialValue;
-@property (strong, nonatomic) NSString *selectString;
+@property (strong, nonatomic) NSString *numberEntered;
 @property (strong, nonatomic) GADInterstitial *interstitial;
 @property (strong, nonatomic) NSMutableArray<Result *> *resultsArray;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewHeight;
 @property (weak, nonatomic) IBOutlet UITableView *resultsTableView;
 @property (weak, nonatomic) IBOutlet UILabel *equalSignLabel;
 @property (weak, nonatomic) IBOutlet UILabel *largeResultLabel;
