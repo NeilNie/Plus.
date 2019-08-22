@@ -136,22 +136,17 @@
 
 -(IBAction)rate:(id)sender{
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/the-toolbox/id992505214?mt=8"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://apps.apple.com/us/app/plus/id992505214?ls=1"] options:@{} completionHandler:nil];
     
 }
 -(IBAction)foremore:(id)sender{
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://appdevelopmentclub.wixsite.com/nspiresoftware"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.neilnie.com"] options:@{} completionHandler:nil];
 }
 
 -(void)setShadowforView:(UIView *)view{
     
     view.layer.cornerRadius = 6;
-    view.layer.shadowRadius = 2.0f;
-    view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
-    view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
-    view.layer.shadowOpacity = 0.6f;
-    view.layer.masksToBounds = NO;
 }
 
 -(void)setupViews{

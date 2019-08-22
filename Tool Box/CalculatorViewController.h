@@ -39,5 +39,6 @@
 @property (weak, nonatomic) IBOutlet GADBannerView *banner;
 @property (weak, nonatomic) IBOutlet UIView *mainView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSMutableArray *buttons;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSMutableArray *operatorButtons;
 
 @end

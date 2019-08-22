@@ -28,6 +28,8 @@ const int BUTTONS_PER_ROW = 4;
 
 -(IBAction)selectedNumber:(id)sender{
     
+    [self enableAllOperatorButtons];
+    
     if (method == 0 && [self.numberEntered isEqualToString:@""]) {
         [self allClear:nil];
     }
@@ -55,7 +57,13 @@ const int BUTTONS_PER_ROW = 4;
 
 -(IBAction)selectedOperation:(id)sender {
     
-    NSString *string = [(UIButton *)sender titleLabel].text;
+    // change the selected button color
+    UIButton *buttonPressed = (UIButton *)sender;
+    [buttonPressed setBackgroundColor:[UIColor colorWithRed:251.0 / 255.0 green:101.0 / 255.0 blue:66.0 / 255.0 alpha:1.0]];
+    
+    [self disableAllOperatorButtons];
+    
+    NSString *buttonTitleString = buttonPressed.titleLabel.text;
     
     if (self.runningTotal == 0)
         self.runningTotal = [self.numberEntered doubleValue];
@@ -63,18 +71,19 @@ const int BUTTONS_PER_ROW = 4;
         [self calculate:method];
     
     // set the operation code
-    if ([string isEqualToString:@"+"]) {
+    if ([buttonTitleString isEqualToString:@"+"]) {
         method = 4;
-    } else if ([string isEqualToString:@"-"]) {
+    } else if ([buttonTitleString isEqualToString:@"-"]) {
         method = 3;
-    } else if ([string isEqualToString:@"×"]) {
+    } else if ([buttonTitleString isEqualToString:@"×"]) {
         method = 1;
-    } else if ([string isEqualToString:@"/"]) {
+    } else if ([buttonTitleString isEqualToString:@"/"]) {
         method = 2;
-    } else if ([string isEqualToString:@"="]) {
+    } else if ([buttonTitleString isEqualToString:@"="]) {
         method = 0;
         self.numberEntered = @"";
         self.largeResultLabel.text = [self extractString:[NSString stringWithFormat:@"%f", self.runningTotal]];
+        [self enableAllOperatorButtons];
         return;
     }
 
@@ -201,9 +210,8 @@ const int BUTTONS_PER_ROW = 4;
             break;
     }
     
-    if (method > 0) {
+    if (method > 0)
         [self addNewResult:result];
-    }
 }
 
 -(void)addNewResult:(Result *)result {
@@ -251,11 +259,6 @@ const int BUTTONS_PER_ROW = 4;
 -(void)setShadowforView:(UIView *)view{
     
     view.layer.cornerRadius = 5;
-    view.layer.shadowRadius = 2.0f;
-    view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
-    view.layer.shadowOffset = CGSizeMake(-1.0f, 3.0f);
-    view.layer.shadowOpacity = 0.6f;
-    view.layer.masksToBounds = YES;
 }
 
 -(void)setupViews{
@@ -288,6 +291,23 @@ const int BUTTONS_PER_ROW = 4;
         self.banner.adUnitID = @"ca-app-pub-7942613644553368/1714159132";
         self.banner.rootViewController = self;
         [self.banner loadRequest:[GADRequest request]];
+    }
+}
+
+- (void)disableAllOperatorButtons {
+    
+    for (UIButton *button in self.operatorButtons) {
+        button.enabled = NO;
+        button.alpha = 0.85;
+    }
+}
+
+- (void)enableAllOperatorButtons {
+    
+    for (UIButton *button in self.operatorButtons) {
+        button.enabled = YES;
+        button.alpha = 1.0;
+        [button setBackgroundColor:[UIColor colorWithRed:255.0 / 255.0 green:187.0 / 255.0 blue:0.0 / 255.0 alpha:1.0]];
     }
 }
 
