@@ -21,7 +21,7 @@
     
     MFMailComposeViewController *mailcontroller = [[MFMailComposeViewController alloc] init];
     [mailcontroller setMailComposeDelegate:self];
-    NSArray *emailArray = [[NSArray alloc] initWithObjects:@"appledeveloper.neil@gmail.com", nil];
+    NSArray *emailArray = [[NSArray alloc] initWithObjects:@"contact@neilnie.com", nil];
     [mailcontroller setToRecipients:emailArray];
     [mailcontroller setSubject:@"Contact Us/subsribe"];
     [mailcontroller setMessageBody:@"Your Email:               Your Message:        " isHTML:NO];
@@ -135,12 +135,10 @@
 }
 
 -(IBAction)rate:(id)sender{
-    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://apps.apple.com/us/app/plus/id992505214?ls=1"] options:@{} completionHandler:nil];
-    
 }
+
 -(IBAction)foremore:(id)sender{
-    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.neilnie.com"] options:@{} completionHandler:nil];
 }
 
