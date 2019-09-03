@@ -53,6 +53,10 @@
 		008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */; };
 		00B58A1B1D6E935E00B7870E /* compass_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B58A1A1D6E935E00B7870E /* compass_1.png */; };
 		00D6DBD11BE6B53A00BDC277 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D6DBD01BE6B53A00BDC277 /* left.png */; };
+		00D7DCB1230C7C2000FC62FC /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D7DCB0230C7C2000FC62FC /* Calculator.m */; };
+		00EB18A2230B5B7E00BD590D /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EB18A1230B5B7E00BD590D /* Result.m */; };
+		00EB18A6230B5C0400BD590D /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EB18A4230B5C0400BD590D /* ResultTableViewCell.m */; };
+		00EB18A7230B5C0400BD590D /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00EB18A5230B5C0400BD590D /* ResultTableViewCell.xib */; };
 		282FB0BC1EE8BF7600EBECED /* PreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282FB0BB1EE8BF7600EBECED /* PreferenceViewController.m */; };
 		282FB0C11EE8C06300EBECED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 282FB0C01EE8BFF800EBECED /* AppDelegate.m */; };
 		284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284737541D85B9CE00B56DB0 /* CalculatorViewController.m */; };
@@ -114,7 +118,6 @@
 		28E2A5651B54B39400126C42 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E2A5641B54B39400126C42 /* UIKit.framework */; };
 		28E2A5691B54B5E700126C42 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E2A5681B54B5E700126C42 /* Media.xcassets */; };
 		28F8E3871EE9AB400091D9E2 /* libWritePadRecoUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F5D2841EE9AA5D00D00054 /* libWritePadRecoUniversal.a */; };
-		28FBF2B01EE87DDE004D83BF /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBF2AF1EE87DDE004D83BF /* SpeechViewController.swift */; };
 		A59844EBE63A8A074A7F772E /* Pods_Plus_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58073B63F2B362F1EB56DABA /* Pods_Plus_.framework */; };
 /* End PBXBuildFile section */
 
@@ -178,6 +181,13 @@
 		008C22CC1D047AAE00E34325 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00B58A1A1D6E935E00B7870E /* compass_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_1.png; sourceTree = "<group>"; };
 		00D6DBD01BE6B53A00BDC277 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		00D7DCAF230C7C2000FC62FC /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		00D7DCB0230C7C2000FC62FC /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		00EB18A0230B5B7E00BD590D /* Result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
+		00EB18A1230B5B7E00BD590D /* Result.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
+		00EB18A3230B5C0400BD590D /* ResultTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
+		00EB18A4230B5C0400BD590D /* ResultTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
+		00EB18A5230B5C0400BD590D /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		1567500C16668611F0A3057A /* Pods-Plus..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plus..debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plus./Pods-Plus..debug.xcconfig"; sourceTree = "<group>"; };
 		282FB0BA1EE8BF7600EBECED /* PreferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceViewController.h; sourceTree = "<group>"; };
 		282FB0BB1EE8BF7600EBECED /* PreferenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceViewController.m; sourceTree = "<group>"; };
@@ -322,7 +332,6 @@
 		28F8E3851EE9AAD40091D9E2 /* French.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = French.dct; sourceTree = "<group>"; };
 		28F8E3861EE9AAD40091D9E2 /* Danish.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Danish.dct; sourceTree = "<group>"; };
 		28FBF2AA1EE87D76004D83BF /* Plus.-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plus.-Bridging-Header.h"; sourceTree = "<group>"; };
-		28FBF2AF1EE87DDE004D83BF /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		41E593850244D5392F72B002 /* Pods-Plus..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plus..release.xcconfig"; path = "Pods/Target Support Files/Pods-Plus./Pods-Plus..release.xcconfig"; sourceTree = "<group>"; };
 		58073B63F2B362F1EB56DABA /* Pods_Plus_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plus_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE98D9096D41C7CAF87274C6 /* libPods-Tool Box.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tool Box.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,6 +385,7 @@
 			children = (
 				0004010F1DA94FA3005E51E9 /* Main.storyboard */,
 				28BFC6B21B5493DA00E45770 /* LaunchScreen.xib */,
+				00EB18A5230B5C0400BD590D /* ResultTableViewCell.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -383,7 +393,6 @@
 		00594D3D1D6A9D7F00CB1DB4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				28FBF2AF1EE87DDE004D83BF /* SpeechViewController.swift */,
 				282FB0BD1EE8BF9100EBECED /* HandwritingViewController.swift */,
 				001E87291F9E8CFC0040F5B1 /* StopWatchViewController.swift */,
 				282FB0BA1EE8BF7600EBECED /* PreferenceViewController.h */,
@@ -397,10 +406,16 @@
 		00594D3E1D6A9D8900CB1DB4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				00EB18A3230B5C0400BD590D /* ResultTableViewCell.h */,
+				00EB18A4230B5C0400BD590D /* ResultTableViewCell.m */,
 				2872E75E1D8DE929004D0D62 /* Speech.h */,
 				2872E75F1D8DE929004D0D62 /* Speech.m */,
 				289FC80D1D86336800D3BDAF /* SpeechParser.h */,
 				289FC80E1D86336800D3BDAF /* SpeechParser.m */,
+				00EB18A0230B5B7E00BD590D /* Result.h */,
+				00EB18A1230B5B7E00BD590D /* Result.m */,
+				00D7DCAF230C7C2000FC62FC /* Calculator.h */,
+				00D7DCB0230C7C2000FC62FC /* Calculator.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -769,7 +784,7 @@
 					28BFC69F1B5493DA00E45770 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = YC4C987ET6;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1030;
 					};
 					28E2A52C1B54B29700126C42 = {
 						CreatedOnToolsVersion = 6.4;
@@ -845,6 +860,7 @@
 				2874B40B1EE895CC00EDDD86 /* SFCompactDisplay-Semibold.otf in Resources */,
 				2874B41A1EE895CD00EDDD86 /* SFCompactText-Bold.otf in Resources */,
 				00594D3A1D6A9BF300CB1DB4 /* circled_down_filled.png in Resources */,
+				00EB18A7230B5C0400BD590D /* ResultTableViewCell.xib in Resources */,
 				2874B4231EE895CD00EDDD86 /* SF-Pro-Text-Medium.otf in Resources */,
 				008C22CD1D047AAE00E34325 /* GoogleService-Info.plist in Resources */,
 				2874B40A1EE895CC00EDDD86 /* SFCompactText-Regular.otf in Resources */,
@@ -966,10 +982,12 @@
 				2872E7601D8DE929004D0D62 /* Speech.m in Sources */,
 				282FB0C11EE8C06300EBECED /* AppDelegate.m in Sources */,
 				284737551D85B9CE00B56DB0 /* CalculatorViewController.m in Sources */,
+				00EB18A6230B5C0400BD590D /* ResultTableViewCell.m in Sources */,
 				001E872A1F9E8CFC0040F5B1 /* StopWatchViewController.swift in Sources */,
-				28FBF2B01EE87DDE004D83BF /* SpeechViewController.swift in Sources */,
+				00EB18A2230B5B7E00BD590D /* Result.m in Sources */,
 				28BFC6A61B5493DA00E45770 /* main.m in Sources */,
 				289FC80F1D86336800D3BDAF /* SpeechParser.m in Sources */,
+				00D7DCB1230C7C2000FC62FC /* Calculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,8 +1172,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tool Box/Plus.-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1182,8 +1199,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.toobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tool Box/Plus.-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1204,7 +1220,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -1220,7 +1236,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -1241,7 +1257,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -1258,7 +1274,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
